@@ -123,31 +123,25 @@ body::after {
   z-index: 10;
 }
 
-.brand-badge {
+.brand-logo-wrap {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: #FFFFFF;
-  border: 1.5px solid var(--line);
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  font-size: 0.88rem;
-  font-weight: 800;
-  color: var(--ink);
-  box-shadow: var(--shadow-xs);
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
   flex-shrink: 0;
-  white-space: nowrap;
 }
 
-.brand-badge .brand-icon {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--yellow);
-  display: grid;
-  place-items: center;
-  font-size: 0.75rem;
-  flex-shrink: 0;
+.brand-logo-wrap:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.site-brand-logo {
+  height: 38px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-cta-btn {
@@ -953,7 +947,7 @@ h1 {
 
 .clients-logo-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 14px;
 }
 
@@ -1258,27 +1252,28 @@ h1 {
 
 .why-main-layout {
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
   align-items: stretch;
   margin-top: 28px;
 }
 
 .why-cards-col {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .why-card {
   background: #FFFFFF;
   border: 1.5px solid var(--line);
   border-radius: 20px;
-  padding: 22px 20px;
+  padding: 16px 20px;
   box-shadow: var(--shadow-sm);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .why-card:hover {
@@ -1316,6 +1311,14 @@ h1 {
   margin: 0 0 6px;
 }
 
+.title-step-arrow {
+  color: var(--yellow-hover);
+  margin: 0 4px;
+  font-size: 0.9em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .why-card-text {
   font-size: 0.9rem;
   color: var(--muted);
@@ -1333,11 +1336,12 @@ h1 {
   background: #FFFFFF;
   border: 1.5px solid var(--line);
   border-radius: 22px;
-  padding: 18px 18px 20px;
+  padding: 20px 20px 22px;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   position: relative;
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
@@ -1351,7 +1355,8 @@ h1 {
 .founder-photo-wrap {
   position: relative;
   width: 100%;
-  height: 310px;
+  flex: 1;
+  min-height: 380px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(15, 16, 21, 0.08);
@@ -2403,16 +2408,9 @@ dialog.lead-dialog::backdrop {
     box-sizing: border-box;
   }
 
-  .brand-badge {
-    padding: 6px 12px;
-    font-size: 0.82rem;
-    gap: 6px;
-  }
-
-  .brand-badge .brand-icon {
-    width: 20px;
-    height: 20px;
-    font-size: 0.7rem;
+  .site-brand-logo {
+    height: 32px;
+    max-width: 110px;
   }
 
   .nav-cta-btn {
@@ -2760,19 +2758,16 @@ dialog.lead-dialog::backdrop {
     justify-content: center;
   }
 
-  .client-logo-card:nth-child(5) {
-    grid-column: 1 / -1 !important;
-    max-width: 260px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
   .client-logo-card {
     padding: 14px 10px 12px;
   }
 
   .client-logo-img-wrap {
     height: 64px;
+  }
+
+  .site-brand-logo {
+    height: 32px;
   }
 
   .work-grid {
@@ -2809,7 +2804,8 @@ dialog.lead-dialog::backdrop {
   }
 
   .founder-photo-wrap {
-    height: 290px;
+    min-height: 320px;
+    height: 360px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -2919,10 +2915,9 @@ dialog.lead-dialog::backdrop {
 
 <!-- ==================== HEADER NAVBAR ==================== -->
 <header class="site-header">
-  <div class="brand-badge">
-    <span class="brand-icon">⚡</span>
-    <span>OGS Growth Partner</span>
-  </div>
+  <a href="#" class="brand-logo-wrap" aria-label="OGS Growth Studio Home">
+    <img src="https://dedicated-marketing-support.vercel.app/assets/ogs_logo.png" alt="OGS - OSK Growth Studio" class="site-brand-logo">
+  </a>
   <button type="button" class="nav-cta-btn open-modal-trigger">Book a Growth Call</button>
 </header>
 
@@ -2965,6 +2960,7 @@ dialog.lead-dialog::backdrop {
         <img class="h-avatar-img" src="https://dedicated-marketing-support.vercel.app/assets/clients/quitt_mozz.jpg" alt="QUITT MOZZ" title="QUITT MOZZ">
         <img class="h-avatar-img logo-homeartist" src="https://dedicated-marketing-support.vercel.app/assets/clients/homeartist_interior.jpg" alt="Homeartist Interior" title="Homeartist Interior">
         <img class="h-avatar-img" src="https://dedicated-marketing-support.vercel.app/assets/clients/relax_wellness.jpg" alt="Relax Wellness" title="Relax Wellness">
+        <img class="h-avatar-img" src="https://dedicated-marketing-support.vercel.app/assets/clients/mittal_lab_cropped.jpg" alt="Mittal Lab" title="Mittal Lab">
       </div>
       <div class="hero-rating-text">
         <span class="stars-gold">★★★★★</span>
@@ -2987,7 +2983,7 @@ dialog.lead-dialog::backdrop {
       </div>
       <div class="hero-cta-note">
         <span class="live-pulse-dot" aria-hidden="true"></span>
-        <span>⚡ 48-Hour Setup Kickoff • Free Strategic Growth Audit</span>
+        <span>⚡ 48-Hour Setup Kickoff • Free Strategic Growth Call</span>
       </div>
     </div>
   </section>
@@ -3335,6 +3331,15 @@ dialog.lead-dialog::backdrop {
         <div class="client-name">Relax Wellness</div>
         <div class="client-category">Wellness &amp; Tourism</div>
       </div>
+
+      <!-- 6. Mittal Lab -->
+      <div class="client-logo-card">
+        <div class="client-logo-img-wrap">
+          <img src="https://dedicated-marketing-support.vercel.app/assets/clients/mittal_lab_cropped.jpg" alt="Mittal Lab Diagnostics &amp; Imaging" loading="lazy">
+        </div>
+        <div class="client-name">Mittal Lab</div>
+        <div class="client-category">Diagnostics &amp; Imaging</div>
+      </div>
     </div>
   </section>
 
@@ -3377,7 +3382,7 @@ dialog.lead-dialog::backdrop {
             <span class="why-num-badge">03</span>
             <span class="why-icon-spark">🔄</span>
           </div>
-          <h3 class="why-card-title">Test. Learn. Optimize.</h3>
+          <h3 class="why-card-title">Test <span class="title-step-arrow" aria-hidden="true">➔</span> Learn <span class="title-step-arrow" aria-hidden="true">➔</span> Optimize</h3>
           <p class="why-card-text">We continuously test creatives, audiences and campaigns to identify what deserves more budget.</p>
         </div>
 
@@ -3523,7 +3528,7 @@ dialog.lead-dialog::backdrop {
         </button>
         <div id="faqAns5" class="faq-answer-panel" role="region" aria-labelledby="faqBtn5">
           <div class="faq-answer-inner">
-            <p>There is no one-size-fits-all budget. We recommend a starting budget based on your business model, offer, target market and acquisition goals. We'll discuss this during the initial growth audit.</p>
+            <p>There is no one-size-fits-all budget. We recommend a starting budget based on your business model, offer, target market and acquisition goals. We'll discuss this during the initial growth call.</p>
           </div>
         </div>
       </div>
@@ -3541,7 +3546,7 @@ dialog.lead-dialog::backdrop {
         </button>
         <div id="faqAns6" class="faq-answer-panel" role="region" aria-labelledby="faqBtn6">
           <div class="faq-answer-inner">
-            <p><strong>Start by booking a Growth Audit.</strong> We'll understand your business, current acquisition setup and growth goals, then identify the biggest opportunities and next steps.</p>
+            <p><strong>Start by booking a Growth Call.</strong> We'll understand your business, current acquisition setup and growth goals, then identify the biggest opportunities and next steps.</p>
           </div>
         </div>
       </div>
@@ -3575,9 +3580,9 @@ dialog.lead-dialog::backdrop {
 </main>
 
 <!-- Floating Hook Action Trigger Button (Bottom-Right FAB) -->
-<button type="button" class="floating-contact-hook open-modal-trigger" id="floatingHookBtn" aria-label="Book Free Growth Audit">
+<button type="button" class="floating-contact-hook open-modal-trigger" id="floatingHookBtn" aria-label="Book Free Growth Call">
   <span class="live-pulse-dot" aria-hidden="true"></span>
-  <span><span class="hook-text-accent">⚡ Free Growth Audit</span> (Book Call)</span>
+  <span><span class="hook-text-accent">⚡ Free Growth Call</span> (Book Now)</span>
 </button>
 
 <!-- ==================== LEAD MODAL POPUP ==================== -->
@@ -3593,7 +3598,7 @@ dialog.lead-dialog::backdrop {
 
     <!-- Hook Headline -->
     <h2 id="dialogTitle" class="modal-title">
-      Book Your Free <span class="highlight-gold">Growth Audit Call</span>
+      Book Your Free <span class="highlight-gold">Growth Call</span>
     </h2>
     <p class="modal-subtitle">
       Let's understand your business and map out a predictable path to scale your Meta &amp; Google ad spend into revenue.
