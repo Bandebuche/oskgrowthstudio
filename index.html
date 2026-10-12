@@ -471,7 +471,7 @@ h1 {
 .comparison-container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  align-items: stretch;
   gap: 16px;
   margin-top: 14px;
   position: relative;
@@ -486,8 +486,9 @@ h1 {
   border: 1.5px solid transparent;
   display: grid;
   grid-template-columns: 1fr 190px;
-  gap: 12px;
-  align-items: center;
+  gap: 14px;
+  align-items: stretch;
+  height: 100%;
   min-height: 320px;
   transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
@@ -510,8 +511,10 @@ h1 {
 .card-content-col {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   z-index: 2;
   position: relative;
+  height: 100%;
 }
 
 .card-pill {
@@ -603,9 +606,7 @@ h1 {
   object-fit: cover;
   object-position: center top;
   border-radius: 18px;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.12));
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 16%, black 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 16%, black 100%);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
 
@@ -920,6 +921,15 @@ h1 {
   color: var(--ink);
   letter-spacing: 0.03em;
   margin-bottom: 12px;
+}
+
+.why-pill-badge {
+  padding: 8px 24px;
+  font-size: 0.98rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 14px rgba(255, 210, 63, 0.28);
 }
 
 .clients-showcase-title {
@@ -1924,34 +1934,47 @@ dialog.lead-dialog::backdrop {
 .modal-perks-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 10px;
   background: #F8F7F3;
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--line);
   border-radius: 16px;
-  padding: 10px 12px;
+  padding: 12px 14px;
   margin-bottom: 18px;
 }
 
 .modal-perk-item {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  font-size: 0.78rem;
+  align-items: center;
+  gap: 4px;
   color: var(--ink);
-  font-weight: 800;
   text-align: center;
 }
 
 .modal-perk-item .perk-icon {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   line-height: 1;
   margin-bottom: 3px;
+}
+
+.perk-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.perk-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.25;
 }
 
 .modal-perk-item .perk-sub {
   font-size: 0.69rem;
   font-weight: 500;
   color: var(--muted);
+  line-height: 1.25;
 }
 
 .form-group {
@@ -3309,7 +3332,7 @@ dialog.lead-dialog::backdrop {
   <!-- ==================== WHY - OGS SECTION ==================== -->
   <section class="why-ogs-section" id="why-ogs" aria-labelledby="whyTitle">
     <div class="why-header">
-      <div class="pill-badge-sm">
+      <div class="pill-badge-sm why-pill-badge">
         <span>⚡ WHY — OGS</span>
       </div>
       <h2 id="whyTitle" class="why-title">We Don’t Just Run Ads. We Build the System Behind Them.</h2>
@@ -3586,19 +3609,25 @@ dialog.lead-dialog::backdrop {
     <!-- 3 Value Perks Hook Strip -->
     <div class="modal-perks-strip">
       <div class="modal-perk-item">
-        <span class="perk-icon">⚡</span>
-        <span>48h Kickoff</span>
-        <span class="perk-sub">No 45-day hiring lag</span>
-      </div>
-      <div class="modal-perk-item">
         <span class="perk-icon">🎯</span>
-        <span>Proven Ads System</span>
-        <span class="perk-sub">Meta &amp; Google scaling</span>
+        <div class="perk-text-wrap">
+          <span class="perk-title">Growth-Focused Strategy</span>
+          <span class="perk-sub">Built around your business goals</span>
+        </div>
       </div>
       <div class="modal-perk-item">
-        <span class="perk-icon">🛡️</span>
-        <span>Zero Payroll Risk</span>
-        <span class="perk-sub">100% flexibility</span>
+        <span class="perk-icon">🚀</span>
+        <div class="perk-text-wrap">
+          <span class="perk-title">Proven Ads System</span>
+          <span class="perk-sub">Meta &amp; Google scaling</span>
+        </div>
+      </div>
+      <div class="modal-perk-item">
+        <span class="perk-icon">📊</span>
+        <div class="perk-text-wrap">
+          <span class="perk-title">Data-Driven Optimization</span>
+          <span class="perk-sub">Decisions guided by campaign data</span>
+        </div>
       </div>
     </div>
 
@@ -3663,15 +3692,6 @@ dialog.lead-dialog::backdrop {
         <span>Claim My Free Growth Audit</span>
         <span aria-hidden="true">➔</span>
       </button>
-
-      <!-- Trust & Privacy Strip -->
-      <div class="modal-guarantee-strip">
-        <span>🔒 100% Confidential</span>
-        <span>•</span>
-        <span>🚫 Zero Spam Guarantee</span>
-        <span>•</span>
-        <span>⚡ 24h Turnaround</span>
-      </div>
     </form>
 
     <!-- Social Proof Mini Avatars Inside Modal -->
