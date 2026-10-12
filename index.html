@@ -1356,11 +1356,11 @@ h1 {
   position: relative;
   width: 100%;
   flex: 1;
-  min-height: 380px;
-  border-radius: 16px;
+  min-height: 440px;
+  border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(15, 16, 21, 0.08);
-  margin-bottom: 14px;
+  margin-bottom: 0;
   background: #F4F2EB;
 }
 
@@ -1368,7 +1368,7 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 15%;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -1379,19 +1379,19 @@ h1 {
 
 .founder-floating-pill {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 12px;
+  left: 12px;
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   background: rgba(15, 16, 21, 0.88);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-pill);
   color: #FFFFFF;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.02em;
 }
@@ -1399,7 +1399,8 @@ h1 {
 .founder-card-content {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 0 0 auto;
+  margin-top: 14px;
 }
 
 .founder-name-row {
@@ -1412,26 +1413,15 @@ h1 {
 }
 
 .founder-name {
-  font-size: 1.25rem;
+  font-size: 1.28rem;
   font-weight: 900;
   letter-spacing: -0.025em;
   color: var(--ink);
   margin: 0;
 }
 
-.founder-role-badge {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 800;
-  color: #15803D;
-  background: #EDFAF3;
-  border: 1px solid #C1EED8;
-  padding: 2px 8px;
-  border-radius: var(--radius-pill);
-}
-
 .founder-bio {
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   color: var(--muted);
   line-height: 1.55;
   margin: 6px 0 0;
@@ -1477,89 +1467,75 @@ h1 {
 }
 
 .why-bottom-line {
-  margin-top: 20px;
-  background: linear-gradient(135deg, #0F1015 0%, #1D1E28 100%);
-  border: 2px solid #0F1015;
+  margin-top: 24px;
+  background: #0F1015;
+  border: 1.5px solid #0F1015;
   border-radius: 20px;
-  padding: 22px 28px;
+  padding: 22px 32px;
   box-shadow: 0 12px 32px rgba(15, 16, 21, 0.16);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.bottom-line-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: #FFD23F;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  justify-content: center;
+  text-align: center;
 }
 
 .bottom-line-quote {
-  font-size: 1.15rem;
+  font-size: clamp(1.1rem, 2.3vw, 1.35rem);
   font-weight: 800;
   color: #FFFFFF;
   margin: 0;
   letter-spacing: -0.015em;
-  flex: 1;
+  line-height: 1.45;
+  text-align: center;
 }
 
 /* ====================================================
    FREQUENTLY ASKED QUESTIONS (FAQ) ACCORDION
    ==================================================== */
 .faq-section {
-  max-width: 860px;
-  margin: 54px auto 0;
+  max-width: 900px;
+  margin: 58px auto 0;
   padding: 0 10px;
 }
 
 .faq-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 .faq-pill-badge {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 5px 14px;
+  gap: 8px;
+  padding: 7px 18px;
   background: var(--yellow-light);
-  border: 1.5px solid rgba(255, 210, 63, 0.85);
+  border: 1.5px solid rgba(255, 210, 63, 0.9);
   border-radius: var(--radius-pill);
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   font-weight: 800;
   color: var(--ink);
   letter-spacing: 0.02em;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .faq-badge-icon {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .faq-title {
-  font-size: 2.1rem;
+  font-size: clamp(2.2rem, 4.4vw, 2.85rem);
   font-weight: 900;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   line-height: 1.2;
   color: var(--ink);
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .faq-subtitle {
   color: var(--muted);
-  font-size: 0.96rem;
-  line-height: 1.5;
-  max-width: 580px;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  max-width: 620px;
   margin: 0 auto;
   font-weight: 500;
 }
@@ -1567,13 +1543,13 @@ h1 {
 .faq-accordion {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .faq-item {
   background: #FFFFFF;
   border: 1.5px solid var(--line);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: 0 2px 8px rgba(17, 17, 20, 0.03);
   overflow: hidden;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
@@ -1581,12 +1557,12 @@ h1 {
 
 .faq-item:hover {
   border-color: #D4D2C9;
-  box-shadow: 0 6px 20px rgba(17, 17, 20, 0.06);
+  box-shadow: 0 8px 24px rgba(17, 17, 20, 0.06);
 }
 
 .faq-item.is-open {
   border-color: #0F1015;
-  box-shadow: 0 8px 24px rgba(15, 16, 21, 0.08);
+  box-shadow: 0 10px 28px rgba(15, 16, 21, 0.08);
 }
 
 .faq-question-btn {
@@ -1594,8 +1570,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 20px 24px;
+  gap: 18px;
+  padding: 22px 28px;
   background: none;
   border: none;
   text-align: left;
@@ -1607,7 +1583,7 @@ h1 {
 }
 
 .faq-q-text {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 800;
   line-height: 1.35;
   letter-spacing: -0.015em;
@@ -1616,8 +1592,8 @@ h1 {
 }
 
 .faq-toggle-icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: #F8F7F3;
   border: 1px solid var(--line);
@@ -1629,8 +1605,8 @@ h1 {
 }
 
 .faq-toggle-icon svg {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1660,11 +1636,11 @@ h1 {
 }
 
 .faq-answer-inner p {
-  padding: 0 24px 22px 24px;
+  padding: 0 28px 24px 28px;
   margin: 0;
   color: #4A4A54;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1.02rem;
+  line-height: 1.65;
   font-weight: 500;
 }
 
@@ -2211,14 +2187,24 @@ dialog.lead-dialog::backdrop {
 .success-view {
   display: none;
   text-align: center;
-  padding: 20px 10px 10px;
+  padding: 24px 14px 14px;
 }
 
-.success-view svg {
-  width: 68px;
-  height: 68px;
-  margin-bottom: 12px;
+.success-check-bubble {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #D9F99D;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 8px 24px rgba(217, 249, 157, 0.4);
   animation: bounceCheck 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.success-check-bubble svg {
+  width: 32px;
+  height: 32px;
 }
 
 @keyframes bounceCheck {
@@ -2227,40 +2213,31 @@ dialog.lead-dialog::backdrop {
   100% { transform: scale(1); }
 }
 
-.success-view h2 {
-  font-size: 1.7rem;
-  font-weight: 900;
-  margin: 0 0 8px;
-}
-
-.success-view p {
-  color: var(--muted);
-  font-size: 0.98rem;
-  line-height: 1.5;
-  margin: 0 0 20px;
-}
-
-.whatsapp-direct-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 14px 20px;
-  background: #25D366;
-  color: #FFFFFF;
-  border-radius: var(--radius-pill);
+.success-kicker {
+  font-size: 0.8rem;
   font-weight: 800;
-  font-size: 0.98rem;
-  text-decoration: none;
+  letter-spacing: 0.08em;
+  color: #15803D;
+  text-transform: uppercase;
   margin-bottom: 10px;
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
-  transition: transform 0.2s ease;
 }
 
-.whatsapp-direct-btn:hover {
-  transform: translateY(-2px);
-  background: #20BD5A;
+.success-title {
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+.success-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 auto 24px;
+  max-width: 440px;
+  font-weight: 500;
 }
 
 .modal-sheet.is-submitted form,
@@ -2719,37 +2696,37 @@ dialog.lead-dialog::backdrop {
   }
 
   .faq-title {
-    font-size: 1.55rem;
+    font-size: 1.85rem;
   }
 
   .faq-subtitle {
-    font-size: 0.88rem;
+    font-size: 0.98rem;
     padding: 0 8px;
   }
 
   .faq-question-btn {
-    padding: 16px 18px;
-    gap: 12px;
+    padding: 18px 20px;
+    gap: 14px;
   }
 
   .faq-q-text {
-    font-size: 0.94rem;
+    font-size: 1.12rem;
   }
 
   .faq-toggle-icon {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
 
   .faq-toggle-icon svg {
-    width: 13px;
-    height: 13px;
+    width: 14px;
+    height: 14px;
   }
 
   .faq-answer-inner p {
-    padding: 0 18px 18px 18px;
-    font-size: 0.88rem;
-    line-height: 1.55;
+    padding: 0 20px 20px 20px;
+    font-size: 0.98rem;
+    line-height: 1.6;
   }
 
   .clients-logo-grid {
@@ -2801,32 +2778,33 @@ dialog.lead-dialog::backdrop {
   .why-founder-card {
     width: 100%;
     box-sizing: border-box;
+    padding: 16px 16px 18px;
   }
 
   .founder-photo-wrap {
-    min-height: 320px;
-    height: 360px;
+    min-height: 380px;
+    height: 420px;
     width: 100%;
     box-sizing: border-box;
   }
 
   .why-card {
-    padding: 20px 18px;
+    padding: 18px 18px;
     width: 100%;
     box-sizing: border-box;
   }
 
   .why-bottom-line {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 18px 20px;
-    gap: 12px;
     width: 100%;
     box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
   }
 
   .bottom-line-quote {
-    font-size: 1.02rem;
+    font-size: 1.05rem;
+    text-align: center;
   }
 
   .hero-cta-buttons {
@@ -3421,10 +3399,6 @@ dialog.lead-dialog::backdrop {
 
     <!-- Bottom Line High-Impact Banner -->
     <div class="why-bottom-line">
-      <div class="bottom-line-badge">
-        <span class="bottom-line-icon">💡</span>
-        <span>The Bottom Line</span>
-      </div>
       <p class="bottom-line-quote">
         “Every Campaign Needs a Strategy. Every Strategy Needs a System.”
       </p>
@@ -3687,7 +3661,7 @@ dialog.lead-dialog::backdrop {
 
       <!-- High-Converting Shimmer CTA Button -->
       <button class="submit-btn" id="submitBtn" type="submit">
-        <span>Claim My Free Growth Audit</span>
+        <span>Claim My Free Growth Call</span>
         <span aria-hidden="true">➔</span>
       </button>
     </form>
@@ -3700,6 +3674,7 @@ dialog.lead-dialog::backdrop {
         <img class="h-avatar-img mini-dot-img" src="https://dedicated-marketing-support.vercel.app/assets/clients/quitt_mozz.jpg" alt="QUITT MOZZ" title="QUITT MOZZ">
         <img class="h-avatar-img mini-dot-img logo-homeartist" src="https://dedicated-marketing-support.vercel.app/assets/clients/homeartist_interior.jpg" alt="Homeartist Interior" title="Homeartist Interior">
         <img class="h-avatar-img mini-dot-img" src="https://dedicated-marketing-support.vercel.app/assets/clients/relax_wellness.jpg" alt="Relax Wellness" title="Relax Wellness">
+        <img class="h-avatar-img mini-dot-img" src="https://dedicated-marketing-support.vercel.app/assets/clients/mittal_lab_cropped.jpg" alt="Mittal Lab" title="Mittal Lab">
       </div>
       <div class="social-proof-text">
         <span class="social-proof-stars">★★★★★</span>
@@ -3709,17 +3684,16 @@ dialog.lead-dialog::backdrop {
 
     <!-- Success View -->
     <div class="success-view" role="status">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="11" fill="#10B981"/>
-        <path d="M7 12.5l3.2 3.2L17 9" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-      <h2>You're All Set! 🎉</h2>
-      <p>I have received your details and am preparing your tailored marketing roadmap. I will reach out within 24 hours on WhatsApp &amp; Email.</p>
-      
-      <a href="https://wa.me/?text=Hi%2C%20I%20just%20submitted%20the%20form%20for%20a%20free%20marketing%20strategy%20audit." target="_blank" rel="noopener noreferrer" class="whatsapp-direct-btn">
-        <span>💬 Instant WhatsApp Connect</span>
-      </a>
-
+      <div class="success-check-bubble">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 13l4 4L19 7" stroke="#0F1015" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="success-kicker">REQUEST RECEIVED · OGS</div>
+      <h2 class="success-title">Your Next Stage of Growth Starts Here.</h2>
+      <p class="success-desc">
+        Thanks for considering OSK Growth Studio. We'll review your details and reach out to understand your business, advertising goals and opportunities to improve your paid acquisition strategy.
+      </p>
       <button type="button" class="submit-btn" id="doneBtn" style="margin-top:8px;">Done &amp; Close</button>
     </div>
   </div>
