@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /
+
+# 1. Redirect /thank-you.html to /thank-you (Clean URL redirect)
+RewriteCond %{THE_REQUEST} /thank-you\.html [NC]
+RewriteRule ^thank-you\.html$ /thank-you [R=301,L]
+
+# 2. Rewrite clean URLs without .html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

@@ -4017,7 +4017,7 @@ dialog.lead-dialog::backdrop {
 
     const trap = document.getElementById('f-site');
     if (trap && trap.value) {
-      window.location.href = 'thank-you.html';
+      window.location.href = '/thank-you';
       return;
     }
 
@@ -4057,7 +4057,7 @@ dialog.lead-dialog::backdrop {
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
       }
-      window.location.href = 'thank-you.html';
+      window.location.href = '/thank-you';
     } else {
       formAlert.textContent = "We couldn't submit your details. Please check your connection and try again.";
       formAlert.style.display = 'block';
