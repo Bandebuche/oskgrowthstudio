@@ -40,9 +40,9 @@ src="https://www.facebook.com/tr?id=1310370707788717&ev=Lead&noscript=1"
   --line: #E6E4DC;
   --yellow: #FFD23F;
   --yellow-hover: #F5C62C;
-  --green: #10B981;
-  --green-bg: #EDFAF3;
-  --green-border: #C1EED8;
+  --green: #15803D;
+  --green-bg: #DCFCE7;
+  --green-border: #86EFAC;
   --radius-card: 24px;
   --radius-pill: 9999px;
   --shadow-card: 0 16px 36px rgba(15, 16, 21, 0.07), 0 3px 8px rgba(15, 16, 21, 0.03);
@@ -67,6 +67,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 24px 16px;
+  overflow-x: hidden;
 }
 
 /* Ambient background glow */
@@ -85,22 +86,24 @@ body::before {
 .header {
   position: relative;
   z-index: 1;
-  padding: 12px 0 24px;
+  padding: 8px 0 20px;
   text-align: center;
+  width: 100%;
 }
 
 .logo-img {
-  height: 40px;
+  height: 42px;
   width: auto;
+  max-width: 200px;
   object-fit: contain;
 }
 
 .main-container {
   position: relative;
   z-index: 1;
-  max-width: 580px;
+  max-width: 520px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .thankyou-card {
@@ -108,15 +111,18 @@ body::before {
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
-  padding: 44px 36px 36px;
+  padding: 42px 36px 36px;
   text-align: center;
-  animation: slideUp 0.5s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -125,54 +131,63 @@ body::before {
 }
 
 .check-bubble {
-  width: 76px;
-  height: 76px;
-  background: var(--yellow);
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
-  display: inline-flex;
+  background: var(--green-bg);
+  border: 2px solid var(--green-border);
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 22px;
-  box-shadow: 0 10px 24px rgba(255, 210, 63, 0.45);
+  margin: 0 auto 18px;
+  color: var(--green);
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.18);
   animation: popScale 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 @keyframes popScale {
-  0% { transform: scale(0.6); opacity: 0; }
+  0% { transform: scale(0.4); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
 .check-bubble svg {
-  width: 38px;
-  height: 38px;
+  width: 28px;
+  height: 28px;
 }
 
 .kicker {
-  display: inline-block;
+  display: block;
+  width: 100%;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: var(--muted);
+  color: var(--green);
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin: 0 auto 12px;
+  text-align: center;
 }
 
 .title {
-  font-size: clamp(1.6rem, 3.8vw, 2.1rem);
+  display: block;
+  width: 100%;
+  font-size: clamp(1.4rem, 4.5vw, 1.95rem);
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.28;
   color: var(--ink);
-  margin-bottom: 14px;
+  margin: 0 auto 14px;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .desc {
-  font-size: 1rem;
+  display: block;
+  font-size: clamp(0.92rem, 2.5vw, 1.02rem);
   color: var(--muted);
   line-height: 1.6;
-  margin-bottom: 28px;
+  max-width: 440px;
+  margin: 0 auto 28px;
+  text-align: center;
 }
-
 
 .back-btn {
   display: inline-flex;
@@ -180,12 +195,13 @@ body::before {
   justify-content: center;
   gap: 8px;
   width: 100%;
+  max-width: 320px;
   background: var(--yellow);
   color: var(--ink);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 800;
-  padding: 16px 24px;
+  padding: 15px 24px;
   border-radius: var(--radius-pill);
   text-decoration: none;
   box-shadow: 0 10px 24px rgba(255, 210, 63, 0.35);
@@ -207,15 +223,36 @@ body::before {
 .footer {
   position: relative;
   z-index: 1;
-  padding: 24px 0 12px;
+  padding: 20px 0 10px;
   text-align: center;
   font-size: 0.82rem;
   color: var(--muted);
+  width: 100%;
 }
 
 @media (max-width: 480px) {
+  body {
+    padding: 16px 14px;
+  }
   .thankyou-card {
-    padding: 32px 20px 24px;
+    padding: 32px 20px 28px;
+    border-radius: 20px;
+  }
+  .check-bubble {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 14px;
+  }
+  .check-bubble svg {
+    width: 24px;
+    height: 24px;
+  }
+  .desc {
+    margin-bottom: 24px;
+  }
+  .back-btn {
+    max-width: 100%;
+    padding: 14px 20px;
   }
 }
 </style>
@@ -232,7 +269,7 @@ body::before {
   <div class="thankyou-card">
     <div class="check-bubble" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none">
-        <path d="M5 13l4 4L19 7" stroke="#0F1015" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
 
@@ -241,7 +278,6 @@ body::before {
     <p class="desc">
       Thank you for choosing OSK Growth Studio. We have safely received your details and our team is already reviewing your brand's growth opportunities.
     </p>
-
 
     <a href="index.html" class="back-btn">
       <span>← Return to Homepage</span>
