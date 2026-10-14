@@ -1802,8 +1802,8 @@ dialog.lead-dialog {
   padding: 0;
   background: transparent;
   color: var(--ink);
-  width: min(540px, calc(100% - 24px));
-  max-height: calc(100dvh - 24px);
+  width: min(520px, calc(100% - 24px));
+  max-height: 96vh;
   overflow: visible;
   margin: auto;
 }
@@ -1838,18 +1838,18 @@ dialog.lead-dialog::backdrop {
 .modal-sheet {
   background: #FFFFFF;
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(255, 210, 63, 0.24) 0%, rgba(255, 255, 255, 0) 60%),
+    radial-gradient(circle at 50% 0%, rgba(255, 210, 63, 0.22) 0%, rgba(255, 255, 255, 0) 60%),
     linear-gradient(180deg, #FFFFFF 0%, #FAFAF8 100%);
   border: 2px solid rgba(231, 229, 221, 0.95);
   border-radius: 24px;
   box-shadow: 
-    0 25px 70px -10px rgba(17, 17, 20, 0.4),
-    0 0 45px rgba(255, 210, 63, 0.22),
+    0 25px 70px -10px rgba(17, 17, 20, 0.35),
+    0 0 45px rgba(255, 210, 63, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  padding: 20px 24px 18px;
+  padding: 18px 24px 16px;
   position: relative;
-  overflow-y: auto;
-  max-height: calc(100dvh - 32px);
+  overflow: hidden;
+  max-height: none;
   animation: modalSpringIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -1945,43 +1945,52 @@ dialog.lead-dialog::backdrop {
   background: #F8F7F3;
   border: 1.5px solid var(--line);
   border-radius: 14px;
-  padding: 8px 10px;
-  margin-bottom: 12px;
+  padding: 6px 8px;
+  margin-bottom: 10px;
+  align-items: stretch;
 }
 
 .modal-perk-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  color: var(--ink);
+  justify-content: center;
   text-align: center;
+  gap: 2px;
+  color: var(--ink);
+  padding: 6px 4px;
+  background: #FFFFFF;
+  border: 1px solid rgba(230, 228, 220, 0.7);
+  border-radius: 10px;
+  min-height: 52px;
 }
 
 .modal-perk-item .perk-icon {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   line-height: 1;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .perk-text-wrap {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
 }
 
 .perk-title {
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   font-weight: 800;
   color: var(--ink);
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .modal-perk-item .perk-sub {
-  font-size: 0.69rem;
-  font-weight: 500;
+  font-size: 0.65rem;
+  font-weight: 600;
   color: var(--muted);
-  line-height: 1.25;
+  line-height: 1.15;
 }
 
 .form-group {
@@ -2734,7 +2743,28 @@ dialog.lead-dialog::backdrop {
   }
 
   .modal-social-proof {
-    display: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--line);
+  }
+
+  .mini-avatars-row .mini-dot-img {
+    width: 22px;
+    height: 22px;
+    margin-left: -6px;
+  }
+
+  .social-proof-text {
+    font-size: 0.72rem;
+    line-height: 1.25;
+  }
+
+  .social-proof-stars {
+    font-size: 0.65rem;
   }
 
   .form-group {
@@ -3654,7 +3684,6 @@ dialog.lead-dialog::backdrop {
         <span class="perk-icon">🎯</span>
         <div class="perk-text-wrap">
           <span class="perk-title">Growth-Focused Strategy</span>
-          <span class="perk-sub">Built around your business goals</span>
         </div>
       </div>
       <div class="modal-perk-item">
@@ -3668,7 +3697,6 @@ dialog.lead-dialog::backdrop {
         <span class="perk-icon">📊</span>
         <div class="perk-text-wrap">
           <span class="perk-title">Data-Driven Optimization</span>
-          <span class="perk-sub">Decisions guided by campaign data</span>
         </div>
       </div>
     </div>
