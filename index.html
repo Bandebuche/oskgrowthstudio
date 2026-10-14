@@ -606,17 +606,19 @@ h1 {
   height: 100%;
   min-height: 260px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  overflow: visible;
+  overflow: hidden;
+  border-radius: 18px;
 }
 
 .card-person-img {
   width: 100%;
   height: 100%;
-  max-height: 270px;
+  min-height: 260px;
+  max-height: 280px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
   border-radius: 18px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
@@ -1839,12 +1841,12 @@ dialog.lead-dialog::backdrop {
     radial-gradient(circle at 50% 0%, rgba(255, 210, 63, 0.24) 0%, rgba(255, 255, 255, 0) 60%),
     linear-gradient(180deg, #FFFFFF 0%, #FAFAF8 100%);
   border: 2px solid rgba(231, 229, 221, 0.95);
-  border-radius: 28px;
+  border-radius: 24px;
   box-shadow: 
     0 25px 70px -10px rgba(17, 17, 20, 0.4),
     0 0 45px rgba(255, 210, 63, 0.22),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  padding: 28px 26px 24px;
+  padding: 20px 24px 18px;
   position: relative;
   overflow-y: auto;
   max-height: calc(100dvh - 32px);
@@ -1853,8 +1855,8 @@ dialog.lead-dialog::backdrop {
 
 .modal-close-btn {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 14px;
+  right: 14px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -1879,18 +1881,18 @@ dialog.lead-dialog::backdrop {
 .modal-hook-banner {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
+  gap: 6px;
+  padding: 4px 12px;
   background: linear-gradient(135deg, #FFF9D2 0%, #FEF08A 100%);
   border: 1.5px solid rgba(255, 210, 63, 0.9);
   border-radius: var(--radius-pill);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 800;
   color: #0F1015;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   box-shadow: 0 2px 8px rgba(255, 210, 63, 0.25);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .live-pulse-dot {
@@ -1911,7 +1913,7 @@ dialog.lead-dialog::backdrop {
 }
 
 .modal-title {
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.2;
@@ -1930,21 +1932,21 @@ dialog.lead-dialog::backdrop {
 
 .modal-subtitle {
   color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.45;
-  margin: 8px 0 16px;
+  font-size: 0.85rem;
+  line-height: 1.38;
+  margin: 4px 0 10px;
   font-weight: 500;
 }
 
 .modal-perks-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 8px;
   background: #F8F7F3;
   border: 1.5px solid var(--line);
-  border-radius: 16px;
-  padding: 12px 14px;
-  margin-bottom: 18px;
+  border-radius: 14px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
 }
 
 .modal-perk-item {
@@ -1983,14 +1985,14 @@ dialog.lead-dialog::backdrop {
 }
 
 .form-group {
-  margin-bottom: 14px;
+  margin-bottom: 9px;
 }
 
 .form-group label {
   display: block;
   font-weight: 700;
-  font-size: 0.88rem;
-  margin-bottom: 5px;
+  font-size: 0.82rem;
+  margin-bottom: 3px;
   color: var(--ink);
 }
 
@@ -2000,11 +2002,11 @@ dialog.lead-dialog::backdrop {
 
 .input-icon-badge {
   position: absolute;
-  left: 14px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   color: #71717A;
   pointer-events: none;
   display: flex;
@@ -2026,10 +2028,10 @@ dialog.lead-dialog::backdrop {
 .form-group input {
   width: 100%;
   font: inherit;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 12px 14px 12px 42px;
-  border-radius: 14px;
+  padding: 10px 12px 10px 38px;
+  border-radius: 12px;
   border: 1.5px solid var(--line);
   background: #FBFBFA;
   color: var(--ink);
@@ -2095,15 +2097,15 @@ dialog.lead-dialog::backdrop {
   width: 100%;
   font: inherit;
   font-weight: 800;
-  font-size: 1.05rem;
-  padding: 16px 20px;
+  font-size: 0.98rem;
+  padding: 13px 18px;
   border-radius: var(--radius-pill);
   border: 2px solid #0F1015;
   background: var(--yellow);
   color: #0F1015;
   cursor: pointer;
-  margin-top: 8px;
-  box-shadow: 0 10px 24px rgba(255, 210, 63, 0.5), 0 3px 6px rgba(17, 17, 20, 0.1);
+  margin-top: 6px;
+  box-shadow: 0 10px 24px rgba(255, 210, 63, 0.4), 0 3px 6px rgba(17, 17, 20, 0.1);
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background-color 0.2s ease;
   display: flex;
   align-items: center;
@@ -2687,28 +2689,82 @@ dialog.lead-dialog::backdrop {
   }
 
   dialog.lead-dialog {
-    width: calc(100% - 20px);
-    max-height: calc(100dvh - 20px);
+    width: calc(100% - 24px);
+    max-width: 390px;
+    margin: auto;
   }
 
   .modal-sheet {
-    padding: 22px 18px 20px;
+    padding: 16px 16px 14px;
+    border-radius: 20px;
+  }
+
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    background: #FFFFFF;
+    color: #0F1015;
+    border: 2px solid #0F1015;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-size: 1.3rem;
+    font-weight: 800;
+    z-index: 99;
+  }
+
+  .modal-hook-banner {
+    padding: 3px 10px;
+    font-size: 0.7rem;
+    margin-bottom: 6px;
+  }
+
+  .modal-title {
+    font-size: 1.25rem;
+    padding-right: 28px;
+  }
+
+  .modal-subtitle {
+    font-size: 0.78rem;
+    margin: 4px 0 8px;
   }
 
   .modal-perks-strip {
-    grid-template-columns: 1fr;
-    gap: 6px;
+    display: none !important;
   }
 
-  .modal-perk-item {
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    text-align: left;
+  .modal-social-proof {
+    display: none !important;
+  }
+
+  .form-group {
+    margin-bottom: 7px;
+  }
+
+  .form-group label {
+    font-size: 0.76rem;
+    margin-bottom: 2px;
   }
 
   .form-group input {
-    font-size: 16px;
+    font-size: 14px;
+    padding: 8px 10px 8px 34px;
+  }
+
+  .input-icon-badge {
+    left: 10px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .form-helper-note {
+    display: none;
+  }
+
+  .submit-btn {
+    padding: 11px 16px;
+    font-size: 0.94rem;
+    margin-top: 6px;
   }
 
   .faq-section {
@@ -2917,7 +2973,7 @@ dialog.lead-dialog::backdrop {
   <a href="#" class="brand-logo-wrap" aria-label="OGS Growth Studio Home">
     <img src="https://dedicated-marketing-support.vercel.app/assets/ogs_logo.png" alt="OGS - OSK Growth Studio" class="site-brand-logo">
   </a>
-  <button type="button" class="nav-cta-btn open-modal-trigger">Book a Growth Call</button>
+  <button type="button" class="nav-cta-btn open-modal-trigger">Start Scaling</button>
 </header>
 
 <main class="page">
@@ -2970,7 +3026,7 @@ dialog.lead-dialog::backdrop {
     <div class="hero-cta-wrap">
       <div class="hero-cta-buttons">
         <button type="button" class="hero-action-btn open-modal-trigger" id="heroOpenBtn" aria-haspopup="dialog" aria-controls="leadDialog">
-          <span>Book a Growth Call</span>
+          <span>Start Scaling</span>
           <span class="hero-arrow-circle" aria-hidden="true">➔</span>
         </button>
         <a href="#our-work" class="hero-secondary-btn">
@@ -3029,9 +3085,6 @@ dialog.lead-dialog::backdrop {
       </div>
 
       <div class="card-image-col">
-        <div class="floating-tag tag-bad" aria-hidden="true">
-          <span>⚠️ 45+ Days Lost</span>
-        </div>
         <img class="card-person-img" src="https://dedicated-marketing-support.vercel.app/assets/ai_stressed.jpg" alt="Stressed professional overwhelmed with resumes and in-house hiring headaches" loading="lazy">
       </div>
     </article>
@@ -3084,14 +3137,6 @@ dialog.lead-dialog::backdrop {
       </div>
 
       <div class="card-image-col">
-        <div class="floating-tag tag-good" aria-hidden="true">
-          <span>🚀 Day 1 Kickoff</span>
-        </div>
-        <div class="marketer-sparks" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path d="M2 12l2.5-1.5L6 8l-1.5 2.5L2 12zM20 6l-2 3M22 10l-3-1" stroke="#FFD23F" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-        </div>
         <img class="card-person-img" src="https://dedicated-marketing-support.vercel.app/assets/ai_smiling.jpg" alt="Dedicated marketing expert smiling at laptop delivering high-converting ad performance" loading="lazy">
       </div>
     </article>
@@ -3411,10 +3456,11 @@ dialog.lead-dialog::backdrop {
           </div>
           <div class="founder-card-content">
             <div class="founder-name-row">
-              <h3 class="founder-name">Founder - OSK Growth Studio</h3>
+              <h3 class="founder-name">Onkar Kulkarni</h3>
+              <span class="founder-role-tag" style="font-size:0.8rem;font-weight:700;color:var(--muted);">Founder - OSK Growth Studio</span>
             </div>
             <p class="founder-bio">
-              I lead OGS's performance marketing approach across Meta and Google, connecting campaign strategy, tracking and optimization to business goals.
+              We lead OGS's performance marketing approach across Meta and Google, connecting campaign strategy, tracking and optimization to business goals.
             </p>
           </div>
         </div>
@@ -3560,7 +3606,7 @@ dialog.lead-dialog::backdrop {
     </div>
 
     <button type="button" class="cta-button open-modal-trigger" id="openFormBtn" aria-haspopup="dialog" aria-controls="leadDialog">
-      <span>Book a Growth Call</span>
+      <span>Start Scaling</span>
       <span class="cta-circle-arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
@@ -3685,7 +3731,7 @@ dialog.lead-dialog::backdrop {
 
       <!-- High-Converting Shimmer CTA Button -->
       <button class="submit-btn" id="submitBtn" type="submit">
-        <span>Claim My Free Growth Call</span>
+        <span>Submit Details</span>
         <span aria-hidden="true">➔</span>
       </button>
     </form>
@@ -3825,7 +3871,7 @@ dialog.lead-dialog::backdrop {
       if (dlg && !dlg.open) {
         openModal(true);
       }
-    }, 700);
+    }, 5500);
   }
 
   if (document.readyState === 'complete') {
@@ -3976,7 +4022,7 @@ dialog.lead-dialog::backdrop {
     }
 
     btn.disabled = false;
-    btn.innerHTML = '<span>Claim My Free Growth Audit</span><span aria-hidden="true">➔</span>';
+    btn.innerHTML = '<span>Submit Details</span><span aria-hidden="true">➔</span>';
 
     if (saved) {
       if (typeof fbq === 'function') {
