@@ -1,11 +1,17 @@
+DirectoryIndex index.html index.php
+Options -Indexes +FollowSymLinks
+
 RewriteEngine On
 RewriteBase /
 
-# 1. Redirect /thank-you.html to /thank-you (Clean URL redirect)
+# 1. Direct clean rewrite for /thank-you and /thank-you/
+RewriteRule ^thank-you/?$ thank-you/index.html [L]
+
+# 2. Redirect /thank-you.html to /thank-you
 RewriteCond %{THE_REQUEST} /thank-you\.html [NC]
 RewriteRule ^thank-you\.html$ /thank-you [R=301,L]
 
-# 2. Rewrite clean URLs without .html
+# 3. Clean URLs for any other .html files
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
