@@ -33,6 +33,11 @@ fbq('track', 'Lead');
 src="https://www.facebook.com/tr?id=1310370707788717&ev=Lead&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<script>
+if (window.history && window.history.replaceState && window.location.pathname.includes('.html')) {
+  window.history.replaceState(null, '', window.location.pathname.replace(/\.html.*$/, ''));
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
