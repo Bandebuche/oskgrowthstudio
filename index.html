@@ -3655,17 +3655,17 @@ dialog.lead-dialog::backdrop {
         <div class="field-error-msg">Please enter a valid 10-digit mobile number.</div>
       </div>
 
-      <!-- Gmail -->
+      <!-- Email -->
       <div class="form-group">
-        <label for="f-email">Gmail Address</label>
+        <label for="f-email">Email Address</label>
         <div class="input-with-icon">
           <span class="input-icon-badge" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </span>
-          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@gmail.com" required>
+          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
         </div>
         <div class="form-helper-note">✓ Your personalized strategy deck will be delivered here</div>
-        <div class="field-error-msg">Please enter a valid Gmail address (name@gmail.com).</div>
+        <div class="field-error-msg">Please enter a valid email address.</div>
       </div>
 
       <!-- City -->
@@ -3888,7 +3888,7 @@ dialog.lead-dialog::backdrop {
       return /^[6-9]\d{9}$/.test(clean);
     },
     email: function(val) {
-      return /^[a-z0-9](\.?[a-z0-9_+-])*@gmail\.com$/i.test(val.trim());
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
     },
     city: function(val) {
       return /^[A-Za-z\u0900-\u097F][A-Za-z\u0900-\u097F .'-]{1,49}$/.test(val.trim());
@@ -3942,7 +3942,7 @@ dialog.lead-dialog::backdrop {
 
     const trap = document.getElementById('f-site');
     if (trap && trap.value) {
-      sheet.classList.add('is-submitted');
+      window.location.href = 'thank-you.html';
       return;
     }
 
@@ -3979,7 +3979,10 @@ dialog.lead-dialog::backdrop {
     btn.innerHTML = '<span>Claim My Free Growth Audit</span><span aria-hidden="true">➔</span>';
 
     if (saved) {
-      sheet.classList.add('is-submitted');
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+      window.location.href = 'thank-you.html';
     } else {
       formAlert.textContent = "We couldn't submit your details. Please check your connection and try again.";
       formAlert.style.display = 'block';

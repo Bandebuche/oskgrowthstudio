@@ -1,4 +1,5 @@
 .vercel
 index.html.bak
 website_hostinger.zip
+serve.js
 *.log

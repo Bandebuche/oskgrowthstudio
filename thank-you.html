@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thank You | OSK Growth Studio</title>
+<meta name="description" content="Thank you for requesting your Growth Marketing Strategy & Audit from OSK Growth Studio. We will contact you within 24 hours.">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1310370707788717');
+fbq('track', 'PageView');
+fbq('track', 'Lead');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1310370707788717&ev=Lead&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #F8F7F3;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #FFFFFF 0%, #F5F3EC 100%);
+  --ink: #0F1015;
+  --ink-secondary: #272832;
+  --muted: #565662;
+  --card: #FFFFFF;
+  --line: #E6E4DC;
+  --yellow: #FFD23F;
+  --yellow-hover: #F5C62C;
+  --green: #10B981;
+  --green-bg: #EDFAF3;
+  --green-border: #C1EED8;
+  --radius-card: 24px;
+  --radius-pill: 9999px;
+  --shadow-card: 0 16px 36px rgba(15, 16, 21, 0.07), 0 3px 8px rgba(15, 16, 21, 0.03);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+/* Ambient background glow */
+body::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  right: 0;
+  width: min(500px, 90vw);
+  height: min(500px, 90vh);
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(255, 210, 63, 0.08) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  padding: 12px 0 24px;
+  text-align: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.main-container {
+  position: relative;
+  z-index: 1;
+  max-width: 580px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.thankyou-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 44px 36px 36px;
+  text-align: center;
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.check-bubble {
+  width: 76px;
+  height: 76px;
+  background: var(--yellow);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 24px rgba(255, 210, 63, 0.45);
+  animation: popScale 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popScale {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.check-bubble svg {
+  width: 38px;
+  height: 38px;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: clamp(1.6rem, 3.8vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.desc {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 16px 24px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(255, 210, 63, 0.35);
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.back-btn:hover {
+  background: var(--yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(255, 210, 63, 0.45);
+}
+
+.back-btn:active {
+  transform: translateY(0);
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+  padding: 24px 0 12px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .thankyou-card {
+    padding: 32px 20px 24px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" aria-label="Go to Homepage">
+    <img src="assets/ogs_logo.png" alt="OSK Growth Studio Logo" class="logo-img" onerror="this.onerror=null;this.src='assets/ogs_logo.jpg';">
+  </a>
+</header>
+
+<main class="main-container">
+  <div class="thankyou-card">
+    <div class="check-bubble" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M5 13l4 4L19 7" stroke="#0F1015" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <span class="kicker">REQUEST RECEIVED · OSK GROWTH STUDIO</span>
+    <h1 class="title">Your Next Stage of Growth Starts Here.</h1>
+    <p class="desc">
+      Thank you for choosing OSK Growth Studio. We have safely received your details and our team is already reviewing your brand's growth opportunities.
+    </p>
+
+
+    <a href="index.html" class="back-btn">
+      <span>← Return to Homepage</span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer">
+  © 2026 OSK Growth Studio. All rights reserved.
+</footer>
+
+</body>
+</html>
