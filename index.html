@@ -1849,7 +1849,16 @@ dialog.lead-dialog {
   justify-content: center;
   z-index: 99999 !important;
   overflow-y: auto;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
   -webkit-overflow-scrolling: touch;
+}
+
+dialog.lead-dialog::-webkit-scrollbar,
+.modal-sheet::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 dialog.lead-dialog[open] {
@@ -1885,7 +1894,7 @@ dialog.lead-dialog::backdrop {
 
 .modal-sheet {
   width: 100%;
-  max-width: 450px;
+  max-width: 480px;
   margin: auto;
   box-sizing: border-box;
   background: #FFFFFF;
@@ -1898,12 +1907,11 @@ dialog.lead-dialog::backdrop {
     0 25px 70px -10px rgba(17, 17, 20, 0.35),
     0 0 45px rgba(255, 210, 63, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  padding: 18px 22px 16px;
+  padding: 16px 22px 14px;
   position: relative;
-  overflow: hidden;
-  max-height: 94vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow: visible;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
   animation: modalSpringIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -1967,7 +1975,7 @@ dialog.lead-dialog::backdrop {
 }
 
 .modal-title {
-  font-size: 1.45rem;
+  font-size: 1.36rem;
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.2;
@@ -1986,21 +1994,21 @@ dialog.lead-dialog::backdrop {
 
 .modal-subtitle {
   color: var(--muted);
-  font-size: 0.85rem;
-  line-height: 1.38;
-  margin: 4px 0 10px;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  margin: 3px 0 8px;
   font-weight: 500;
 }
 
 .modal-perks-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 6px;
   background: #F8F7F3;
   border: 1.5px solid var(--line);
-  border-radius: 14px;
-  padding: 6px 8px;
-  margin-bottom: 10px;
+  border-radius: 12px;
+  padding: 5px 6px;
+  margin-bottom: 8px;
   align-items: stretch;
 }
 
@@ -2010,19 +2018,19 @@ dialog.lead-dialog::backdrop {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 2px;
+  gap: 1px;
   color: var(--ink);
-  padding: 6px 4px;
+  padding: 4px 3px;
   background: #FFFFFF;
   border: 1px solid rgba(230, 228, 220, 0.7);
-  border-radius: 10px;
-  min-height: 52px;
+  border-radius: 8px;
+  min-height: 44px;
 }
 
 .modal-perk-item .perk-icon {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   line-height: 1;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 
 .perk-text-wrap {
@@ -2034,28 +2042,28 @@ dialog.lead-dialog::backdrop {
 }
 
 .perk-title {
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 800;
   color: var(--ink);
-  line-height: 1.2;
+  line-height: 1.18;
 }
 
 .modal-perk-item .perk-sub {
-  font-size: 0.65rem;
+  font-size: 0.63rem;
   font-weight: 600;
   color: var(--muted);
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
 .form-group {
-  margin-bottom: 9px;
+  margin-bottom: 7px;
 }
 
 .form-group label {
   display: block;
   font-weight: 700;
-  font-size: 0.82rem;
-  margin-bottom: 3px;
+  font-size: 0.78rem;
+  margin-bottom: 2px;
   color: var(--ink);
 }
 
@@ -2091,10 +2099,10 @@ dialog.lead-dialog::backdrop {
 .form-group input {
   width: 100%;
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
-  padding: 10px 12px 10px 38px;
-  border-radius: 12px;
+  padding: 8px 12px 8px 36px;
+  border-radius: 10px;
   border: 1.5px solid var(--line);
   background: #FBFBFA;
   color: var(--ink);
@@ -2160,14 +2168,14 @@ dialog.lead-dialog::backdrop {
   width: 100%;
   font: inherit;
   font-weight: 800;
-  font-size: 0.98rem;
-  padding: 13px 18px;
+  font-size: 0.95rem;
+  padding: 11px 16px;
   border-radius: var(--radius-pill);
   border: 2px solid #0F1015;
   background: var(--yellow);
   color: #0F1015;
   cursor: pointer;
-  margin-top: 6px;
+  margin-top: 5px;
   box-shadow: 0 10px 24px rgba(255, 210, 63, 0.4), 0 3px 6px rgba(17, 17, 20, 0.1);
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background-color 0.2s ease;
   display: flex;
@@ -2782,17 +2790,19 @@ dialog.lead-dialog::backdrop {
   }
 
   dialog.lead-dialog {
-    padding: 12px;
+    padding: 10px;
+    overflow-y: auto;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
   }
 
   .modal-sheet {
     width: 100%;
-    max-width: 390px;
-    padding: 16px 16px 14px;
+    max-width: 385px;
+    padding: 14px 14px 12px;
     border-radius: 20px;
-    max-height: 90vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    max-height: none;
+    overflow: visible;
   }
 
   .modal-close-btn {
