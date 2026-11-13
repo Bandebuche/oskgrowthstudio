@@ -2211,6 +2211,107 @@ dialog.lead-dialog::backdrop {
   margin-bottom: 14px;
 }
 
+.form-steps-header {
+  margin-bottom: 11px;
+}
+
+.form-step-badge-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.form-step-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #0F1015;
+  text-transform: uppercase;
+  background: var(--yellow-light);
+  border: 1px solid rgba(255, 210, 63, 0.85);
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+}
+
+.form-step-hint {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.form-progress-track {
+  width: 100%;
+  height: 4px;
+  background: #EAE8DE;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.form-progress-bar {
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(90deg, #FFD23F 0%, #F59E0B 100%);
+  border-radius: 99px;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.form-step-pane {
+  display: none;
+}
+
+.form-step-pane.is-active {
+  display: block;
+  animation: stepFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes stepFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.back-step-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--line);
+  background: #FFFFFF;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.back-step-btn:hover {
+  background: #F4F3ED;
+  border-color: #0F1015;
+  transform: translateY(-1px);
+}
+
+.final-submit-btn {
+  flex: 1;
+  margin-top: 0 !important;
+}
+
 .form-audit-guarantee {
   text-align: center;
   font-size: 0.76rem;
@@ -3801,175 +3902,202 @@ dialog.lead-dialog::backdrop {
     <form id="leadForm" novalidate>
       <div class="form-alert-box" id="formAlertBox" role="alert"></div>
 
-      <!-- 1. Full Name -->
-      <div class="form-group">
-        <label for="f-name">Your Full Name</label>
-        <div class="input-with-icon">
-          <span class="input-icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          </span>
-          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="e.g. Rahul Sharma" required>
+      <!-- Step Indicator & Progress Bar -->
+      <div class="form-steps-header">
+        <div class="form-step-badge-wrap">
+          <span class="form-step-badge" id="stepBadge">STEP 1 OF 2 · CONTACT</span>
+          <span class="form-step-hint" id="stepHint">Quick 30 seconds</span>
         </div>
-        <div class="field-error-msg">Please enter your full name.</div>
+        <div class="form-progress-track">
+          <div class="form-progress-bar" id="formProgressBar" style="width: 50%;"></div>
+        </div>
       </div>
 
-      <!-- 2. Mobile / WhatsApp -->
-      <div class="form-group">
-        <label for="f-phone">Mobile / WhatsApp Number</label>
-        <div class="input-with-icon">
-          <span class="input-icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          </span>
-          <input id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number (e.g. 98765 43210)" required>
+      <!-- ================= SECTION 1: CONTACT DETAILS ================= -->
+      <div class="form-step-pane is-active" id="stepPane1">
+        <!-- 1. Full Name -->
+        <div class="form-group">
+          <label for="f-name">Your Full Name</label>
+          <div class="input-with-icon">
+            <span class="input-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </span>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="e.g. Rahul Sharma" required>
+          </div>
+          <div class="field-error-msg">Please enter your full name.</div>
         </div>
-        <div class="form-helper-note">💬 Hum WhatsApp pe aapse contact karenge</div>
-        <div class="field-error-msg">Please enter a valid 10-digit mobile number.</div>
+
+        <!-- 2. Mobile / WhatsApp -->
+        <div class="form-group">
+          <label for="f-phone">Mobile / WhatsApp Number</label>
+          <div class="input-with-icon">
+            <span class="input-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </span>
+            <input id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number (e.g. 98765 43210)" required>
+          </div>
+          <div class="form-helper-note">💬 Hum WhatsApp pe aapse contact karenge</div>
+          <div class="field-error-msg">Please enter a valid 10-digit mobile number.</div>
+        </div>
+
+        <!-- 3. Email Address (Optional) -->
+        <div class="form-group">
+          <label for="f-email">Email Address (optional)</label>
+          <div class="input-with-icon">
+            <span class="input-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </span>
+            <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="field-error-msg">Please enter a valid email address.</div>
+        </div>
+
+        <!-- 4. Your City -->
+        <div class="form-group">
+          <label for="f-city">Your City</label>
+          <div class="input-with-icon">
+            <span class="input-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </span>
+            <select id="f-city" name="city" required>
+              <option value="" disabled selected>Select your city...</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi NCR">Delhi NCR</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Pune">Pune</option>
+              <option value="Surat">Surat</option>
+              <option value="Jaipur">Jaipur</option>
+              <option value="Lucknow">Lucknow</option>
+              <option value="Kanpur">Kanpur</option>
+              <option value="Nagpur">Nagpur</option>
+              <option value="Indore">Indore</option>
+              <option value="Thane">Thane</option>
+              <option value="Bhopal">Bhopal</option>
+              <option value="Visakhapatnam">Visakhapatnam</option>
+              <option value="Patna">Patna</option>
+              <option value="Vadodara">Vadodara</option>
+              <option value="Ghaziabad">Ghaziabad</option>
+              <option value="Ludhiana">Ludhiana</option>
+              <option value="Agra">Agra</option>
+              <option value="Nashik">Nashik</option>
+              <option value="Faridabad">Faridabad</option>
+              <option value="Meerut">Meerut</option>
+              <option value="Rajkot">Rajkot</option>
+              <option value="Varanasi">Varanasi</option>
+              <option value="Srinagar">Srinagar</option>
+              <option value="Aurangabad">Aurangabad (Chhatrapati Sambhajinagar)</option>
+              <option value="Dhanbad">Dhanbad</option>
+              <option value="Amritsar">Amritsar</option>
+              <option value="Navi Mumbai">Navi Mumbai</option>
+              <option value="Prayagraj">Prayagraj (Allahabad)</option>
+              <option value="Ranchi">Ranchi</option>
+              <option value="Howrah">Howrah</option>
+              <option value="Coimbatore">Coimbatore</option>
+              <option value="Jabalpur">Jabalpur</option>
+              <option value="Gwalior">Gwalior</option>
+              <option value="Vijayawada">Vijayawada</option>
+              <option value="Jodhpur">Jodhpur</option>
+              <option value="Madurai">Madurai</option>
+              <option value="Raipur">Raipur</option>
+              <option value="Kota">Kota</option>
+              <option value="Guwahati">Guwahati</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Mysore">Mysore</option>
+              <option value="Bhubaneswar">Bhubaneswar</option>
+              <option value="Dehradun">Dehradun</option>
+              <option value="Kochi">Kochi / Ernakulam</option>
+              <option value="Goa">Goa</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field-error-msg">Please select your city.</div>
+        </div>
+
+        <button type="button" class="submit-btn next-step-btn" id="nextStepBtn">
+          <span>Next: Business &amp; Budget</span>
+          <span aria-hidden="true">➔</span>
+        </button>
       </div>
 
-      <!-- 3. Email Address (Optional) -->
-      <div class="form-group">
-        <label for="f-email">Email Address (optional)</label>
-        <div class="input-with-icon">
-          <span class="input-icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          </span>
-          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+      <!-- ================= SECTION 2: BUSINESS & BUDGET ================= -->
+      <div class="form-step-pane" id="stepPane2">
+        <!-- 5. Role -->
+        <div class="form-group">
+          <label for="f-role">Aap kya karte ho?</label>
+          <div class="input-with-icon">
+            <span class="input-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+            </span>
+            <select id="f-role" name="role" required>
+              <option value="" disabled selected>Select what you do...</option>
+              <option value="Business Owner / Founder">Business Owner / Founder</option>
+              <option value="Marketing Head / Manager">Marketing Head / Manager</option>
+              <option value="Freelancer / Agency">Freelancer / Agency</option>
+              <option value="Student / Job Seeker">Student / Job Seeker</option>
+            </select>
+          </div>
+          <div class="field-error-msg">Please select what you do.</div>
         </div>
-        <div class="field-error-msg">Please enter a valid email address.</div>
-      </div>
 
-      <!-- 4. Role -->
-      <div class="form-group">
-        <label for="f-role">Aap kya karte ho?</label>
-        <div class="input-with-icon">
-          <span class="input-icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
-          </span>
-          <select id="f-role" name="role" required>
-            <option value="" disabled selected>Select what you do...</option>
-            <option value="Business Owner / Founder">Business Owner / Founder</option>
-            <option value="Marketing Head / Manager">Marketing Head / Manager</option>
-            <option value="Freelancer / Agency">Freelancer / Agency</option>
-            <option value="Student / Job Seeker">Student / Job Seeker</option>
-          </select>
+        <!-- 6. Business Type -->
+        <div class="form-group">
+          <label for="f-business-type">Aapka business type</label>
+          <div class="input-with-icon">
+            <span class="input-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg>
+            </span>
+            <select id="f-business-type" name="business_type" required>
+              <option value="" disabled selected>Select business type...</option>
+              <option value="Coaching / Education">Coaching / Education</option>
+              <option value="Clinic / Healthcare / Wellness">Clinic / Healthcare / Wellness</option>
+              <option value="Real Estate / Interior">Real Estate / Interior</option>
+              <option value="E-commerce / D2C">E-commerce / D2C</option>
+              <option value="Local Services">Local Services</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field-error-msg">Please select your business type.</div>
         </div>
-        <div class="field-error-msg">Please select what you do.</div>
-      </div>
 
-      <!-- 5. Business Type -->
-      <div class="form-group">
-        <label for="f-business-type">Aapka business type</label>
-        <div class="input-with-icon">
-          <span class="input-icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg>
-          </span>
-          <select id="f-business-type" name="business_type" required>
-            <option value="" disabled selected>Select business type...</option>
-            <option value="Coaching / Education">Coaching / Education</option>
-            <option value="Clinic / Healthcare / Wellness">Clinic / Healthcare / Wellness</option>
-            <option value="Real Estate / Interior">Real Estate / Interior</option>
-            <option value="E-commerce / D2C">E-commerce / D2C</option>
-            <option value="Local Services">Local Services</option>
-            <option value="Other">Other</option>
-          </select>
+        <!-- 7. Monthly Ad Budget -->
+        <div class="form-group">
+          <label for="f-budget">Monthly ad budget</label>
+          <div class="input-with-icon">
+            <span class="input-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+            </span>
+            <select id="f-budget" name="monthly_budget" required>
+              <option value="" disabled selected>Select monthly ad budget...</option>
+              <option value="Abhi ads nahi chalata">Abhi ads nahi chalata</option>
+              <option value="₹10,000 se kam">₹10,000 se kam</option>
+              <option value="₹10,000 – ₹30,000">₹10,000 – ₹30,000</option>
+              <option value="₹30,000 – ₹1,00,000">₹30,000 – ₹1,00,000</option>
+              <option value="₹1,00,000+">₹1,00,000+</option>
+            </select>
+          </div>
+          <div class="field-error-msg">Please select your monthly ad budget.</div>
         </div>
-        <div class="field-error-msg">Please select your business type.</div>
-      </div>
 
-      <!-- 6. Monthly Ad Budget -->
-      <div class="form-group">
-        <label for="f-budget">Monthly ad budget</label>
-        <div class="input-with-icon">
-          <span class="input-icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
-          </span>
-          <select id="f-budget" name="monthly_budget" required>
-            <option value="" disabled selected>Select monthly ad budget...</option>
-            <option value="Abhi ads nahi chalata">Abhi ads nahi chalata</option>
-            <option value="₹10,000 se kam">₹10,000 se kam</option>
-            <option value="₹10,000 – ₹30,000">₹10,000 – ₹30,000</option>
-            <option value="₹30,000 – ₹1,00,000">₹30,000 – ₹1,00,000</option>
-            <option value="₹1,00,000+">₹1,00,000+</option>
-          </select>
+        <!-- Anti-bot honeypot trap -->
+        <input class="hp-field" id="f-site" name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="step-actions-row">
+          <button type="button" class="back-step-btn" id="prevStepBtn" aria-label="Go back to step 1">
+            <span aria-hidden="true">←</span>
+            <span>Back</span>
+          </button>
+          <button class="submit-btn final-submit-btn" id="submitBtn" type="submit">
+            <span>Book My Free Growth Call</span>
+            <span aria-hidden="true">➔</span>
+          </button>
         </div>
-        <div class="field-error-msg">Please select your monthly ad budget.</div>
+
+        <div class="form-audit-guarantee">Qualified businesses ko 24 ghante me WhatsApp pe call/audit ka link milega</div>
       </div>
-
-      <!-- 7. Your City -->
-      <div class="form-group">
-        <label for="f-city">Your City</label>
-        <div class="input-with-icon">
-          <span class="input-icon-badge" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          </span>
-          <select id="f-city" name="city" required>
-            <option value="" disabled selected>Select your city...</option>
-            <option value="Mumbai">Mumbai</option>
-            <option value="Delhi NCR">Delhi NCR</option>
-            <option value="Bengaluru">Bengaluru</option>
-            <option value="Hyderabad">Hyderabad</option>
-            <option value="Ahmedabad">Ahmedabad</option>
-            <option value="Chennai">Chennai</option>
-            <option value="Kolkata">Kolkata</option>
-            <option value="Pune">Pune</option>
-            <option value="Surat">Surat</option>
-            <option value="Jaipur">Jaipur</option>
-            <option value="Lucknow">Lucknow</option>
-            <option value="Kanpur">Kanpur</option>
-            <option value="Nagpur">Nagpur</option>
-            <option value="Indore">Indore</option>
-            <option value="Thane">Thane</option>
-            <option value="Bhopal">Bhopal</option>
-            <option value="Visakhapatnam">Visakhapatnam</option>
-            <option value="Patna">Patna</option>
-            <option value="Vadodara">Vadodara</option>
-            <option value="Ghaziabad">Ghaziabad</option>
-            <option value="Ludhiana">Ludhiana</option>
-            <option value="Agra">Agra</option>
-            <option value="Nashik">Nashik</option>
-            <option value="Faridabad">Faridabad</option>
-            <option value="Meerut">Meerut</option>
-            <option value="Rajkot">Rajkot</option>
-            <option value="Varanasi">Varanasi</option>
-            <option value="Srinagar">Srinagar</option>
-            <option value="Aurangabad">Aurangabad (Chhatrapati Sambhajinagar)</option>
-            <option value="Dhanbad">Dhanbad</option>
-            <option value="Amritsar">Amritsar</option>
-            <option value="Navi Mumbai">Navi Mumbai</option>
-            <option value="Prayagraj">Prayagraj (Allahabad)</option>
-            <option value="Ranchi">Ranchi</option>
-            <option value="Howrah">Howrah</option>
-            <option value="Coimbatore">Coimbatore</option>
-            <option value="Jabalpur">Jabalpur</option>
-            <option value="Gwalior">Gwalior</option>
-            <option value="Vijayawada">Vijayawada</option>
-            <option value="Jodhpur">Jodhpur</option>
-            <option value="Madurai">Madurai</option>
-            <option value="Raipur">Raipur</option>
-            <option value="Kota">Kota</option>
-            <option value="Guwahati">Guwahati</option>
-            <option value="Chandigarh">Chandigarh</option>
-            <option value="Mysore">Mysore</option>
-            <option value="Bhubaneswar">Bhubaneswar</option>
-            <option value="Dehradun">Dehradun</option>
-            <option value="Kochi">Kochi / Ernakulam</option>
-            <option value="Goa">Goa</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        <div class="field-error-msg">Please select your city.</div>
-      </div>
-
-      <!-- Anti-bot honeypot trap -->
-      <input class="hp-field" id="f-site" name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-      <!-- High-Converting Shimmer CTA Button -->
-      <button class="submit-btn" id="submitBtn" type="submit">
-        <span>Book My Free Growth Call</span>
-        <span aria-hidden="true">➔</span>
-      </button>
-
-      <div class="form-audit-guarantee">Qualified businesses ko 24 ghante me WhatsApp pe call/audit ka link milega</div>
     </form>
 
     <!-- Social Proof Mini Avatars Inside Modal -->
@@ -4044,6 +4172,7 @@ dialog.lead-dialog::backdrop {
     if (!dlg) return;
     sheet.classList.remove('is-submitted');
     formAlert.style.display = 'none';
+    setStep(1);
     try {
       if (typeof dlg.showModal === 'function') {
         if (!dlg.open) {
@@ -4097,6 +4226,7 @@ dialog.lead-dialog::backdrop {
       e.preventDefault();
       closeModal();
       form.reset();
+      setStep(1);
     });
   }
 
@@ -4212,6 +4342,85 @@ dialog.lead-dialog::backdrop {
     return ok;
   }
 
+  // Multi-step elements
+  const stepPane1 = document.getElementById('stepPane1');
+  const stepPane2 = document.getElementById('stepPane2');
+  const nextBtn = document.getElementById('nextStepBtn');
+  const prevBtn = document.getElementById('prevStepBtn');
+  const stepBadge = document.getElementById('stepBadge');
+  const stepHint = document.getElementById('stepHint');
+  const progressBar = document.getElementById('formProgressBar');
+
+  let currentStep = 1;
+
+  function setStep(step) {
+    currentStep = step;
+    if (step === 1) {
+      if (stepPane1) {
+        stepPane1.classList.add('is-active');
+        stepPane1.style.display = 'block';
+      }
+      if (stepPane2) {
+        stepPane2.classList.remove('is-active');
+        stepPane2.style.display = 'none';
+      }
+      if (stepBadge) stepBadge.textContent = 'STEP 1 OF 2 · CONTACT';
+      if (stepHint) stepHint.textContent = 'Quick 30 seconds';
+      if (progressBar) progressBar.style.width = '50%';
+    } else {
+      if (stepPane1) {
+        stepPane1.classList.remove('is-active');
+        stepPane1.style.display = 'none';
+      }
+      if (stepPane2) {
+        stepPane2.classList.add('is-active');
+        stepPane2.style.display = 'block';
+      }
+      if (stepBadge) stepBadge.textContent = 'STEP 2 OF 2 · BUSINESS & BUDGET';
+      if (stepHint) stepHint.textContent = 'Almost done!';
+      if (progressBar) progressBar.style.width = '100%';
+      const roleSelect = document.getElementById('f-role');
+      if (roleSelect) setTimeout(() => roleSelect.focus(), 120);
+    }
+  }
+
+  // Next Step click handler
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      formAlert.style.display = 'none';
+
+      // Validate Section 1 inputs only (name, phone, email, city)
+      const step1Inputs = stepPane1 ? stepPane1.querySelectorAll('input, select') : [];
+      let step1Valid = true;
+      let firstInvalid = null;
+
+      step1Inputs.forEach(function(inp) {
+        const ok = validateInput(inp);
+        if (!ok) {
+          step1Valid = false;
+          if (!firstInvalid) firstInvalid = inp;
+        }
+      });
+
+      if (!step1Valid) {
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      setStep(2);
+    });
+  }
+
+  // Back Step click handler
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      formAlert.style.display = 'none';
+      setStep(1);
+    });
+  }
+
   const inputs = form.querySelectorAll('.form-group input, .form-group select');
   inputs.forEach(function(inp) {
     inp.addEventListener('blur', function() {
@@ -4235,13 +4444,21 @@ dialog.lead-dialog::backdrop {
     e.preventDefault();
     formAlert.style.display = 'none';
 
+    // If submitted while on step 1 (e.g. Enter pressed), advance to step 2
+    if (currentStep === 1) {
+      if (nextBtn) nextBtn.click();
+      return;
+    }
+
     // Prevent duplicate submission on double-click
     if (btn.disabled) return;
 
     let allValid = true;
     let firstInvalid = null;
 
-    inputs.forEach(function(inp) {
+    // Validate Step 2 inputs
+    const step2Inputs = stepPane2 ? stepPane2.querySelectorAll('select') : [];
+    step2Inputs.forEach(function(inp) {
       const isValid = validateInput(inp);
       if (!isValid) {
         allValid = false;
@@ -4251,6 +4468,20 @@ dialog.lead-dialog::backdrop {
 
     if (!allValid) {
       if (firstInvalid) firstInvalid.focus();
+      return;
+    }
+
+    // Also verify step 1 inputs just in case
+    const step1Inputs = stepPane1 ? stepPane1.querySelectorAll('input, select') : [];
+    let step1Valid = true;
+    step1Inputs.forEach(function(inp) {
+      if (!validateInput(inp)) {
+        step1Valid = false;
+      }
+    });
+
+    if (!step1Valid) {
+      setStep(1);
       return;
     }
 
