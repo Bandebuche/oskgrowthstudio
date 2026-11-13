@@ -3954,62 +3954,36 @@ dialog.lead-dialog::backdrop {
             <span class="input-icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </span>
-            <select id="f-city" name="city" required>
-              <option value="" disabled selected>Select your city...</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Delhi NCR">Delhi NCR</option>
-              <option value="Bengaluru">Bengaluru</option>
-              <option value="Hyderabad">Hyderabad</option>
-              <option value="Ahmedabad">Ahmedabad</option>
-              <option value="Chennai">Chennai</option>
-              <option value="Kolkata">Kolkata</option>
-              <option value="Pune">Pune</option>
-              <option value="Surat">Surat</option>
-              <option value="Jaipur">Jaipur</option>
-              <option value="Lucknow">Lucknow</option>
-              <option value="Kanpur">Kanpur</option>
-              <option value="Nagpur">Nagpur</option>
-              <option value="Indore">Indore</option>
-              <option value="Thane">Thane</option>
-              <option value="Bhopal">Bhopal</option>
-              <option value="Visakhapatnam">Visakhapatnam</option>
-              <option value="Patna">Patna</option>
-              <option value="Vadodara">Vadodara</option>
-              <option value="Ghaziabad">Ghaziabad</option>
-              <option value="Ludhiana">Ludhiana</option>
-              <option value="Agra">Agra</option>
-              <option value="Nashik">Nashik</option>
-              <option value="Faridabad">Faridabad</option>
-              <option value="Meerut">Meerut</option>
-              <option value="Rajkot">Rajkot</option>
-              <option value="Varanasi">Varanasi</option>
-              <option value="Srinagar">Srinagar</option>
-              <option value="Aurangabad">Aurangabad (Chhatrapati Sambhajinagar)</option>
-              <option value="Dhanbad">Dhanbad</option>
-              <option value="Amritsar">Amritsar</option>
-              <option value="Navi Mumbai">Navi Mumbai</option>
-              <option value="Prayagraj">Prayagraj (Allahabad)</option>
-              <option value="Ranchi">Ranchi</option>
-              <option value="Howrah">Howrah</option>
-              <option value="Coimbatore">Coimbatore</option>
-              <option value="Jabalpur">Jabalpur</option>
-              <option value="Gwalior">Gwalior</option>
-              <option value="Vijayawada">Vijayawada</option>
-              <option value="Jodhpur">Jodhpur</option>
-              <option value="Madurai">Madurai</option>
-              <option value="Raipur">Raipur</option>
-              <option value="Kota">Kota</option>
-              <option value="Guwahati">Guwahati</option>
-              <option value="Chandigarh">Chandigarh</option>
-              <option value="Mysore">Mysore</option>
-              <option value="Bhubaneswar">Bhubaneswar</option>
-              <option value="Dehradun">Dehradun</option>
-              <option value="Kochi">Kochi / Ernakulam</option>
-              <option value="Goa">Goa</option>
-              <option value="Other">Other</option>
-            </select>
+            <input id="f-city" name="city" type="text" list="city-list" autocomplete="address-level2" placeholder="e.g. Mumbai, Delhi, Pune, Nagpur" required>
+            <datalist id="city-list">
+              <option value="Mumbai">
+              <option value="Delhi NCR">
+              <option value="Bengaluru">
+              <option value="Pune">
+              <option value="Hyderabad">
+              <option value="Ahmedabad">
+              <option value="Kolkata">
+              <option value="Chennai">
+              <option value="Surat">
+              <option value="Jaipur">
+              <option value="Lucknow">
+              <option value="Nagpur">
+              <option value="Indore">
+              <option value="Thane">
+              <option value="Bhopal">
+              <option value="Visakhapatnam">
+              <option value="Patna">
+              <option value="Vadodara">
+              <option value="Nashik">
+              <option value="Rajkot">
+              <option value="Varanasi">
+              <option value="Navi Mumbai">
+              <option value="Chandigarh">
+              <option value="Coimbatore">
+              <option value="Goa">
+            </datalist>
           </div>
-          <div class="field-error-msg">Please select your city.</div>
+          <div class="field-error-msg">Please enter your city.</div>
         </div>
 
         <button type="button" class="submit-btn next-step-btn" id="nextStepBtn">
@@ -4321,7 +4295,7 @@ dialog.lead-dialog::backdrop {
       return (val || '').trim().length > 0;
     },
     city: function(val) {
-      return (val || '').trim().length > 0;
+      return (val || '').trim().length >= 2;
     }
   };
 
