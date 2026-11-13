@@ -4027,7 +4027,7 @@ dialog.lead-dialog::backdrop {
       <div class="form-step-pane" id="stepPane2">
         <!-- 5. Role -->
         <div class="form-group">
-          <label for="f-role">Aap kya karte ho?</label>
+          <label for="f-role">What do you do?</label>
           <div class="input-with-icon">
             <span class="input-icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
@@ -4045,7 +4045,7 @@ dialog.lead-dialog::backdrop {
 
         <!-- 6. Business Type -->
         <div class="form-group">
-          <label for="f-business-type">Aapka business type</label>
+          <label for="f-business-type">Your Business Type</label>
           <div class="input-with-icon">
             <span class="input-icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg>
@@ -4072,8 +4072,8 @@ dialog.lead-dialog::backdrop {
             </span>
             <select id="f-budget" name="monthly_budget" required>
               <option value="" disabled selected>Select monthly ad budget...</option>
-              <option value="Abhi ads nahi chalata">Abhi ads nahi chalata</option>
-              <option value="₹10,000 se kam">₹10,000 se kam</option>
+              <option value="Not running ads currently">Not running ads currently</option>
+              <option value="Under ₹10,000">Under ₹10,000</option>
               <option value="₹10,000 – ₹30,000">₹10,000 – ₹30,000</option>
               <option value="₹30,000 – ₹1,00,000">₹30,000 – ₹1,00,000</option>
               <option value="₹1,00,000+">₹1,00,000+</option>
@@ -4537,9 +4537,14 @@ dialog.lead-dialog::backdrop {
     if (saved) {
       // Check QualifiedLead conditions:
       // role = Business Owner / Founder OR Marketing Head / Manager
-      // AND monthly_budget NOT ₹10,000 se kam AND NOT Abhi ads nahi chalata
+      // AND monthly_budget NOT Under ₹10,000 / ₹10,000 se kam AND NOT Not running ads currently / Abhi ads nahi chalata
       const isEligibleRole = (roleVal === 'Business Owner / Founder' || roleVal === 'Marketing Head / Manager');
-      const isExcludedBudget = (budgetVal === 'Abhi ads nahi chalata' || budgetVal === '₹10,000 se kam');
+      const isExcludedBudget = (
+        budgetVal === 'Not running ads currently' ||
+        budgetVal === 'Abhi ads nahi chalata' ||
+        budgetVal === 'Under ₹10,000' ||
+        budgetVal === '₹10,000 se kam'
+      );
       const isQualified = isEligibleRole && !isExcludedBudget;
 
       if (typeof fbq === 'function') {
