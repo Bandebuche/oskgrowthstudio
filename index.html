@@ -4503,12 +4503,24 @@ dialog.lead-dialog::backdrop {
 
     const payload = {
       name: form.name.value.trim(),
+      Name: form.name.value.trim(),
       phone: cleanPhone,
+      Phone: cleanPhone,
+      mobile: cleanPhone,
+      Mobile: cleanPhone,
       email: emailVal,
+      Email: emailVal,
       role: roleVal,
+      Role: roleVal,
       business_type: businessTypeVal,
+      businessType: businessTypeVal,
+      "Business Type": businessTypeVal,
       monthly_budget: budgetVal,
+      monthlyBudget: budgetVal,
+      "Monthly Budget": budgetVal,
+      budget: budgetVal,
       city: cityVal,
+      City: cityVal,
       service: 'Growth Marketing Strategy & Audit',
       submittedAt: new Date().toISOString()
     };
