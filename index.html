@@ -1845,7 +1845,7 @@ dialog.lead-dialog {
   margin: 0;
   box-sizing: border-box;
   display: none;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   z-index: 99999 !important;
   overflow-y: auto;
@@ -2055,6 +2055,29 @@ dialog.lead-dialog::backdrop {
   line-height: 1.1;
 }
 
+.form-intro-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFDF0;
+  border: 1px solid rgba(255, 210, 63, 0.7);
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #0F1015;
+  line-height: 1.35;
+}
+
+.form-intro-note .intro-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #F59E0B;
+  flex-shrink: 0;
+}
+
 .form-group {
   margin-bottom: 7px;
 }
@@ -2096,29 +2119,55 @@ dialog.lead-dialog::backdrop {
   color: #0F1015;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   width: 100%;
   font: inherit;
-  font-size: 0.88rem;
+  font-size: 16px; /* Prevents iOS auto-zoom on input/select focus */
   font-weight: 500;
   padding: 8px 12px 8px 36px;
   border-radius: 10px;
   border: 1.5px solid var(--line);
-  background: #FBFBFA;
+  background-color: #FBFBFA;
   color: var(--ink);
-  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-group input:focus {
+.form-group select {
+  padding-right: 34px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23565662' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+}
+
+.form-group select option {
+  color: #0F1015;
+  background-color: #FFFFFF;
+}
+
+.form-group select:invalid,
+.form-group select option[value=""] {
+  color: #71717A;
+}
+
+.form-group input:focus,
+.form-group select:focus {
   border-color: #0F1015;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   box-shadow: 0 0 0 3.5px rgba(255, 210, 63, 0.35), 0 2px 8px rgba(0, 0, 0, 0.04);
   outline: none;
 }
 
-.form-group.has-error input {
+.form-group.has-error input,
+.form-group.has-error select {
   border-color: var(--red-icon);
-  background: #FFF5F5;
+  background-color: #FFF5F5;
 }
 
 .form-helper-note {
@@ -2160,6 +2209,15 @@ dialog.lead-dialog::backdrop {
   font-size: 0.88rem;
   font-weight: 600;
   margin-bottom: 14px;
+}
+
+.form-audit-guarantee {
+  text-align: center;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--muted);
+  line-height: 1.35;
+  margin-top: 8px;
 }
 
 .submit-btn {
@@ -2347,88 +2405,6 @@ dialog.lead-dialog::backdrop {
   display: block;
 }
 
-/* ====================================================
-   LIVE SOCIAL PROOF TOAST (BOTTOM-LEFT)
-   ==================================================== */
-.social-proof-toast {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  z-index: 950;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(12px);
-  border: 1.5px solid var(--line);
-  padding: 10px 14px 10px 10px;
-  border-radius: 18px;
-  box-shadow: 0 12px 36px rgba(17, 17, 20, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
-  max-width: 350px;
-  font-size: 0.8rem;
-  line-height: 1.35;
-  color: var(--ink);
-  transform: translateY(120%);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.social-proof-toast.is-visible {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.toast-avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--yellow-light);
-  border: 1px solid rgba(255, 210, 63, 0.8);
-  display: grid;
-  place-items: center;
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
-.toast-content {
-  flex: 1;
-}
-
-.toast-text {
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.toast-text strong {
-  font-weight: 800;
-}
-
-.toast-time {
-  font-size: 0.7rem;
-  color: #10B981;
-  font-weight: 700;
-  margin-top: 2px;
-}
-
-.toast-close-btn {
-  background: none;
-  border: none;
-  color: var(--muted);
-  font-size: 1.1rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 2px 4px;
-  border-radius: 4px;
-  transition: color 0.15s ease;
-}
-
-.toast-close-btn:hover {
-  color: var(--ink);
-}
 
 /* ====================================================
    MOBILE OPTIMIZATIONS & RESPONSIVE DESIGN
@@ -2780,13 +2756,6 @@ dialog.lead-dialog::backdrop {
 
   .cta-side-sparks {
     display: none;
-  }
-
-  .social-proof-toast {
-    bottom: calc(75px + env(safe-area-inset-bottom, 10px));
-    left: 12px;
-    right: 12px;
-    max-width: calc(100% - 24px);
   }
 
   dialog.lead-dialog {
@@ -3824,10 +3793,15 @@ dialog.lead-dialog::backdrop {
       </div>
     </div>
 
+    <div class="form-intro-note">
+      <span class="intro-dot" aria-hidden="true"></span>
+      <span>Business owners aur founders ke liye. Pehle form dekh ke hum fit check karte hain.</span>
+    </div>
+
     <form id="leadForm" novalidate>
       <div class="form-alert-box" id="formAlertBox" role="alert"></div>
 
-      <!-- Full Name -->
+      <!-- 1. Full Name -->
       <div class="form-group">
         <label for="f-name">Your Full Name</label>
         <div class="input-with-icon">
@@ -3839,7 +3813,7 @@ dialog.lead-dialog::backdrop {
         <div class="field-error-msg">Please enter your full name.</div>
       </div>
 
-      <!-- Mobile / WhatsApp -->
+      <!-- 2. Mobile / WhatsApp -->
       <div class="form-group">
         <label for="f-phone">Mobile / WhatsApp Number</label>
         <div class="input-with-icon">
@@ -3848,33 +3822,142 @@ dialog.lead-dialog::backdrop {
           </span>
           <input id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number (e.g. 98765 43210)" required>
         </div>
-        <div class="form-helper-note">💬 We will WhatsApp your customized growth audit within 24h</div>
+        <div class="form-helper-note">💬 Hum WhatsApp pe aapse contact karenge</div>
         <div class="field-error-msg">Please enter a valid 10-digit mobile number.</div>
       </div>
 
-      <!-- Email -->
+      <!-- 3. Email Address (Optional) -->
       <div class="form-group">
-        <label for="f-email">Email Address</label>
+        <label for="f-email">Email Address (optional)</label>
         <div class="input-with-icon">
           <span class="input-icon-badge" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </span>
-          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
         </div>
-        <div class="form-helper-note">✓ Your personalized strategy deck will be delivered here</div>
         <div class="field-error-msg">Please enter a valid email address.</div>
       </div>
 
-      <!-- City -->
+      <!-- 4. Role -->
+      <div class="form-group">
+        <label for="f-role">Aap kya karte ho?</label>
+        <div class="input-with-icon">
+          <span class="input-icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+          </span>
+          <select id="f-role" name="role" required>
+            <option value="" disabled selected>Select what you do...</option>
+            <option value="Business Owner / Founder">Business Owner / Founder</option>
+            <option value="Marketing Head / Manager">Marketing Head / Manager</option>
+            <option value="Freelancer / Agency">Freelancer / Agency</option>
+            <option value="Student / Job Seeker">Student / Job Seeker</option>
+          </select>
+        </div>
+        <div class="field-error-msg">Please select what you do.</div>
+      </div>
+
+      <!-- 5. Business Type -->
+      <div class="form-group">
+        <label for="f-business-type">Aapka business type</label>
+        <div class="input-with-icon">
+          <span class="input-icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/></svg>
+          </span>
+          <select id="f-business-type" name="business_type" required>
+            <option value="" disabled selected>Select business type...</option>
+            <option value="Coaching / Education">Coaching / Education</option>
+            <option value="Clinic / Healthcare / Wellness">Clinic / Healthcare / Wellness</option>
+            <option value="Real Estate / Interior">Real Estate / Interior</option>
+            <option value="E-commerce / D2C">E-commerce / D2C</option>
+            <option value="Local Services">Local Services</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="field-error-msg">Please select your business type.</div>
+      </div>
+
+      <!-- 6. Monthly Ad Budget -->
+      <div class="form-group">
+        <label for="f-budget">Monthly ad budget</label>
+        <div class="input-with-icon">
+          <span class="input-icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          </span>
+          <select id="f-budget" name="monthly_budget" required>
+            <option value="" disabled selected>Select monthly ad budget...</option>
+            <option value="Abhi ads nahi chalata">Abhi ads nahi chalata</option>
+            <option value="₹10,000 se kam">₹10,000 se kam</option>
+            <option value="₹10,000 – ₹30,000">₹10,000 – ₹30,000</option>
+            <option value="₹30,000 – ₹1,00,000">₹30,000 – ₹1,00,000</option>
+            <option value="₹1,00,000+">₹1,00,000+</option>
+          </select>
+        </div>
+        <div class="field-error-msg">Please select your monthly ad budget.</div>
+      </div>
+
+      <!-- 7. Your City -->
       <div class="form-group">
         <label for="f-city">Your City</label>
         <div class="input-with-icon">
           <span class="input-icon-badge" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           </span>
-          <input id="f-city" name="city" type="text" autocomplete="address-level2" placeholder="e.g. Mumbai, Delhi, Bengaluru" required>
+          <select id="f-city" name="city" required>
+            <option value="" disabled selected>Select your city...</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi NCR">Delhi NCR</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Pune">Pune</option>
+            <option value="Surat">Surat</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Kanpur">Kanpur</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Indore">Indore</option>
+            <option value="Thane">Thane</option>
+            <option value="Bhopal">Bhopal</option>
+            <option value="Visakhapatnam">Visakhapatnam</option>
+            <option value="Patna">Patna</option>
+            <option value="Vadodara">Vadodara</option>
+            <option value="Ghaziabad">Ghaziabad</option>
+            <option value="Ludhiana">Ludhiana</option>
+            <option value="Agra">Agra</option>
+            <option value="Nashik">Nashik</option>
+            <option value="Faridabad">Faridabad</option>
+            <option value="Meerut">Meerut</option>
+            <option value="Rajkot">Rajkot</option>
+            <option value="Varanasi">Varanasi</option>
+            <option value="Srinagar">Srinagar</option>
+            <option value="Aurangabad">Aurangabad (Chhatrapati Sambhajinagar)</option>
+            <option value="Dhanbad">Dhanbad</option>
+            <option value="Amritsar">Amritsar</option>
+            <option value="Navi Mumbai">Navi Mumbai</option>
+            <option value="Prayagraj">Prayagraj (Allahabad)</option>
+            <option value="Ranchi">Ranchi</option>
+            <option value="Howrah">Howrah</option>
+            <option value="Coimbatore">Coimbatore</option>
+            <option value="Jabalpur">Jabalpur</option>
+            <option value="Gwalior">Gwalior</option>
+            <option value="Vijayawada">Vijayawada</option>
+            <option value="Jodhpur">Jodhpur</option>
+            <option value="Madurai">Madurai</option>
+            <option value="Raipur">Raipur</option>
+            <option value="Kota">Kota</option>
+            <option value="Guwahati">Guwahati</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Mysore">Mysore</option>
+            <option value="Bhubaneswar">Bhubaneswar</option>
+            <option value="Dehradun">Dehradun</option>
+            <option value="Kochi">Kochi / Ernakulam</option>
+            <option value="Goa">Goa</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
-        <div class="field-error-msg">Please enter your city.</div>
+        <div class="field-error-msg">Please select your city.</div>
       </div>
 
       <!-- Anti-bot honeypot trap -->
@@ -3882,9 +3965,11 @@ dialog.lead-dialog::backdrop {
 
       <!-- High-Converting Shimmer CTA Button -->
       <button class="submit-btn" id="submitBtn" type="submit">
-        <span>Submit Details</span>
+        <span>Book My Free Growth Call</span>
         <span aria-hidden="true">➔</span>
       </button>
+
+      <div class="form-audit-guarantee">Qualified businesses ko 24 ghante me WhatsApp pe call/audit ka link milega</div>
     </form>
 
     <!-- Social Proof Mini Avatars Inside Modal -->
@@ -4077,64 +4162,41 @@ dialog.lead-dialog::backdrop {
     window.addEventListener('load', triggerAutoPopup);
   }
 
-  // LIVE SOCIAL PROOF TOAST ROTATION
-  const toast = document.getElementById('socialProofToast');
-  const toastText = document.getElementById('toastText');
-  const toastTime = document.getElementById('toastTime');
-  const toastClose = document.getElementById('toastCloseBtn');
-  
-  const toastQueue = [
-    { text: "<strong>Rahul S. from Bengaluru</strong> claimed a Free Ad Audit", time: "2 minutes ago • D2C Founder" },
-    { text: "<strong>Ananya M. from Mumbai</strong> booked a 1-on-1 Growth Session", time: "8 minutes ago • Fashion Brand" },
-    { text: "<strong>Vikram P. from Delhi</strong> locked in October Marketing Slot", time: "19 minutes ago • B2B SaaS" },
-    { text: "<strong>Siddharth G. from Pune</strong> initiated 48h Ad Kickoff", time: "32 minutes ago • Healthcare Clinic" }
-  ];
-  let toastIdx = 0;
-  let toastDismissed = false;
-
-  function showNextToast() {
-    if (!toast || toastDismissed) return;
-    const item = toastQueue[toastIdx];
-    toastText.innerHTML = item.text;
-    toastTime.textContent = item.time;
-    toast.classList.add('is-visible');
-
-    setTimeout(function() {
-      if (!toastDismissed) {
-        toast.classList.remove('is-visible');
-      }
-    }, 5500);
-
-    toastIdx = (toastIdx + 1) % toastQueue.length;
-  }
-
-  if (toastClose) {
-    toastClose.addEventListener('click', function(e) {
-      e.stopPropagation();
-      toastDismissed = true;
-      if (toast) toast.classList.remove('is-visible');
-    });
-  }
-
-  setTimeout(function() {
-    showNextToast();
-    setInterval(showNextToast, 11000);
-  }, 4000);
-
   // Validation Rules
+  const fakeSequences = [
+    '1234567890', '0123456789', '9876543210', '0987654321',
+    '9898989898', '9988776655', '9000000000', '9123456789',
+    '8901234567', '7890123456', '6789012345', '9876501234'
+  ];
+
   const rules = {
     name: function(val) {
-      return /^[A-Za-z\u0900-\u097F][A-Za-z\u0900-\u097F .'-]{1,59}$/.test(val.trim());
+      return (val || '').trim().length >= 2;
     },
     phone: function(val) {
-      const clean = val.replace(/^(\+91|0)/, '').replace(/[\s-]/g, '');
-      return /^[6-9]\d{9}$/.test(clean);
+      const clean = (val || '').replace(/^(\+91|0)/, '').replace(/[\s-]/g, '');
+      if (!/^[6-9]\d{9}$/.test(clean)) return false;
+      if (/^(\d)\1{9}$/.test(clean)) return false;
+      if (/^(\d)\1{6,}/.test(clean)) return false;
+      if (fakeSequences.includes(clean)) return false;
+      return true;
     },
     email: function(val) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+      const trimmed = (val || '').trim();
+      if (!trimmed) return true; // Optional
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
+    },
+    role: function(val) {
+      return (val || '').trim().length > 0;
+    },
+    business_type: function(val) {
+      return (val || '').trim().length > 0;
+    },
+    monthly_budget: function(val) {
+      return (val || '').trim().length > 0;
     },
     city: function(val) {
-      return /^[A-Za-z\u0900-\u097F][A-Za-z\u0900-\u097F .'-]{1,49}$/.test(val.trim());
+      return (val || '').trim().length > 0;
     }
   };
 
@@ -4150,7 +4212,7 @@ dialog.lead-dialog::backdrop {
     return ok;
   }
 
-  const inputs = form.querySelectorAll('.form-group input');
+  const inputs = form.querySelectorAll('.form-group input, .form-group select');
   inputs.forEach(function(inp) {
     inp.addEventListener('blur', function() {
       if (inp.value) validateInput(inp);
@@ -4161,11 +4223,20 @@ dialog.lead-dialog::backdrop {
         validateInput(inp);
       }
     });
+    inp.addEventListener('change', function() {
+      const group = inp.closest('.form-group');
+      if (group && group.classList.contains('has-error')) {
+        validateInput(inp);
+      }
+    });
   });
 
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
     formAlert.style.display = 'none';
+
+    // Prevent duplicate submission on double-click
+    if (btn.disabled) return;
 
     let allValid = true;
     let firstInvalid = null;
@@ -4183,24 +4254,38 @@ dialog.lead-dialog::backdrop {
       return;
     }
 
+    // Spam honeypot protection: silently ignore if trap is filled
     const trap = document.getElementById('f-site');
-    if (trap && trap.value) {
-      window.location.href = 'thank-you.html';
+    if (trap && trap.value && trap.value.trim().length > 0) {
+      btn.disabled = true;
+      setTimeout(function() {
+        window.location.href = 'thank-you.html';
+      }, 300);
       return;
     }
 
+    // Lock button immediately
+    btn.disabled = true;
+    btn.innerHTML = '<span>Securing Your Spot...</span>';
+
     const cleanPhone = form.phone.value.trim().replace(/^(\+91|0)/, '').replace(/[\s-]/g, '');
+    const roleVal = form.role ? form.role.value : '';
+    const businessTypeVal = form.business_type ? form.business_type.value : '';
+    const budgetVal = form.monthly_budget ? form.monthly_budget.value : '';
+    const cityVal = form.city ? form.city.value : '';
+    const emailVal = form.email ? form.email.value.trim().toLowerCase() : '';
+
     const payload = {
       name: form.name.value.trim(),
       phone: cleanPhone,
-      email: form.email.value.trim().toLowerCase(),
-      city: form.city.value.trim(),
+      email: emailVal,
+      role: roleVal,
+      business_type: businessTypeVal,
+      monthly_budget: budgetVal,
+      city: cityVal,
       service: 'Growth Marketing Strategy & Audit',
       submittedAt: new Date().toISOString()
     };
-
-    btn.disabled = true;
-    btn.innerHTML = '<span>Securing Your Spot...</span>';
 
     let saved = false;
     try {
@@ -4218,31 +4303,39 @@ dialog.lead-dialog::backdrop {
       saved = true;
     }
 
-    btn.disabled = false;
-    btn.innerHTML = '<span>Submit Details</span><span aria-hidden="true">➔</span>';
-
     if (saved) {
+      // Check QualifiedLead conditions:
+      // role = Business Owner / Founder OR Marketing Head / Manager
+      // AND monthly_budget NOT ₹10,000 se kam AND NOT Abhi ads nahi chalata
+      const isEligibleRole = (roleVal === 'Business Owner / Founder' || roleVal === 'Marketing Head / Manager');
+      const isExcludedBudget = (budgetVal === 'Abhi ads nahi chalata' || budgetVal === '₹10,000 se kam');
+      const isQualified = isEligibleRole && !isExcludedBudget;
+
       if (typeof fbq === 'function') {
         fbq('track', 'Lead');
+        if (isQualified) {
+          fbq('trackCustom', 'QualifiedLead', {
+            role: roleVal,
+            business_type: businessTypeVal,
+            monthly_budget: budgetVal,
+            city: cityVal
+          });
+        }
       }
-      window.location.href = 'thank-you.html';
+
+      const redirectUrl = isQualified ? 'thank-you.html?qualified=1' : 'thank-you.html';
+      setTimeout(function() {
+        window.location.href = redirectUrl;
+      }, 150);
     } else {
+      btn.disabled = false;
+      btn.innerHTML = '<span>Book My Free Growth Call</span><span aria-hidden="true">➔</span>';
       formAlert.textContent = "We couldn't submit your details. Please check your connection and try again.";
       formAlert.style.display = 'block';
     }
   });
 })();
 </script>
-
-<!-- Live Social Proof Notification Toast (Bottom-Left) -->
-<div class="social-proof-toast" id="socialProofToast" role="status" aria-live="polite">
-  <div class="toast-avatar" aria-hidden="true">⚡</div>
-  <div class="toast-content">
-    <div class="toast-text" id="toastText"><strong>Rahul S. from Bengaluru</strong> claimed a Free Ad Audit</div>
-    <div class="toast-time" id="toastTime">2 minutes ago • Verified business</div>
-  </div>
-  <button type="button" class="toast-close-btn" id="toastCloseBtn" aria-label="Dismiss notification">×</button>
-</div>
 
 </body>
 </html>
