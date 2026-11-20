@@ -1,0 +1,4753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OGS | Performance Marketing & Meta Ads for Growing Businesses</title>
+<meta name="description" content="Turn ad spend into qualified leads & customers. We build and scale high-ROAS paid acquisition systems across Meta and Google for growing businesses.">
+<link rel="canonical" href="https://www.oskgrowthstudio.com/">
+
+<!-- Open Graph & Meta Social Tags -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OSK Growth Studio">
+<meta property="og:url" content="https://www.oskgrowthstudio.com/">
+<meta property="og:title" content="OGS | Performance Marketing & Meta Ads for Growing Businesses">
+<meta property="og:description" content="Turn ad spend into qualified leads & customers. High-performing Meta & Google ad systems with 48-hour kickoff.">
+<meta property="og:image" content="https://dedicated-marketing-support.vercel.app/assets/ogs_logo.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OGS | Performance Marketing & Meta Ads for Growing Businesses">
+<meta name="twitter:description" content="Turn ad spend into qualified leads & customers. High-performing Meta & Google ad systems with 48-hour kickoff.">
+<meta name="twitter:image" content="https://dedicated-marketing-support.vercel.app/assets/ogs_logo.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/ogs_logo.png">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1310370707788717');
+fbq('track', 'PageView');
+
+  </script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1310370707788717&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ====================================================
+   CSS VARIABLES & DESIGN SYSTEM (V2 REFRESH)
+   ==================================================== */
+:root {
+  --bg: #F9F8F5;
+  --bg-subtle: #F3F1EB;
+  --bg-gradient: radial-gradient(circle at 50% -20%, #FFFFFF 0%, #F6F4EC 65%, #F0EDE2 100%);
+  --ink: #0B0D13;
+  --ink-secondary: #272A34;
+  --muted: #5E6271;
+  --muted-light: #7E8292;
+  --card: #FFFFFF;
+  --card-subtle: #FAF9F6;
+  --line: #E7E4DA;
+  --line-light: #F0EEE7;
+  
+  --yellow: #FFC72C;
+  --yellow-hover: #EBB218;
+  --yellow-light: #FFF9D4;
+  --yellow-subtle: #FFFDEB;
+  --on-yellow: #0B0D13;
+  
+  --meta-blue: #0064E0;
+  --meta-blue-light: #EDF5FF;
+  --meta-blue-border: #BFDBFE;
+  
+  --green: #10B981;
+  --green-dark: #059669;
+  --green-badge: #D1FAE5;
+  --green-badge-text: #065F46;
+  --green-bg: #F0FDF4;
+  --green-border: #BBF7D0;
+  
+  --red: #EF4444;
+  --red-badge: #FEE2E2;
+  --red-badge-text: #991B1B;
+  --red-bg: #FEF2F2;
+  --red-border: #FECACA;
+  
+  --shadow-sm: 0 2px 8px rgba(11, 13, 19, 0.04);
+  --shadow-card: 0 16px 36px -10px rgba(11, 13, 19, 0.07), 0 4px 12px rgba(11, 13, 19, 0.03);
+  --shadow-elevated: 0 24px 50px -12px rgba(11, 13, 19, 0.12), 0 6px 16px rgba(11, 13, 19, 0.04);
+  --shadow-glow-yellow: 0 12px 28px rgba(255, 199, 44, 0.38);
+  --shadow-glow-blue: 0 12px 28px rgba(0, 100, 224, 0.22);
+  
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --radius-pill: 9999px;
+  
+  --container-max: 1140px;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Ambient glow accents */
+body::before {
+  content: "";
+  position: fixed;
+  top: -120px;
+  right: -80px;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 100, 224, 0.06) 0%, rgba(255, 199, 44, 0.08) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -150px;
+  left: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, rgba(255, 199, 44, 0.07) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ====================================================
+   TOP NOTIFICATION BAR (URGENCY & META FOCUS)
+   ==================================================== */
+.top-notice-bar {
+  background: #0B0D13;
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.notice-pill {
+  background: var(--yellow);
+  color: #0B0D13;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.notice-link {
+  color: var(--yellow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  margin-left: 4px;
+}
+.notice-link:hover {
+  color: #FFFFFF;
+}
+
+/* ====================================================
+   SITE NAVBAR
+   ==================================================== */
+.site-header {
+  max-width: var(--container-max);
+  margin: 16px auto 0;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+  z-index: 15;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.site-logo {
+  height: 42px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--card);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .brand-tagline { display: inline-flex; align-items: center; gap: 5px; }
+}
+
+.nav-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-link {
+  color: var(--ink-secondary);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .nav-link { display: inline-block; }
+  .nav-link:hover { color: #000; background: rgba(0,0,0,0.04); }
+}
+
+.nav-cta-btn {
+  background: #0B0D13;
+  color: #FFFFFF;
+  border: 1.5px solid #0B0D13;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(11, 13, 19, 0.15);
+  transition: all 0.22s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.nav-cta-btn:hover {
+  background: var(--yellow);
+  color: #0B0D13;
+  border-color: #0B0D13;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-yellow);
+}
+
+/* ====================================================
+   MAIN PAGE CONTAINER
+   ==================================================== */
+.page {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 28px 20px 100px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ====================================================
+   HERO SECTION
+   ==================================================== */
+.hero {
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto 36px;
+}
+
+.hero-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.meta-partner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--meta-blue-light);
+  border: 1.5px solid var(--meta-blue-border);
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--meta-blue);
+  box-shadow: 0 2px 8px rgba(0, 100, 224, 0.08);
+}
+
+.meta-icon-mini {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.kickoff-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.live-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-dot 1.8s infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.hero-title {
+  font-size: clamp(2.3rem, 5.5vw, 4rem);
+  line-height: 1.12;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  margin: 0 0 18px;
+  text-wrap: balance;
+}
+
+.highlight-tag {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--on-yellow);
+  padding: 2px 18px;
+  border-radius: 14px;
+  margin: 2px 4px;
+  box-shadow: 0 6px 20px rgba(255, 199, 44, 0.45);
+  position: relative;
+  white-space: nowrap;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2.3vw, 1.35rem);
+  font-weight: 600;
+  color: var(--ink-secondary);
+  line-height: 1.45;
+  margin: 0 auto 24px;
+  max-width: 740px;
+}
+
+.hero-subtitle strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.hero-social-proof {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid var(--line);
+  padding: 6px 18px 6px 10px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 6px 20px rgba(11, 13, 19, 0.05);
+  margin-bottom: 24px;
+}
+
+.hero-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.h-avatar-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  object-fit: cover;
+  margin-left: -9px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  background: #FFFFFF;
+}
+.h-avatar-img:first-child { margin-left: 0; }
+
+.hero-rating-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 0.82rem;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.stars-gold {
+  color: #F59E0B;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.hero-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #0B0D13;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 16px 36px;
+  border-radius: var(--radius-pill);
+  border: 2px solid #0B0D13;
+  box-shadow: 0 12px 30px rgba(11, 13, 19, 0.22);
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.hero-primary-btn:hover {
+  background: var(--yellow);
+  color: #0B0D13;
+  border-color: #0B0D13;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-glow-yellow);
+}
+
+.hero-arrow-circle {
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+
+.hero-primary-btn:hover .hero-arrow-circle {
+  background: #0B0D13;
+  color: var(--yellow);
+  transform: translateX(4px);
+}
+
+.hero-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 16px 30px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--line);
+  box-shadow: 0 4px 14px rgba(11, 13, 19, 0.05);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  text-decoration: none;
+}
+
+.hero-secondary-btn:hover {
+  background: var(--card-subtle);
+  border-color: #0B0D13;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(11, 13, 19, 0.08);
+}
+
+.hero-guarantee-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* ====================================================
+   REQUIREMENT 1: NEW TOP SECTION FOR META ADS,
+   PROMOTIONAL IMAGES & VIDEO ADS SHOWCASE
+   ==================================================== */
+.meta-showcase-section {
+  background: #0B0D13;
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 34px 28px;
+  margin: 36px 0 48px;
+  box-shadow: var(--shadow-elevated), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.meta-showcase-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0, 100, 224, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.meta-showcase-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.showcase-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 100, 224, 0.2);
+  border: 1px solid rgba(0, 100, 224, 0.5);
+  color: #60A5FA;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.showcase-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
+  margin: 0 0 10px;
+}
+
+.showcase-title .text-gold {
+  color: var(--yellow);
+}
+
+.showcase-desc {
+  font-size: 0.98rem;
+  color: #A0A5B5;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Tab Switcher for Ad Formats */
+.ad-format-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.tab-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  color: #D1D5DB;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.tab-btn.active {
+  background: var(--yellow);
+  color: #0B0D13;
+  border-color: var(--yellow);
+  box-shadow: 0 4px 16px rgba(255, 199, 44, 0.35);
+}
+
+/* Showcase Content Layout */
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 900px) {
+  .showcase-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+  }
+}
+
+/* Meta Ad Video / Reel Player Mockup */
+.ad-mockup-frame {
+  background: #141721;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.ad-frame-top {
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sponsor-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sponsor-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--card);
+  padding: 2px;
+  object-fit: contain;
+}
+
+.sponsor-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.sponsor-name {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.verified-badge {
+  color: #3B82F6;
+  font-size: 0.75rem;
+}
+
+.sponsor-tag {
+  font-size: 0.7rem;
+  color: #9CA3AF;
+  font-weight: 600;
+}
+
+.ad-platform-badge {
+  background: rgba(0, 100, 224, 0.25);
+  border: 1px solid rgba(0, 100, 224, 0.5);
+  color: #93C5FD;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* Video Stage */
+.ad-video-stage {
+  position: relative;
+  background: linear-gradient(180deg, #1A1F2E 0%, #0F111A 100%);
+  padding: 24px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.stage-ambient-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 75% 20%, rgba(255, 199, 44, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.video-hook-badge {
+  align-self: flex-start;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #FCA5A5;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.video-center-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 16px 0;
+}
+
+.video-big-headline {
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-weight: 900;
+  color: #FFFFFF;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.video-big-headline span {
+  color: var(--yellow);
+}
+
+.video-subtext {
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  max-width: 440px;
+  margin: 0 auto 18px;
+}
+
+.play-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  color: #0B0D13;
+  border: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.play-action-btn:hover {
+  background: var(--yellow);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow-yellow);
+}
+
+.play-icon-triangle {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid #0B0D13;
+}
+
+/* Video Footer Bar with Meta Ad CTA */
+.ad-video-footer {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ad-footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-hook-text {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.ad-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  color: #94A3B8;
+  margin-top: 2px;
+}
+
+.ad-meta-cta-btn {
+  background: var(--meta-blue);
+  color: #FFFFFF;
+  border: none;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.ad-meta-cta-btn:hover {
+  background: #1877F2;
+  transform: translateY(-1px);
+}
+
+/* Ad Info Column (Right Side of Spotlight) */
+.ad-showcase-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.showcase-stat-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  transition: all 0.2s ease;
+}
+
+.showcase-stat-box:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 199, 44, 0.4);
+}
+
+.stat-box-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-box-value {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+}
+
+.stat-box-desc {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  margin-top: 4px;
+}
+
+.showcase-cta-wrap {
+  margin-top: 8px;
+}
+
+.showcase-cta-btn {
+  width: 100%;
+  background: var(--yellow);
+  color: #0B0D13;
+  border: none;
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 800;
+  padding: 14px 20px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(255, 199, 44, 0.35);
+  transition: all 0.2s ease;
+}
+
+.showcase-cta-btn:hover {
+  background: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255, 255, 255, 0.25);
+}
+
+/* ====================================================
+   REQUIREMENT 4: ON-PAGE INSTANT LEAD GENERATION FORM
+   ==================================================== */
+.inline-audit-section {
+  background: #FFFFFF;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  margin: 40px 0 52px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.inline-audit-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #FFC72C 0%, #10B981 50%, #0064E0 100%);
+}
+
+.inline-audit-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 920px) {
+  .inline-audit-layout {
+    grid-template-columns: 1.05fr 1fr;
+  }
+}
+
+.audit-pitch-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.audit-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--yellow-light);
+  border: 1px solid rgba(255, 199, 44, 0.4);
+  color: #854D0E;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.audit-heading {
+  font-size: clamp(1.7rem, 3.2vw, 2.3rem);
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+
+.audit-heading .highlight-lead {
+  background: linear-gradient(180deg, transparent 65%, #FFF085 65%);
+}
+
+.audit-pitch-desc {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0 0 20px;
+}
+
+.audit-checklist {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.audit-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+}
+
+.check-green-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--green-badge);
+  color: var(--green-dark);
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.audit-founder-seal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-light);
+}
+
+.mini-founder-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--line);
+}
+
+.founder-seal-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.founder-seal-text strong {
+  color: var(--ink);
+  font-size: 0.88rem;
+}
+
+/* Inline Form Card */
+.audit-form-card {
+  background: var(--card-subtle);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-header-bar {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-header-title {
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.form-header-sub {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  margin-bottom: 6px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-box {
+  position: absolute;
+  left: 12px;
+  color: var(--muted-light);
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.form-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 14px 12px 42px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--line);
+  background: #FFFFFF;
+  color: var(--ink);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #0B0D13;
+  box-shadow: 0 0 0 4px rgba(11, 13, 19, 0.08);
+}
+
+.form-input::placeholder {
+  color: #9CA3AF;
+  font-weight: 500;
+}
+
+.field-error-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--red);
+  margin-top: 4px;
+  display: none;
+}
+
+.has-error .form-input {
+  border-color: var(--red);
+  background: #FEF2F2;
+}
+
+.has-error .field-error-text {
+  display: block;
+}
+
+.submit-lead-btn {
+  width: 100%;
+  background: #0B0D13;
+  color: #FFFFFF;
+  border: 2px solid #0B0D13;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  padding: 15px 24px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(11, 13, 19, 0.18);
+  transition: all 0.22s ease;
+  margin-top: 8px;
+}
+
+.submit-lead-btn:hover {
+  background: var(--yellow);
+  color: #0B0D13;
+  border-color: #0B0D13;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-yellow);
+}
+
+.submit-lead-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-guarantee-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ====================================================
+   COMPARISON SECTION (IN-HOUSE VS OGS)
+   ==================================================== */
+.comparison-section {
+  margin: 54px 0;
+}
+
+.comparison-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 30px;
+}
+
+.section-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--yellow-light);
+  border: 1px solid rgba(255, 199, 44, 0.5);
+  color: #854D0E;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.6vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.comparison-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .comparison-container {
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+  }
+}
+
+.comp-card {
+  border-radius: var(--radius-xl);
+  padding: 26px 24px;
+  box-shadow: var(--shadow-card);
+  border: 1.5px solid transparent;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (min-width: 520px) {
+  .comp-card {
+    grid-template-columns: 1fr 180px;
+    align-items: center;
+  }
+}
+
+.comp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.comp-card.bad-card {
+  background: linear-gradient(135deg, #FFF7F6 0%, #FEF0EF 100%);
+  border-color: var(--red-border);
+}
+
+.comp-card.good-card {
+  background: linear-gradient(135deg, #F0FDF4 0%, #E6FBF0 100%);
+  border-color: var(--green-border);
+}
+
+.comp-pill {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 6px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.bad-pill {
+  background: var(--red);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+}
+
+.good-pill {
+  background: var(--green-dark);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.comp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.comp-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  font-weight: 900;
+  margin-top: 1px;
+}
+
+.icon-red {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.icon-green {
+  background: #D1FAE5;
+  color: #059669;
+}
+
+.comp-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comp-person-img {
+  width: 100%;
+  max-width: 170px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(11, 13, 19, 0.1);
+  border: 2px solid #FFFFFF;
+}
+
+/* Center connector arrow */
+.arrow-connector {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .arrow-connector {
+    display: flex;
+  }
+}
+
+.arrow-bubble {
+  width: 48px;
+  height: 48px;
+  background: var(--yellow);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgba(255, 199, 44, 0.5);
+  border: 2px solid #0B0D13;
+  color: #0B0D13;
+  font-weight: 900;
+}
+
+/* ====================================================
+   OUR WORK SECTION (DASHBOARD PREVIEWS)
+   ==================================================== */
+.our-work-section {
+  margin: 60px 0;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 32px;
+}
+
+@media (min-width: 860px) {
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.work-platform-card {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.work-platform-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.platform-card-header {
+  padding: 20px 24px;
+  background: #FAF9F6;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.platform-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.platform-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  box-shadow: var(--shadow-sm);
+}
+
+.platform-header-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.platform-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.platform-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.platform-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 2px 0 0;
+}
+
+.work-dashboard-preview {
+  padding: 16px;
+  background: #0B0D13;
+}
+
+.dashboard-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #9CA3AF;
+}
+
+.preview-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.preview-dot.red { background: #EF4444; }
+.preview-dot.yellow { background: #F59E0B; }
+.preview-dot.green { background: #10B981; }
+
+.preview-url-bar {
+  margin-left: 8px;
+  font-family: monospace;
+}
+
+.work-dashboard-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ====================================================
+   "WHAT I HANDLE" SERVICES SECTION
+   ==================================================== */
+.services-section {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-xl);
+  padding: 36px 28px;
+  margin: 54px 0;
+  box-shadow: var(--shadow-card);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.service-item {
+  background: #FAF9F6;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.22s ease;
+}
+
+.service-item:hover {
+  background: #FFFFFF;
+  border-color: #0B0D13;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.service-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: #FFFFFF;
+  border: 1.5px solid var(--line);
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+  padding: 8px;
+}
+
+.service-brand-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.clean-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.service-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.service-desc {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* ====================================================
+   TRUST STATS GRID
+   ==================================================== */
+.trust-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 44px 0;
+}
+
+@media (min-width: 768px) {
+  .trust-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.trust-stat-card {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 22px 18px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease;
+}
+
+.trust-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #0B0D13;
+}
+
+.stat-num {
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.stat-unit {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.stat-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--ink-secondary);
+  margin-bottom: 2px;
+}
+
+.stat-sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* ====================================================
+   CLIENTS SHOWCASE (BRANDS THAT TRUST OGS)
+   ==================================================== */
+.clients-showcase {
+  margin: 54px 0;
+  text-align: center;
+}
+
+.clients-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+
+@media (min-width: 640px) {
+  .clients-logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .clients-logo-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.client-logo-card {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 20px 14px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.client-logo-card:hover {
+  transform: translateY(-3px);
+  border-color: #0B0D13;
+  box-shadow: var(--shadow-card);
+}
+
+.client-logo-img-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 12px;
+  border: 2px solid var(--line-light);
+  background: #FFFFFF;
+  display: grid;
+  place-items: center;
+}
+
+.client-logo-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.client-name {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.client-category {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* ====================================================
+   WHY OGS SECTION & FOUNDER CARD
+   ==================================================== */
+.why-ogs-section {
+  margin: 60px 0;
+}
+
+.why-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 36px;
+}
+
+.why-main-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 920px) {
+  .why-main-layout {
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: stretch;
+  }
+}
+
+.why-cards-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .why-cards-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.why-card {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.22s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-3px);
+  border-color: #0B0D13;
+  box-shadow: var(--shadow-card);
+}
+
+.why-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.why-num-badge {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--muted);
+  background: var(--card-subtle);
+  border: 1px solid var(--line);
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.why-icon-spark {
+  font-size: 1.1rem;
+}
+
+.why-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.why-card-text {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Founder Spotlight Card */
+.why-founder-col {
+  display: flex;
+}
+
+.why-founder-card {
+  width: 100%;
+  background: #0B0D13;
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.founder-photo-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.founder-photo {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.founder-floating-pill {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(11, 13, 19, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.founder-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-name-row {
+  margin-bottom: 8px;
+}
+
+.founder-name {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  margin: 0 0 2px;
+}
+
+.founder-role-tag {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.founder-bio {
+  font-size: 0.88rem;
+  color: #D1D5DB;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Quote Banner */
+.why-bottom-line {
+  margin-top: 24px;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.bottom-line-quote {
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* ====================================================
+   FREQUENTLY ASKED QUESTIONS (ACCORDION)
+   ==================================================== */
+.faq-section {
+  margin: 60px 0;
+}
+
+.faq-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 32px;
+}
+
+.faq-accordion {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faq-item.is-open {
+  border-color: #0B0D13;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+  padding: 20px 24px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.faq-toggle-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FAF9F6;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background 0.2s ease;
+}
+
+.faq-toggle-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--ink);
+}
+
+.faq-item.is-open .faq-toggle-icon {
+  transform: rotate(45deg);
+  background: var(--yellow);
+}
+
+.faq-answer-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-item.is-open .faq-answer-panel {
+  max-height: 300px;
+}
+
+.faq-answer-inner {
+  padding: 0 24px 22px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.faq-answer-inner strong {
+  color: var(--ink);
+}
+
+/* ====================================================
+   BOTTOM HIGH-CONVERSION CTA BANNER
+   ==================================================== */
+.final-cta-section {
+  background: #0B0D13;
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 48px 32px;
+  margin: 64px 0 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-elevated);
+}
+
+.final-cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 450px;
+  height: 200px;
+  background: radial-gradient(ellipse, rgba(255, 199, 44, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.final-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 199, 44, 0.15);
+  border: 1px solid rgba(255, 199, 44, 0.4);
+  color: var(--yellow);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.final-cta-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin: 0 auto 14px;
+  max-width: 720px;
+  position: relative;
+  z-index: 2;
+}
+
+.final-cta-sub {
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  max-width: 600px;
+  margin: 0 auto 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.final-cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.final-btn-yellow {
+  background: var(--yellow);
+  color: #0B0D13;
+  border: 2px solid var(--yellow);
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 16px 36px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(255, 199, 44, 0.4);
+  transition: all 0.22s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.final-btn-yellow:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(255, 255, 255, 0.3);
+}
+
+.final-btn-outline {
+  background: transparent;
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 16px 30px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.final-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* ====================================================
+   MOBILE STICKY BOTTOM BAR (META ADS ESSENTIAL)
+   ==================================================== */
+.mobile-sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(11, 13, 19, 0.95);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 16px max(10px, env(safe-area-inset-bottom));
+  z-index: 99;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.mobile-bar-btn {
+  flex: 1;
+  background: var(--yellow);
+  color: #0B0D13;
+  border: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 13px 18px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(255, 199, 44, 0.4);
+}
+
+.mobile-whatsapp-btn {
+  background: #25D366;
+  color: #FFFFFF;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+/* ====================================================
+   FLOATING FAB (DESKTOP & TABLET)
+   ==================================================== */
+.floating-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #0B0D13;
+  color: #FFFFFF;
+  border: 1.5px solid var(--yellow);
+  padding: 12px 22px;
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: var(--shadow-elevated), 0 0 20px rgba(255, 199, 44, 0.25);
+  display: none;
+  align-items: center;
+  gap: 8px;
+  z-index: 90;
+  transition: all 0.22s ease;
+}
+
+@media (min-width: 769px) {
+  .floating-fab {
+    display: inline-flex;
+  }
+}
+
+.floating-fab:hover {
+  background: var(--yellow);
+  color: #0B0D13;
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* ====================================================
+   SOCIAL PROOF NOTIFICATION TOAST
+   ==================================================== */
+.social-proof-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  box-shadow: var(--shadow-elevated);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 340px;
+  z-index: 85;
+  transform: translateY(120px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-proof-toast.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .social-proof-toast {
+    bottom: 80px;
+    left: 12px;
+    right: 12px;
+    max-width: none;
+  }
+}
+
+.toast-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--yellow-light);
+  border: 1px solid var(--yellow);
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.toast-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.toast-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.toast-text strong {
+  font-weight: 800;
+}
+
+.toast-time {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.toast-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+/* ====================================================
+   LEAD DIALOG MODAL (POPUP)
+   ==================================================== */
+.lead-dialog {
+  border: none;
+  border-radius: var(--radius-xl);
+  padding: 0;
+  max-width: 480px;
+  width: 92%;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  background: #FFFFFF;
+}
+
+.lead-dialog::backdrop {
+  background: rgba(11, 13, 19, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.modal-sheet {
+  padding: 32px 28px;
+  position: relative;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #FAF9F6;
+  border: 1px solid var(--line);
+  font-size: 1.3rem;
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: var(--red-badge);
+  color: var(--red);
+  border-color: var(--red-border);
+}
+
+.modal-hook-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--yellow-light);
+  border: 1px solid rgba(255, 199, 44, 0.4);
+  color: #854D0E;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 12px;
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.modal-subtitle {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0 0 20px;
+}
+
+.modal-perks-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: #FAF9F6;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-perk-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.modal-perk-item .perk-emoji {
+  font-size: 1rem;
+}
+
+.hp-field {
+  display: none !important;
+}
+
+.form-alert-box {
+  background: #FEE2E2;
+  border: 1px solid #FECACA;
+  color: #991B1B;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  display: none;
+}
+
+/* Success View Inside Modal */
+.success-view {
+  display: none;
+  text-align: center;
+  padding: 24px 10px;
+}
+
+.is-submitted #leadForm,
+.is-submitted .modal-perks-strip,
+.is-submitted .modal-subtitle,
+.is-submitted .modal-title,
+.is-submitted .modal-hook-pill {
+  display: none;
+}
+
+.is-submitted .success-view {
+  display: block;
+}
+
+.success-check-bubble {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--green-badge);
+  border: 2px solid var(--green);
+  color: var(--green-dark);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  margin: 0 auto 16px;
+}
+
+.success-title {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.success-desc {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+/* ====================================================
+   VIDEO MODAL PREVIEW DIALOG
+   ==================================================== */
+.video-preview-dialog {
+  border: none;
+  border-radius: var(--radius-xl);
+  padding: 0;
+  max-width: 640px;
+  width: 92%;
+  background: #0B0D13;
+  color: #FFFFFF;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.video-preview-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.video-dialog-inner {
+  padding: 24px;
+  position: relative;
+}
+
+.video-player-container {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  background: #141721;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+/* ====================================================
+   REFERENCE VIDEO SECTION (MODELED ON WEBINAR.DIGITALAZADIAGENCY.COM)
+   ==================================================== */
+.ref-video-section {
+  max-width: 1040px;
+  margin: 36px auto 52px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.ref-video-pill {
+  display: inline-block;
+  border: 1.5px solid #0B0D13;
+  color: #0B0D13;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  padding: 7px 22px;
+  border-radius: var(--radius-pill);
+  background: var(--yellow-light);
+  box-shadow: 0 2px 8px rgba(255, 199, 44, 0.2);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.ref-video-headline {
+  margin: 0 auto 12px;
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  line-height: 1.18;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  max-width: 860px;
+}
+
+.ref-video-subgradient {
+  margin-top: 8px;
+  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+  font-weight: 800;
+  line-height: 1.35;
+  background: linear-gradient(90deg, #0B0D13 0%, #1D4ED8 50%, #059669 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.ref-video-bezel {
+  margin-top: 32px;
+  padding: 14px;
+  border-radius: 28px;
+  background: #0B0D13;
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 30px 80px rgba(255, 199, 44, 0.22), 0 16px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.ref-video-bezel-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 10px 10px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #9CA3AF;
+  letter-spacing: 0.02em;
+}
+
+.ref-live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #F87171;
+  font-weight: 800;
+}
+
+.ref-video-container {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.ref-video-below {
+  max-width: 840px;
+  margin: 32px auto 0;
+  text-align: center;
+}
+
+.ref-video-desc {
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--ink-secondary);
+  max-width: 720px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.ref-video-btn {
+  margin-top: 28px;
+  font-size: 1.12rem;
+  font-weight: 800;
+  padding: 18px 44px;
+  border-radius: var(--radius-pill);
+  background: #0B0D13;
+  color: #FFFFFF;
+  border: 2px solid #0B0D13;
+  box-shadow: 0 12px 30px rgba(11, 13, 19, 0.22);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: inherit;
+}
+
+.ref-video-btn:hover {
+  background: var(--yellow);
+  color: #0B0D13;
+  border-color: #0B0D13;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-yellow);
+}
+
+.ref-video-guarantees {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ref-mentor-badge {
+  margin-top: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  padding: 14px 24px 14px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease;
+}
+
+.ref-mentor-badge:hover {
+  transform: translateY(-2px);
+  border-color: #0B0D13;
+}
+
+.ref-mentor-avatar {
+  width: 64px;
+  height: 64px;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2.5px solid var(--yellow);
+  box-shadow: 0 4px 12px rgba(255, 199, 44, 0.35);
+  background: #0B0D13;
+}
+
+
+/* ====================================================
+   MOBILE HAMBURGER NAVBAR & ENHANCED RESPONSIVENESS
+   ==================================================== */
+.mobile-header-actions {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-nav-cta-btn {
+  background: #0B0D13;
+  color: #FFFFFF;
+  border: 1.5px solid #0B0D13;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(11, 13, 19, 0.12);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.mobile-nav-cta-btn:hover {
+  background: var(--yellow);
+  color: #0B0D13;
+  border-color: #0B0D13;
+}
+
+.hamburger-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: #FFFFFF;
+  border: 1.5px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hamburger-btn:hover {
+  background: #FAF9F6;
+  border-color: #0B0D13;
+}
+
+.hamburger-bar {
+  width: 20px;
+  height: 2px;
+  background: #0B0D13;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.hamburger-btn.is-active .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.is-active .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.is-active .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Drawer Overlay */
+.mobile-nav-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-nav-drawer.is-open {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 13, 19, 0.68);
+  backdrop-filter: blur(8px);
+}
+
+.drawer-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(340px, 86vw);
+  background: #0B0D13;
+  color: #FFFFFF;
+  padding: 22px 20px;
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-nav-drawer.is-open .drawer-panel {
+  transform: translateX(0);
+}
+
+.drawer-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer-logo {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
+.drawer-close-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drawer-close-btn:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.drawer-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--yellow);
+  margin: 16px 0 14px;
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  margin: 8px 0;
+}
+
+.drawer-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: var(--radius-md);
+  color: #E2E8F0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.drawer-link:hover, .drawer-link:active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--yellow);
+  transform: translateX(4px);
+}
+
+.drawer-link-highlight {
+  background: rgba(255, 199, 44, 0.12);
+  border: 1px solid rgba(255, 199, 44, 0.3);
+  color: var(--yellow);
+}
+
+.drawer-link-icon {
+  font-size: 1rem;
+  width: 22px;
+  text-align: center;
+}
+
+.drawer-link-arrow {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: #64748B;
+  transition: transform 0.2s ease;
+}
+
+.drawer-link:hover .drawer-link-arrow {
+  transform: translateX(3px);
+  color: var(--yellow);
+}
+
+.drawer-bottom-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer-cta-primary {
+  width: 100%;
+  background: var(--yellow);
+  color: #0B0D13;
+  border: none;
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 800;
+  padding: 14px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(255, 199, 44, 0.35);
+}
+
+.drawer-cta-whatsapp {
+  width: 100%;
+  background: #25D366;
+  color: #FFFFFF;
+  border: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 13px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+
+.drawer-guarantee-note {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94A3B8;
+  margin-top: 4px;
+}
+
+/* ====================================================
+   ALL-DEVICE RESPONSIVE OPTIMIZATIONS (TABLETS & PHONES)
+   ==================================================== */
+@media (max-width: 860px) {
+  .nav-right-actions {
+    display: none !important;
+  }
+  .mobile-header-actions {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 110px;
+  }
+  /* Prevent iOS Safari auto-zoom on input focus */
+  .form-input {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .top-notice-bar {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    gap: 8px;
+  }
+  .notice-pill {
+    display: none;
+  }
+  .site-header {
+    margin-top: 10px;
+    padding: 0 16px;
+  }
+  .site-logo {
+    height: 34px;
+  }
+  .hero {
+    margin-bottom: 22px;
+  }
+  .hero-badges-row {
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .meta-partner-badge, .kickoff-badge {
+    font-size: 0.74rem;
+    padding: 5px 12px;
+  }
+  .hero-title {
+    font-size: clamp(1.85rem, 6.8vw, 2.5rem);
+    line-height: 1.16;
+    margin-bottom: 14px;
+  }
+  .hero-subtitle {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+  .hero-social-proof {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    padding: 8px 14px;
+  }
+  .hero-rating-text {
+    text-align: center;
+    font-size: 0.78rem;
+  }
+  .hero-primary-btn, .hero-secondary-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+  .hero-guarantee-note {
+    font-size: 0.76rem;
+    text-align: center;
+  }
+  /* Reference Video Section Mobile */
+  .ref-video-section {
+    margin: 22px auto 36px;
+  }
+  .ref-video-headline {
+    font-size: clamp(1.45rem, 5.2vw, 2rem);
+  }
+  .ref-video-bezel {
+    padding: 8px;
+    border-radius: 18px;
+    margin-top: 18px;
+  }
+  .ref-video-bezel-topbar {
+    padding: 2px 6px 8px;
+    font-size: 0.68rem;
+  }
+  .ref-video-container {
+    border-radius: 12px;
+  }
+  .ref-video-btn {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    justify-content: center;
+  }
+  .ref-video-guarantees {
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+  .ref-mentor-badge {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 14px;
+    width: 100%;
+    border-radius: 18px;
+  }
+  .ref-mentor-avatar {
+    margin: 0 auto;
+  }
+  /* Meta Showcase Mobile */
+  .meta-showcase-section {
+    padding: 24px 16px;
+    border-radius: var(--radius-lg);
+    margin: 28px 0;
+  }
+  .showcase-title {
+    font-size: clamp(1.4rem, 4.8vw, 1.8rem);
+  }
+  .tab-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  .ad-video-stage {
+    padding: 16px;
+    min-height: 240px;
+  }
+  .video-big-headline {
+    font-size: 1.2rem;
+  }
+  /* Inline Audit Form Mobile */
+  .inline-audit-section {
+    padding: 24px 16px;
+    border-radius: var(--radius-lg);
+    margin: 28px 0;
+  }
+  .audit-heading {
+    font-size: clamp(1.5rem, 5vw, 1.9rem);
+  }
+  .audit-form-card {
+    padding: 20px 14px;
+    border-radius: var(--radius-md);
+  }
+  /* Comparison Section Mobile */
+  .comp-card {
+    padding: 20px 16px;
+    border-radius: var(--radius-lg);
+  }
+  .comp-card .comp-person-img {
+    max-width: 130px;
+    height: 170px;
+  }
+  /* Services Mobile */
+  .services-section {
+    padding: 24px 16px;
+    border-radius: var(--radius-lg);
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .service-item {
+    padding: 14px 10px;
+  }
+  .service-name {
+    font-size: 0.92rem;
+  }
+  .service-desc {
+    font-size: 0.72rem;
+  }
+  /* Stats Mobile */
+  .trust-stats-grid {
+    gap: 10px;
+  }
+  .trust-stat-card {
+    padding: 16px 12px;
+  }
+  .stat-num {
+    font-size: 1.6rem;
+  }
+  /* Final CTA Mobile */
+  .final-cta-section {
+    padding: 36px 16px;
+    border-radius: var(--radius-lg);
+  }
+  .final-cta-title {
+    font-size: clamp(1.6rem, 5.2vw, 2.2rem);
+  }
+  .final-btn-yellow, .final-btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP URGENCY & META FOCUS BAR -->
+<div class="top-notice-bar" role="banner">
+  <span class="notice-pill">META ADS 2026</span>
+  <span>High-ROAS Paid Acquisition Engine · ⚡ Only 3 Growth Slots Open This Month</span>
+  <a href="#audit-form" class="notice-link">Claim Audit ➔</a>
+</div>
+
+<!-- HEADER NAVBAR -->
+<header class="site-header">
+  <a href="#" class="brand-wrap" aria-label="OGS Home">
+    <img src="assets/ogs_logo.png" alt="OGS - OSK Growth Studio" class="site-logo">
+    <span class="brand-tagline">
+      <span class="live-pulse-dot" aria-hidden="true"></span>
+      Meta &amp; Google Growth Partner
+    </span>
+  </a>
+
+  <!-- Desktop Navigation -->
+  <nav class="nav-right-actions" aria-label="Desktop Navigation">
+    <a href="#strategy-video" class="nav-link" style="color:#0B0D13;font-weight:800;">▶ Strategy Video</a>
+    <a href="#meta-showcase" class="nav-link">Ad Showcase</a>
+    <a href="#comparison" class="nav-link">Why Us</a>
+    <a href="#meta-showcase" class="nav-link">Live Proof</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+    <button type="button" class="nav-cta-btn open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+      <span>Book Growth Call</span>
+      <span aria-hidden="true">➔</span>
+    </button>
+  </nav>
+
+  <!-- Mobile Header Actions (Quick CTA + Hamburger Button) -->
+  <div class="mobile-header-actions">
+    <button type="button" class="mobile-nav-cta-btn open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+      <span>Book Call</span>
+      <span aria-hidden="true">➔</span>
+    </button>
+    <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Slide-In Navigation Drawer -->
+<div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true" role="dialog" aria-label="Mobile Navigation Menu">
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="drawer-panel" id="drawerPanel">
+    
+    <!-- Drawer Top Bar -->
+    <div class="drawer-top-row">
+      <a href="#" class="drawer-brand" id="drawerBrandLink">
+        <img src="assets/ogs_logo.png" alt="OGS" class="drawer-logo">
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
+        ✕
+      </button>
+    </div>
+
+    <!-- Trust Tagline Badge -->
+    <div class="drawer-trust-badge">
+      <span class="live-pulse-dot" aria-hidden="true"></span>
+      <span>Meta &amp; Google Partner · 48h Kickoff</span>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <nav class="drawer-nav" aria-label="Mobile Menu Links">
+      <a href="#strategy-video" class="drawer-link drawer-link-highlight">
+        <span class="drawer-link-icon">▶</span>
+        <span>Strategy Video</span>
+        <span class="drawer-link-arrow">➔</span>
+      </a>
+      <a href="#meta-showcase" class="drawer-link">
+        <span class="drawer-link-icon">🎬</span>
+        <span>Meta Ads Showcase</span>
+        <span class="drawer-link-arrow">➔</span>
+      </a>
+      <a href="#audit-form" class="drawer-link">
+        <span class="drawer-link-icon">🎯</span>
+        <span>Claim Free Audit</span>
+        <span class="drawer-link-arrow">➔</span>
+      </a>
+      <a href="#comparison" class="drawer-link">
+        <span class="drawer-link-icon">⚖️</span>
+        <span>In-House vs Us</span>
+        <span class="drawer-link-arrow">➔</span>
+      </a>
+      <a href="#meta-showcase" class="drawer-link">
+        <span class="drawer-link-icon">💼</span>
+        <span>Live Campaign Proof</span>
+        <span class="drawer-link-arrow">➔</span>
+      </a>
+      <a href="#servicesTitle" class="drawer-link">
+        <span class="drawer-link-icon">🚀</span>
+        <span>What We Handle</span>
+        <span class="drawer-link-arrow">➔</span>
+      </a>
+      <a href="#clientsTitle" class="drawer-link">
+        <span class="drawer-link-icon">⭐</span>
+        <span>Trusted Brands</span>
+        <span class="drawer-link-arrow">➔</span>
+      </a>
+      <a href="#why-ogs" class="drawer-link">
+        <span class="drawer-link-icon">⚡</span>
+        <span>Why OGS System</span>
+        <span class="drawer-link-arrow">➔</span>
+      </a>
+      <a href="#faq" class="drawer-link">
+        <span class="drawer-link-icon">💡</span>
+        <span>Frequently Asked Questions</span>
+        <span class="drawer-link-arrow">➔</span>
+      </a>
+    </nav>
+
+    <!-- Drawer Action Buttons -->
+    <div class="drawer-bottom-actions">
+      <button type="button" class="drawer-cta-primary open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+        <span>Book Free Growth Call</span>
+        <span aria-hidden="true">➔</span>
+      </button>
+      <a href="https://wa.me/919876543210?text=Hi%20OGS,%20I%20would%20like%20to%20learn%20more%20about%20your%20Meta%20Ads%20growth%20support." target="_blank" rel="noopener noreferrer" class="drawer-cta-whatsapp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.8 14.15c-.24.67-1.39 1.28-1.92 1.36-.5.08-1.14.12-3.66-.92-3.22-1.33-5.29-4.59-5.45-4.81-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4.21 0 .43.01.62.01.2 0 .47-.08.73.56.27.67.92 2.25 1 2.41.08.16.13.35.03.56-.11.21-.16.35-.32.53-.16.19-.34.42-.48.56-.16.16-.33.33-.14.65.19.32.84 1.38 1.8 2.24 1.24 1.1 2.29 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.29.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.77-.16 1.44z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <div class="drawer-guarantee-note">
+        <span>⚡ 48h Setup Kickoff · 🔒 Zero Lock-In</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<main class="page">
+
+  <!-- ==================== HERO VIDEO SECTION ==================== -->
+  <section class="ref-video-section hero" id="strategy-video" aria-label="Hero Video Strategy" style="margin-top: 10px; margin-bottom: 48px;">
+    <div class="hero-badges-row">
+      <div class="meta-partner-badge">
+        <img src="assets/meta_logo.png" alt="Meta" class="meta-icon-mini">
+        <span>META ADS &amp; GOOGLE GROWTH STUDIO</span>
+      </div>
+      <div class="kickoff-badge">
+        <span class="live-pulse-dot" aria-hidden="true"></span>
+        <span>48h Setup Kickoff Guarantee</span>
+      </div>
+    </div>
+
+    <h1 id="refVideoTitle" class="ref-video-headline" style="margin-top: 14px;">
+      Watch How We Engineer Meta &amp; Google Systems <span class="highlight-tag">Behind The Ads</span>
+    </h1>
+
+    <!-- Social Proof Rating Pill -->
+    <div class="hero-social-proof" style="margin-top: 16px; margin-bottom: 24px;">
+      <div class="hero-avatars" aria-hidden="true">
+        <img class="h-avatar-img" src="assets/clients/namasthe_herbal.jpg" alt="Namasthe Herbal" title="Namasthe Herbal">
+        <img class="h-avatar-img" src="assets/clients/nwst_foundation.jpg" alt="NWST Foundation" title="NWST Foundation">
+        <img class="h-avatar-img" src="assets/clients/quitt_mozz.jpg" alt="QUITT MOZZ" title="QUITT MOZZ">
+        <img class="h-avatar-img" src="assets/clients/homeartist_interior.jpg" alt="Homeartist Interior" title="Homeartist Interior">
+        <img class="h-avatar-img" src="assets/clients/relax_wellness.jpg" alt="Relax Wellness" title="Relax Wellness">
+        <img class="h-avatar-img" src="assets/clients/mittal_lab_cropped.jpg" alt="Mittal Lab" title="Mittal Lab">
+      </div>
+      <div class="hero-rating-text">
+        <span class="stars-gold">★★★★★</span>
+        <span><strong>4.9/5 Average Client Rating</strong> · 150+ Businesses &amp; Founders Served</span>
+      </div>
+    </div>
+
+    <!-- Video Player (Universal & Self-Contained, styled after reference) -->
+    <div class="ref-video-bezel">
+      <div class="ref-video-bezel-topbar">
+        <span class="ref-live-tag">
+          <span class="live-pulse-dot" style="background:#EF4444;" aria-hidden="true"></span>
+          <span>LIVE STRATEGY MASTERCLASS</span>
+        </span>
+        <span style="color:#CBD5E1;">Meta &amp; Google Verified Acquisition System</span>
+      </div>
+      
+      <div id="heroVideoContainer" class="ref-video-container">
+        <iframe id="heroVideoFrame" src="https://www.youtube.com/embed/0an2Q1fgMho?rel=0&amp;modestbranding=1" title="How To Change Meta Ad Thumbnail &amp; Optimize Ads - OGS Growth Studio" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Below Video: CTA Button, Guarantees & Mentor Badge -->
+    <div class="ref-video-below">
+      <button type="button" class="ref-video-btn open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+        <span>CLAIM FREE STRATEGY AUDIT</span>
+        <span aria-hidden="true">➔</span>
+      </button>
+
+      <div class="ref-video-guarantees">
+        <span>⚡ 48-Hour Setup Kickoff</span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>🎯 100% Free Strategy Session (₹15,000 Value)</span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>🔒 Zero Long-Term Lock-In</span>
+      </div>
+
+      <!-- Mentor / Founder Mini Credibility Badge (matching reference) -->
+      <div class="ref-mentor-badge">
+        <img src="assets/onkar_kulkarni.jpg" alt="Onkar Kulkarni" class="ref-mentor-avatar" loading="lazy">
+        <div>
+          <div style="font-weight: 800; font-size: 1.1rem; line-height: 1.3; color: var(--ink);">Onkar Kulkarni</div>
+          <div style="font-size: 0.85rem; color: var(--muted); font-weight: 600;">Founder &amp; Lead Growth Partner · OSK Growth Studio</div>
+          <div style="margin-top: 4px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px;">
+            <span style="color: #F59E0B; font-size: 0.95rem; letter-spacing: 2px;">★★★★★</span>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--ink-secondary);">4.9/5 Rating · 150+ Founders &amp; Brands Scaled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       REQUIREMENT 1: NEW TOP SECTION FOR META ADS,
+       PROMOTIONAL IMAGES & VIDEO ADS SHOWCASE
+       ==================================================== -->
+  <section class="meta-showcase-section" id="meta-showcase" aria-labelledby="showcaseTitle">
+    <div class="meta-showcase-header">
+      <div class="showcase-pill">
+        <span class="live-pulse-dot" aria-hidden="true"></span>
+        <span>META ADS &amp; CREATIVE ENGINE</span>
+      </div>
+      <h2 id="showcaseTitle" class="showcase-title">
+        High-Converting <span class="text-gold">Meta Ads &amp; Video Creatives</span> In Action
+      </h2>
+      <p class="showcase-desc">
+        Stop losing money on generic boosted posts. See the exact video ad formats, reels, and carousel hooks we deploy to capture intent on Instagram and Facebook.
+      </p>
+    </div>
+
+    <!-- Ad Format Switcher Tabs -->
+    <div class="ad-format-tabs" role="tablist" aria-label="Ad Formats">
+      <button type="button" class="tab-btn active" id="tabVideo" role="tab" aria-selected="true" aria-controls="panelVideo">
+        <span>🎬 Video Ad &amp; Reel Format</span>
+      </button>
+      <button type="button" class="tab-btn" id="tabCarousel" role="tab" aria-selected="false" aria-controls="panelCarousel">
+        <span>🖼️ High-ROAS Carousel Hook</span>
+      </button>
+      <button type="button" class="tab-btn" id="tabProof" role="tab" aria-selected="false" aria-controls="panelProof">
+        <span>📊 Live Meta Campaign Proof</span>
+      </button>
+    </div>
+
+    <!-- Showcase Layout -->
+    <div class="showcase-grid">
+      
+      <!-- LEFT: Interactive Ad Preview Mockup -->
+      <div class="ad-mockup-frame">
+        <!-- Sponsored Header Bar -->
+        <div class="ad-frame-top">
+          <div class="sponsor-info">
+            <img src="assets/ogs_logo.png" alt="OGS" class="sponsor-avatar">
+            <div class="sponsor-meta">
+              <span class="sponsor-name">
+                oskgrowthstudio
+                <span class="verified-badge" aria-label="Verified">●</span>
+              </span>
+              <span class="sponsor-tag">Sponsored · Instagram &amp; Facebook</span>
+            </div>
+          </div>
+          <span class="ad-platform-badge">Meta Verified Creative</span>
+        </div>
+
+        <!-- Video Ad Interactive Stage (Tab 1) -->
+        <div class="ad-video-stage" id="panelVideo" role="tabpanel" aria-labelledby="tabVideo">
+          <div class="stage-ambient-glow"></div>
+          
+          <div class="video-hook-badge">
+            <span class="live-pulse-dot" style="background:#EF4444;" aria-hidden="true"></span>
+            <span>HIGH-RETENTION HOOK (0:00 - 0:03)</span>
+          </div>
+
+          <div class="video-center-content">
+            <h3 class="video-big-headline">
+              Why 90% of Meta Ad Budgets Are Wasted <br><span>(And The 48h Fix)</span>
+            </h3>
+            <p class="video-subtext">
+              Watch how our connected acquisition system replaces broken in-house hiring and delivers verified leads from day 1.
+            </p>
+            <button type="button" class="play-action-btn" id="openVideoModalBtn" aria-label="Watch video preview">
+              <span class="play-icon-triangle" aria-hidden="true"></span>
+              <span>Watch Video Ad Breakdown</span>
+            </button>
+          </div>
+
+          <!-- Ad Action Footer Bar -->
+          <div class="ad-video-footer">
+            <div class="ad-footer-left">
+              <span class="ad-hook-text">⚡ 48-Hour Paid Acquisition Engine</span>
+              <div class="ad-stats-row">
+                <span>👁️ 42.8K Views</span>
+                <span>🔥 4.8% CTR</span>
+                <span>📈 3.8x ROAS</span>
+              </div>
+            </div>
+            <button type="button" class="ad-meta-cta-btn open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!-- Carousel Ad Mockup (Tab 2 - Hidden by default) -->
+        <div class="ad-video-stage" id="panelCarousel" role="tabpanel" aria-labelledby="tabCarousel" style="display:none;">
+          <div class="stage-ambient-glow"></div>
+          
+          <div class="video-hook-badge" style="background:rgba(16,185,129,0.2);border-color:rgba(16,185,129,0.4);color:#6EE7B7;">
+            <span>MULTI-CARD RETARGETING FUNNEL</span>
+          </div>
+
+          <div class="video-center-content">
+            <h3 class="video-big-headline">
+              3 Cards That Generated <br><span>100K+ Qualified Inquiries</span>
+            </h3>
+            <p class="video-subtext">
+              Card 1: Pattern Interrupt Hook → Card 2: Cost Comparison Matrix → Card 3: Free Strategic Audit Offer.
+            </p>
+            <button type="button" class="play-action-btn open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+              <span>Deploy For My Business ➔</span>
+            </button>
+          </div>
+
+          <div class="ad-video-footer">
+            <div class="ad-footer-left">
+              <span class="ad-hook-text">Swipeable Meta Carousel Creative</span>
+              <div class="ad-stats-row">
+                <span>🎯 Top Engagement Placement</span>
+              </div>
+            </div>
+            <button type="button" class="ad-meta-cta-btn open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+              Claim Offer
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Meta Campaign Proof (Tab 3 - Hidden by default) -->
+        <div class="ad-video-stage" id="panelProof" role="tabpanel" aria-labelledby="tabProof" style="display:none;padding:12px;">
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/work/meta_mobile.png">
+            <img src="assets/work/meta_desktop.png" alt="Meta Ads Manager Live Campaign Proof" class="work-dashboard-img" loading="lazy">
+          </picture>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Why Meta Ads Perform With OGS (Sidebar Box) -->
+      <div class="ad-showcase-sidebar">
+        <div class="showcase-stat-box">
+          <div class="stat-box-title">
+            <span>⚡ Creative Hook Strategy</span>
+          </div>
+          <div class="stat-box-value">3.8x Avg ROAS</div>
+          <div class="stat-box-desc">We test 5+ video hooks &amp; visual angles per campaign to eliminate budget exhaustion.</div>
+        </div>
+
+        <div class="showcase-stat-box">
+          <div class="stat-box-title">
+            <span>🎯 High-Intent Lead Filtering</span>
+          </div>
+          <div class="stat-box-value">₹37.36 CPL</div>
+          <div class="stat-box-desc">Zero spam clicks. We connect Meta Instant Forms with automated qualification steps.</div>
+        </div>
+
+        <div class="showcase-stat-box">
+          <div class="stat-box-title">
+            <span>⚡ Speed To Execution</span>
+          </div>
+          <div class="stat-box-value">48 Hours</div>
+          <div class="stat-box-desc">From initial strategic call to live live ad campaigns with end-to-end pixel tracking.</div>
+        </div>
+
+        <div class="showcase-cta-wrap">
+          <button type="button" class="showcase-cta-btn open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+            <span>Run High-Converting Ads Like This</span>
+            <span aria-hidden="true">➔</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================
+       REQUIREMENT 4: ON-PAGE INSTANT LEAD GENERATION FORM
+       ==================================================== -->
+  <section class="inline-audit-section" id="audit-form" aria-labelledby="auditHeading">
+    <div class="inline-audit-layout">
+      
+      <!-- Pitch Column -->
+      <div class="audit-pitch-col">
+        <div class="audit-badge">
+          <span>⚡ LIMITED TO 5 FOUNDERS PER MONTH</span>
+        </div>
+        <h2 id="auditHeading" class="audit-heading">
+          Get Your Free <span class="highlight-lead">Meta Ads Growth Audit</span>
+        </h2>
+        <p class="audit-pitch-desc">
+          Stop wondering where your ad spend is disappearing. In this 30-minute growth session, we will analyze your Meta &amp; Google ad campaigns, uncover high-cost leaks, and map out a custom 48-hour scaling plan.
+        </p>
+
+        <ul class="audit-checklist">
+          <li class="audit-check-item">
+            <span class="check-green-icon" aria-hidden="true">✓</span>
+            <span><strong>Full Ad Account Audit:</strong> Review of your targeting, bidding, and creative fatigue</span>
+          </li>
+          <li class="audit-check-item">
+            <span class="check-green-icon" aria-hidden="true">✓</span>
+            <span><strong>Landing Page &amp; Pixel Check:</strong> Eliminate drop-offs between click and inquiry</span>
+          </li>
+          <li class="audit-check-item">
+            <span class="check-green-icon" aria-hidden="true">✓</span>
+            <span><strong>Predictable Scaling Roadmap:</strong> Tailored budget recommendations for 2x-3x ROAS</span>
+          </li>
+        </ul>
+
+        <div class="audit-founder-seal">
+          <img src="assets/onkar_kulkarni.jpg" alt="Onkar Kulkarni" class="mini-founder-avatar">
+          <div class="founder-seal-text">
+            <strong>Direct Review by Onkar Kulkarni</strong>
+            <span>Lead Growth Partner · OSK Growth Studio</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instant Lead Form Card -->
+      <div class="audit-form-card">
+        <div class="form-header-bar">
+          <h3 class="form-header-title">Claim Your Free Audit</h3>
+          <p class="form-header-sub">Takes under 60 seconds • 100% Free Strategy Session</p>
+        </div>
+
+        <form id="inlineLeadForm" novalidate>
+          <div class="form-alert-box" id="inlineFormAlert" role="alert"></div>
+
+          <!-- Name -->
+          <div class="form-group">
+            <label class="form-label" for="inf-name">Your Full Name</label>
+            <div class="input-container">
+              <span class="input-icon-box" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              </span>
+              <input class="form-input" id="inf-name" name="name" type="text" autocomplete="name" placeholder="e.g. Rahul Sharma" required>
+            </div>
+            <div class="field-error-text">Please enter your full name.</div>
+          </div>
+
+          <!-- WhatsApp / Phone -->
+          <div class="form-group">
+            <label class="form-label" for="inf-phone">WhatsApp / Phone Number</label>
+            <div class="input-container">
+              <span class="input-icon-box" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </span>
+              <input class="form-input" id="inf-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number (e.g. 98765 43210)" required>
+            </div>
+            <div class="field-error-text">Please enter a valid 10-digit mobile number.</div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="inf-email">Work / Business Email</label>
+            <div class="input-container">
+              <span class="input-icon-box" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </span>
+              <input class="form-input" id="inf-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+            </div>
+            <div class="field-error-text">Please enter a valid email address.</div>
+          </div>
+
+          <!-- City / Website -->
+          <div class="form-group">
+            <label class="form-label" for="inf-city">City or Website URL</label>
+            <div class="input-container">
+              <span class="input-icon-box" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </span>
+              <input class="form-input" id="inf-city" name="city" type="text" placeholder="e.g. Mumbai / yoursite.com" required>
+            </div>
+            <div class="field-error-text">Please enter your city or website.</div>
+          </div>
+
+          <!-- Anti-bot Honeypot -->
+          <input class="hp-field" id="inf-site" name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <button class="submit-lead-btn" id="inlineSubmitBtn" type="submit">
+            <span>Claim Free Growth Audit</span>
+            <span aria-hidden="true">➔</span>
+          </button>
+
+          <div class="form-guarantee-strip">
+            <span class="guarantee-item">🔒 100% Confidential</span>
+            <span class="guarantee-item">⚡ 24h Response</span>
+            <span class="guarantee-item">🎯 Zero Sales Pressure</span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== COMPARISON SECTION ==================== -->
+  <section class="comparison-section" id="comparison" aria-labelledby="compHeading">
+    <div class="comparison-header">
+      <div class="section-pill">
+        <span>⚖️ THE SMART CHOICE</span>
+      </div>
+      <h2 id="compHeading" class="section-title">In-House Hiring vs Dedicated Marketing Support</h2>
+      <p class="section-subtitle">Why growing businesses choose dedicated performance marketing over expensive recruitment headaches.</p>
+    </div>
+
+    <div class="comparison-container">
+      
+      <!-- LEFT CARD: In-House Hiring -->
+      <article class="comp-card bad-card">
+        <div>
+          <div class="comp-pill bad-pill">Traditional In-House Hiring</div>
+          <ul class="comp-list">
+            <li class="comp-item">
+              <span class="comp-icon icon-red" aria-hidden="true">✕</span>
+              <span>Hiring &amp; Recruitment (45+ Days Lag)</span>
+            </li>
+            <li class="comp-item">
+              <span class="comp-icon icon-red" aria-hidden="true">✕</span>
+              <span>Training &amp; Onboarding Overhead</span>
+            </li>
+            <li class="comp-item">
+              <span class="comp-icon icon-red" aria-hidden="true">✕</span>
+              <span>Fixed Salaries, PF &amp; Employee Benefits</span>
+            </li>
+            <li class="comp-item">
+              <span class="comp-icon icon-red" aria-hidden="true">✕</span>
+              <span>Replacement Hassles &amp; Firing Friction</span>
+            </li>
+            <li class="comp-item">
+              <span class="comp-icon icon-red" aria-hidden="true">✕</span>
+              <span>Slow Scaling &amp; Uncertain Ad ROI</span>
+            </li>
+          </ul>
+        </div>
+        <div class="comp-image-wrap">
+          <img class="comp-person-img" src="assets/ai_stressed.jpg" alt="Overwhelmed founder dealing with in-house hiring headaches" loading="lazy">
+        </div>
+      </article>
+
+      <!-- CENTER CONNECTOR ARROW -->
+      <div class="arrow-connector" aria-hidden="true">
+        <div class="arrow-bubble">➔</div>
+      </div>
+
+      <!-- RIGHT CARD: Dedicated Marketing Support -->
+      <article class="comp-card good-card">
+        <div>
+          <div class="comp-pill good-pill">Your Dedicated OGS Support</div>
+          <ul class="comp-list">
+            <li class="comp-item">
+              <span class="comp-icon icon-green" aria-hidden="true">✓</span>
+              <span>Meta &amp; Google Ads Campaign Management</span>
+            </li>
+            <li class="comp-item">
+              <span class="comp-icon icon-green" aria-hidden="true">✓</span>
+              <span>Qualified Inquiries &amp; Verified Leads</span>
+            </li>
+            <li class="comp-item">
+              <span class="comp-icon icon-green" aria-hidden="true">✓</span>
+              <span>Creative Strategy, Hooks &amp; Continuous Optimization</span>
+            </li>
+            <li class="comp-item">
+              <span class="comp-icon icon-green" aria-hidden="true">✓</span>
+              <span>Performance Scaling &amp; Predictable ROAS</span>
+            </li>
+            <li class="comp-item">
+              <span class="comp-icon icon-green" aria-hidden="true">✓</span>
+              <span>Long-Term Partnership (Zero Lock-In Contract)</span>
+            </li>
+          </ul>
+        </div>
+        <div class="comp-image-wrap">
+          <img class="comp-person-img" src="assets/ai_smiling.jpg" alt="Dedicated marketing partner delivering high ROAS performance" loading="lazy">
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+    
+
+  <!-- ==================== "WHAT I HANDLE" SECTION ==================== -->
+  <section class="services-section" aria-labelledby="servicesTitle">
+    <div class="services-header">
+      <div class="section-pill">
+        <span>🚀 FULL-STACK EXPERTISE</span>
+      </div>
+      <h2 id="servicesTitle" class="section-title">What We Handle For Your Business</h2>
+    </div>
+
+    <div class="services-grid">
+      <!-- 1. Meta Ads -->
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <img src="assets/meta_logo.png" alt="Meta Ads" class="service-brand-img">
+        </div>
+        <h3 class="service-name">Meta Ads</h3>
+        <span class="service-desc">Facebook &amp; Instagram Scaling</span>
+      </div>
+
+      <!-- 2. Google Ads -->
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <img src="assets/google_ads_logo.png" alt="Google Ads" class="service-brand-img">
+        </div>
+        <h3 class="service-name">Google Ads</h3>
+        <span class="service-desc">Search, Display, YouTube</span>
+      </div>
+
+      <!-- 3. Lead Generation -->
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <svg class="clean-icon" viewBox="0 0 36 36" aria-hidden="true">
+            <circle cx="18" cy="11" r="5" fill="#0B0D13"/>
+            <path d="M8 28c0-5 4.5-8 10-8s10 3 10 8" fill="#0B0D13"/>
+            <circle cx="7" cy="13" r="3.5" fill="#5E6271"/>
+            <path d="M1 27c0-3.5 3-6 7-6" stroke="#5E6271" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="29" cy="13" r="3.5" fill="#5E6271"/>
+            <path d="M28 21c4 0 7 2.5 7 6" stroke="#5E6271" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Lead Generation</h3>
+        <span class="service-desc">High-Intent Inquiries</span>
+      </div>
+
+      <!-- 4. Campaign Strategy -->
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <svg class="clean-icon" viewBox="0 0 36 36" aria-hidden="true">
+            <circle cx="18" cy="18" r="14" fill="none" stroke="#0B0D13" stroke-width="2.6"/>
+            <circle cx="18" cy="18" r="9" fill="none" stroke="#5E6271" stroke-width="2.4"/>
+            <circle cx="18" cy="18" r="4" fill="#0B0D13"/>
+            <path d="M18 18l11-11M27 7h4v4" stroke="#FFC72C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Campaign Strategy</h3>
+        <span class="service-desc">Creative Hooks &amp; Angles</span>
+      </div>
+
+      <!-- 5. Performance Marketing -->
+      <div class="service-item">
+        <div class="service-icon-wrap">
+          <svg class="clean-icon" viewBox="0 0 36 36" aria-hidden="true">
+            <rect x="5" y="22" width="4.5" height="9" rx="1.5" fill="#5E6271"/>
+            <rect x="12" y="16" width="4.5" height="15" rx="1.5" fill="#5E6271"/>
+            <rect x="19" y="11" width="4.5" height="20" rx="1.5" fill="#0B0D13"/>
+            <rect x="26" y="6" width="4.5" height="25" rx="1.5" fill="#0B0D13"/>
+            <path d="M7 17l9-8 7 4 9-9M28 4h4v4" stroke="#10B981" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Performance</h3>
+        <span class="service-desc">Scaling &amp; ROAS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROVEN PERFORMANCE METRICS ==================== -->
+  <section class="trust-stats-grid" aria-label="Key Performance Metrics">
+    <div class="trust-stat-card">
+      <div class="stat-num">4.9<span class="stat-unit">/5</span></div>
+      <div class="stat-title">Average Client Rating</div>
+      <div class="stat-sub">150+ Businesses &amp; Founders Served</div>
+    </div>
+
+    <div class="trust-stat-card">
+      <div class="stat-num">100<span class="stat-unit">K+</span></div>
+      <div class="stat-title">Qualified Leads</div>
+      <div class="stat-sub">High-Intent Inquiries Generated</div>
+    </div>
+
+    <div class="trust-stat-card">
+      <div class="stat-num">Full<span class="stat-unit">-Funnel</span></div>
+      <div class="stat-title">Acquisition Strategy</div>
+      <div class="stat-sub">Meta &amp; Google Systems</div>
+    </div>
+
+    <div class="trust-stat-card">
+      <div class="stat-num">48<span class="stat-unit">h</span></div>
+      <div class="stat-title">Setup Kickoff</div>
+      <div class="stat-sub">Zero Recruitment Lag</div>
+    </div>
+  </section>
+
+  <!-- ==================== CLIENT LOGOS SHOWCASE ==================== -->
+  <section class="clients-showcase" aria-labelledby="clientsTitle">
+    <div class="comparison-header">
+      <div class="section-pill">
+        <span>⭐ 150+ BUSINESSES &amp; FOUNDERS SERVED</span>
+      </div>
+      <h2 id="clientsTitle" class="section-title">Brands That Trust OGS With Their Growth</h2>
+      <p class="section-subtitle">Real businesses scaling their lead generation and customer acquisition with our dedicated systems.</p>
+    </div>
+
+    <div class="clients-logo-grid">
+      <!-- 1. Namasthe Herbal -->
+      <div class="client-logo-card">
+        <div class="client-logo-img-wrap">
+          <img src="assets/clients/namasthe_herbal.jpg" alt="Namasthe Herbal Modern Ayurveda" loading="lazy">
+        </div>
+        <div class="client-name">Namasthe Herbal</div>
+        <div class="client-category">Modern Ayurveda</div>
+      </div>
+
+      <!-- 2. NWST Foundation -->
+      <div class="client-logo-card">
+        <div class="client-logo-img-wrap">
+          <img src="assets/clients/nwst_foundation.jpg" alt="NWST Charitable Foundation" loading="lazy">
+        </div>
+        <div class="client-name">NWST Foundation</div>
+        <div class="client-category">Charitable Trust</div>
+      </div>
+
+      <!-- 3. QUITT MOZZ -->
+      <div class="client-logo-card">
+        <div class="client-logo-img-wrap">
+          <img src="assets/clients/quitt_mozz.jpg" alt="QUITT MOZZ" loading="lazy">
+        </div>
+        <div class="client-name">QUITT MOZZ</div>
+        <div class="client-category">Consumer Products</div>
+      </div>
+
+      <!-- 4. Homeartist Interior -->
+      <div class="client-logo-card">
+        <div class="client-logo-img-wrap">
+          <img src="assets/clients/homeartist_interior.jpg" alt="Homeartist Interior" loading="lazy">
+        </div>
+        <div class="client-name">Homeartist Interior</div>
+        <div class="client-category">Interior &amp; Design</div>
+      </div>
+
+      <!-- 5. Relax Wellness -->
+      <div class="client-logo-card">
+        <div class="client-logo-img-wrap">
+          <img src="assets/clients/relax_wellness.jpg" alt="Relax Wellness Tourism" loading="lazy">
+        </div>
+        <div class="client-name">Relax Wellness</div>
+        <div class="client-category">Wellness &amp; Tourism</div>
+      </div>
+
+      <!-- 6. Mittal Lab -->
+      <div class="client-logo-card">
+        <div class="client-logo-img-wrap">
+          <img src="assets/clients/mittal_lab_cropped.jpg" alt="Mittal Lab Diagnostics &amp; Imaging" loading="lazy">
+        </div>
+        <div class="client-name">Mittal Lab</div>
+        <div class="client-category">Diagnostics &amp; Imaging</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY OGS & FOUNDER SPOTLIGHT ==================== -->
+  <section class="why-ogs-section" id="why-ogs" aria-labelledby="whyTitle">
+    <div class="why-header">
+      <div class="section-pill">
+        <span>⚡ THE OGS SYSTEM</span>
+      </div>
+      <h2 id="whyTitle" class="section-title">
+        We Don't Just Run Ads.<br>We Build The System Behind Them.
+      </h2>
+      <p class="section-subtitle">
+        Most agencies focus merely on launching campaigns. We engineer what happens before, during, and after the click — from hooks and creative testing to landing pages, server-side tracking, and conversion optimization.
+      </p>
+    </div>
+
+    <div class="why-main-layout">
+      <!-- 4 Strategy Pillars -->
+      <div class="why-cards-col">
+        <div class="why-card">
+          <div class="why-card-top">
+            <span class="why-num-badge">01</span>
+            <span class="why-icon-spark">⚡</span>
+          </div>
+          <h3 class="why-card-title">One Connected System</h3>
+          <p class="why-card-text">Ads, creative assets, landing pages, and conversion tracking work together as one cohesive engine.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-card-top">
+            <span class="why-num-badge">02</span>
+            <span class="why-icon-spark">🎯</span>
+          </div>
+          <h3 class="why-card-title">Built Around Your Business</h3>
+          <p class="why-card-text">We align every campaign with your exact customer economics, target profit margins, and sales cycle.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-card-top">
+            <span class="why-num-badge">03</span>
+            <span class="why-icon-spark">🔄</span>
+          </div>
+          <h3 class="why-card-title">Test ➔ Learn ➔ Scale</h3>
+          <p class="why-card-text">We ruthlessly iterate ad creative hooks, audiences, and angles to identify the winners that deserve higher budget.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-card-top">
+            <span class="why-num-badge">04</span>
+            <span class="why-icon-spark">📈</span>
+          </div>
+          <h3 class="why-card-title">Focused on Business Outcomes</h3>
+          <p class="why-card-text">The goal is never vanity clicks or low-intent leads. It is generating predictable, qualified customer opportunities.</p>
+        </div>
+      </div>
+
+      <!-- Founder Card -->
+      <div class="why-founder-col">
+        <div class="why-founder-card">
+          <div class="founder-photo-wrap">
+            <img src="assets/onkar_kulkarni.jpg" alt="Onkar Kulkarni - Founder OSK Growth Studio" class="founder-photo" loading="lazy">
+            <div class="founder-floating-pill">
+              <span class="live-pulse-dot" aria-hidden="true"></span>
+              <span>Lead Growth Partner</span>
+            </div>
+          </div>
+          <div class="founder-card-content">
+            <div class="founder-name-row">
+              <h3 class="founder-name">Onkar Kulkarni</h3>
+              <span class="founder-role-tag">Founder · OSK Growth Studio</span>
+            </div>
+            <p class="founder-bio">
+              "We personally lead OGS's performance marketing approach across Meta and Google, connecting high-converting creative strategy, server tracking, and conversion optimization directly to bottom-line revenue."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quote Banner -->
+    <div class="why-bottom-line">
+      <p class="bottom-line-quote">
+        “Every Campaign Needs a Strategy. Every Strategy Needs a System.”
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== FREQUENTLY ASKED QUESTIONS ==================== -->
+  <section class="faq-section" id="faq" aria-labelledby="faqHeading">
+    <div class="faq-header">
+      <div class="section-pill">
+        <span>💡 FREQUENTLY ASKED QUESTIONS</span>
+      </div>
+      <h2 id="faqHeading" class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Clear, straightforward answers about partnering with OGS for performance marketing and Meta Ads.</p>
+    </div>
+
+    <div class="faq-accordion" role="region" aria-label="FAQ Accordion">
+      <!-- FAQ 1 -->
+      <div class="faq-item is-open">
+        <button type="button" class="faq-question-btn" aria-expanded="true" aria-controls="faqAns1" id="faqBtn1">
+          <span>1. What services does OGS provide?</span>
+          <span class="faq-toggle-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          </span>
+        </button>
+        <div id="faqAns1" class="faq-answer-panel" role="region" aria-labelledby="faqBtn1">
+          <div class="faq-answer-inner">
+            <p>We specialize in full-funnel performance marketing across <strong>Meta Ads (Facebook &amp; Instagram) and Google Ads</strong>, supported by landing page architecture, server-side conversion tracking, creative hook testing, and ongoing ROAS optimization.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAns2" id="faqBtn2">
+          <span>2. What types of businesses do you work with?</span>
+          <span class="faq-toggle-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          </span>
+        </button>
+        <div id="faqAns2" class="faq-answer-panel" role="region" aria-labelledby="faqBtn2">
+          <div class="faq-answer-inner">
+            <p>We work with <strong>growth-focused founders, high-ticket service businesses, D2C brands, healthcare clinics, and education providers</strong> looking to scale qualified customer inquiries profitably through paid acquisition.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAns3" id="faqBtn3">
+          <span>3. Do you manage both Meta Ads and Google Ads?</span>
+          <span class="faq-toggle-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          </span>
+        </button>
+        <div id="faqAns3" class="faq-answer-panel" role="region" aria-labelledby="faqBtn3">
+          <div class="faq-answer-inner">
+            <p><strong>Yes.</strong> We manage Meta Ads and Google Ads together in a synchronized acquisition ecosystem. Meta creates demand and captures high-volume interest; Google captures high-intent active searchers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAns4" id="faqBtn4">
+          <span>4. Do you create landing pages and handle tracking?</span>
+          <span class="faq-toggle-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          </span>
+        </button>
+        <div id="faqAns4" class="faq-answer-panel" role="region" aria-labelledby="faqBtn4">
+          <div class="faq-answer-inner">
+            <p><strong>Yes.</strong> Conversion happens on the page, not just in the ad. We design and build high-converting landing pages, configure Meta Conversions API (CAPI), Google Tag Manager, and CRM lead routing.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAns5" id="faqBtn5">
+          <span>5. What ad budget do I need to get started?</span>
+          <span class="faq-toggle-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          </span>
+        </button>
+        <div id="faqAns5" class="faq-answer-panel" role="region" aria-labelledby="faqBtn5">
+          <div class="faq-answer-inner">
+            <p>There is no rigid minimum. We calculate your recommended initial ad spend based on your target customer value, target cost-per-lead, and market size. We map this out clearly in your initial strategy session.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-item">
+        <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAns6" id="faqBtn6">
+          <span>6. How do we get started with OGS?</span>
+          <span class="faq-toggle-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          </span>
+        </button>
+        <div id="faqAns6" class="faq-answer-panel" role="region" aria-labelledby="faqBtn6">
+          <div class="faq-answer-inner">
+            <p><strong>Start by booking a Free Growth Call.</strong> Fill out the form on this page, and our team will review your ad account, current website, and provide a clear 48-hour onboarding roadmap.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL HIGH-IMPACT CTA BANNER ==================== -->
+  <section class="final-cta-section" aria-labelledby="finalCtaTitle">
+    <div class="final-cta-badge">
+      <span class="live-pulse-dot" aria-hidden="true"></span>
+      <span>48-HOUR SETUP KICKOFF GUARANTEE</span>
+    </div>
+    <h2 id="finalCtaTitle" class="final-cta-title">Ready To Scale Your Paid Acquisition Predictably?</h2>
+    <p class="final-cta-sub">
+      Get a complete audit of your Meta &amp; Google ad strategy. Zero obligation, zero sales pressure — just real tactical insights.
+    </p>
+    <div class="final-cta-buttons">
+      <button type="button" class="final-btn-yellow open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+        <span>Book Your Free Growth Call</span>
+        <span aria-hidden="true">➔</span>
+      </button>
+      <a href="https://wa.me/919876543210?text=Hi%20OGS,%20I%20would%20like%20to%20learn%20more%20about%20your%20Meta%20Ads%20growth%20support." target="_blank" rel="noopener noreferrer" class="final-btn-outline">
+        <span>💬 WhatsApp Us Directly</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- MOBILE STICKY BOTTOM BAR (CONVERSION BOOSTER) -->
+<aside class="mobile-sticky-bar" aria-label="Mobile Quick Conversion Bar">
+  <button type="button" class="mobile-bar-btn open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+    <span>⚡ Claim Free Growth Audit</span>
+    <span aria-hidden="true">➔</span>
+  </button>
+  <a href="https://wa.me/919876543210?text=Hi%20OGS,%20I%20want%20to%20scale%20my%20Meta%20Ads%20campaigns." target="_blank" rel="noopener noreferrer" class="mobile-whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.8 14.15c-.24.67-1.39 1.28-1.92 1.36-.5.08-1.14.12-3.66-.92-3.22-1.33-5.29-4.59-5.45-4.81-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4.21 0 .43.01.62.01.2 0 .47-.08.73.56.27.67.92 2.25 1 2.41.08.16.13.35.03.56-.11.21-.16.35-.32.53-.16.19-.34.42-.48.56-.16.16-.33.33-.14.65.19.32.84 1.38 1.8 2.24 1.24 1.1 2.29 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.29.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.77-.16 1.44z"/></svg>
+  </a>
+</aside>
+
+<!-- FLOATING FAB (DESKTOP) -->
+<button type="button" class="floating-fab open-modal-trigger" aria-haspopup="dialog" aria-controls="leadDialog">
+  <span class="live-pulse-dot" aria-hidden="true"></span>
+  <span>⚡ Book Free Growth Call</span>
+</button>
+
+<!-- LIVE SOCIAL PROOF NOTIFICATION TOAST -->
+<div class="social-proof-toast" id="socialProofToast" role="status" aria-live="polite">
+  <div class="toast-avatar" aria-hidden="true">⚡</div>
+  <div class="toast-content">
+    <div class="toast-text" id="toastText"><strong>Rahul S. from Bengaluru</strong> claimed a Free Meta Ads Audit</div>
+    <div class="toast-time" id="toastTime">2 minutes ago • D2C Founder</div>
+  </div>
+  <button type="button" class="toast-close-btn" id="toastCloseBtn" aria-label="Dismiss notification">×</button>
+</div>
+
+<!-- ==================== LEAD MODAL DIALOG ==================== -->
+<dialog class="lead-dialog" id="leadDialog" aria-labelledby="dialogTitle">
+  <div class="modal-sheet" id="modalSheet">
+    <button type="button" class="modal-close-btn" id="closeFormBtn" aria-label="Close dialog">×</button>
+    
+    <div class="modal-hook-pill">
+      <span class="live-pulse-dot" aria-hidden="true"></span>
+      <span>⚡ 5 SPOTS LEFT THIS MONTH</span>
+    </div>
+
+    <h2 id="dialogTitle" class="modal-title">Book Your Free Growth Call</h2>
+    <p class="modal-subtitle">
+      Let's understand your business model and engineer a predictable path to scale your Meta &amp; Google ad spend into profit.
+    </p>
+
+    <div class="modal-perks-strip">
+      <div class="modal-perk-item">
+        <span class="perk-emoji">🎯</span>
+        <span>Account Audit</span>
+      </div>
+      <div class="modal-perk-item">
+        <span class="perk-emoji">🚀</span>
+        <span>48h Kickoff</span>
+      </div>
+      <div class="modal-perk-item">
+        <span class="perk-emoji">📊</span>
+        <span>ROAS Scaling</span>
+      </div>
+    </div>
+
+    <form id="leadForm" novalidate>
+      <div class="form-alert-box" id="formAlertBox" role="alert"></div>
+
+      <!-- Full Name -->
+      <div class="form-group">
+        <label class="form-label" for="f-name">Your Full Name</label>
+        <div class="input-container">
+          <span class="input-icon-box" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </span>
+          <input class="form-input" id="f-name" name="name" type="text" autocomplete="name" placeholder="e.g. Rahul Sharma" required>
+        </div>
+        <div class="field-error-text">Please enter your full name.</div>
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <label class="form-label" for="f-phone">Mobile / WhatsApp Number</label>
+        <div class="input-container">
+          <span class="input-icon-box" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </span>
+          <input class="form-input" id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number (e.g. 98765 43210)" required>
+        </div>
+        <div class="field-error-text">Please enter a valid 10-digit mobile number.</div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label class="form-label" for="f-email">Work / Business Email</label>
+        <div class="input-container">
+          <span class="input-icon-box" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </span>
+          <input class="form-input" id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+        </div>
+        <div class="field-error-text">Please enter a valid email address.</div>
+      </div>
+
+      <!-- City -->
+      <div class="form-group">
+        <label class="form-label" for="f-city">Your City</label>
+        <div class="input-container">
+          <span class="input-icon-box" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </span>
+          <input class="form-input" id="f-city" name="city" type="text" placeholder="e.g. Mumbai, Delhi, Bengaluru" required>
+        </div>
+        <div class="field-error-text">Please enter your city.</div>
+      </div>
+
+      <!-- Anti-bot honeypot -->
+      <input class="hp-field" id="f-site" name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <button class="submit-lead-btn" id="submitBtn" type="submit">
+        <span>Submit &amp; Book Growth Call</span>
+        <span aria-hidden="true">➔</span>
+      </button>
+    </form>
+
+    <!-- Success View -->
+    <div class="success-view" role="status">
+      <div class="success-check-bubble">✓</div>
+      <h3 class="success-title">Your Growth Audit Is Booked!</h3>
+      <p class="success-desc">
+        Thank you for submitting your details to OSK Growth Studio. Our team will review your account and reach out via WhatsApp/Phone within 24 hours.
+      </p>
+      <button type="button" class="submit-lead-btn" id="doneBtn">Close &amp; Return</button>
+    </div>
+  </div>
+</dialog>
+
+<!-- ==================== VIDEO DEMO DIALOG ==================== -->
+<dialog class="video-preview-dialog" id="videoDialog" aria-labelledby="videoDialogTitle">
+  <div class="video-dialog-inner">
+    <button type="button" class="modal-close-btn" id="closeVideoBtn" aria-label="Close video">×</button>
+    <div style="margin-bottom:16px;">
+      <span class="showcase-pill">OGS CREATIVE BREAKDOWN</span>
+      <h3 id="videoDialogTitle" style="font-size:1.35rem;font-weight:900;margin:6px 0 2px;">
+        The High-Performing Meta Ad System
+      </h3>
+      <p style="font-size:0.85rem;color:#94A3B8;margin:0;">
+        How we craft hooks, lead magnets, and retargeting sequences that convert cold traffic.
+      </p>
+    </div>
+    
+    <div class="video-player-container">
+      <div style="width:70px;height:70px;border-radius:50%;background:var(--yellow);color:#0B0D13;display:grid;place-items:center;font-size:1.8rem;margin-bottom:14px;box-shadow:var(--shadow-glow-yellow);">
+        ▶
+      </div>
+      <h4 style="font-size:1.2rem;font-weight:800;color:#FFFFFF;margin:0 0 6px;">
+        High-Converting Ad Creative Walkthrough
+      </h4>
+      <p style="font-size:0.88rem;color:#CBD5E1;max-width:400px;margin:0 0 20px;">
+        We build bespoke video ads tailored to your target audience. Book a call to see live campaign creatives from your specific industry.
+      </p>
+      <button type="button" class="submit-lead-btn open-modal-trigger" style="max-width:280px;background:var(--yellow);color:#0B0D13;border-color:var(--yellow);" aria-haspopup="dialog" aria-controls="leadDialog">
+        Get Custom Ad Creative Plan ➔
+      </button>
+    </div>
+  </div>
+</dialog>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+(function() {
+  const SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbwhZZVfysb_JRwknYLRgUrMkTWHka8fxe39cOFCEJfmplITH8GwoPmZIdmxEsL2W7eQ/exec";
+
+  // Elements
+  const dlg = document.getElementById('leadDialog');
+  const sheet = document.getElementById('modalSheet');
+  const modalForm = document.getElementById('leadForm');
+  const modalBtn = document.getElementById('submitBtn');
+  const modalAlert = document.getElementById('formAlertBox');
+  const closeBtn = document.getElementById('closeFormBtn');
+  const doneBtn = document.getElementById('doneBtn');
+
+  const inlineForm = document.getElementById('inlineLeadForm');
+  const inlineBtn = document.getElementById('inlineSubmitBtn');
+  const inlineAlert = document.getElementById('inlineFormAlert');
+
+  // Video Dialog Elements
+  const videoDialog = document.getElementById('videoDialog');
+  const openVideoBtn = document.getElementById('openVideoModalBtn');
+  const closeVideoBtn = document.getElementById('closeVideoBtn');
+
+  if (openVideoBtn && videoDialog) {
+    openVideoBtn.addEventListener('click', function() {
+      try {
+        if (typeof videoDialog.showModal === 'function') videoDialog.showModal();
+        else videoDialog.setAttribute('open', '');
+      } catch(e) {
+        videoDialog.setAttribute('open', '');
+      }
+    });
+  }
+
+  if (closeVideoBtn && videoDialog) {
+    closeVideoBtn.addEventListener('click', function() {
+      if (typeof videoDialog.close === 'function') videoDialog.close();
+      else videoDialog.removeAttribute('open');
+    });
+    videoDialog.addEventListener('click', function(e) {
+      if (e.target === videoDialog) videoDialog.close();
+    });
+  }
+
+  // Showcase Tabs Interactivity
+  const tabVideo = document.getElementById('tabVideo');
+  const tabCarousel = document.getElementById('tabCarousel');
+  const tabProof = document.getElementById('tabProof');
+  const panelVideo = document.getElementById('panelVideo');
+  const panelCarousel = document.getElementById('panelCarousel');
+  const panelProof = document.getElementById('panelProof');
+
+  function switchTab(activeBtn, activePanel) {
+    [tabVideo, tabCarousel, tabProof].forEach(b => {
+      if (b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      }
+    });
+    [panelVideo, panelCarousel, panelProof].forEach(p => {
+      if (p) p.style.display = 'none';
+    });
+
+    if (activeBtn) {
+      activeBtn.classList.add('active');
+      activeBtn.setAttribute('aria-selected', 'true');
+    }
+    if (activePanel) {
+      activePanel.style.display = (activePanel === panelProof) ? 'block' : 'flex';
+    }
+  }
+
+  if (tabVideo) tabVideo.addEventListener('click', () => switchTab(tabVideo, panelVideo));
+  if (tabCarousel) tabCarousel.addEventListener('click', () => switchTab(tabCarousel, panelCarousel));
+  if (tabProof) tabProof.addEventListener('click', () => switchTab(tabProof, panelProof));
+
+  // FAQ Accordion Interactivity
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const qBtn = item.querySelector('.faq-question-btn');
+    if (!qBtn) return;
+    qBtn.addEventListener('click', () => {
+      const isAlreadyOpen = item.classList.contains('is-open');
+      faqItems.forEach(other => {
+        other.classList.remove('is-open');
+        const otherBtn = other.querySelector('.faq-question-btn');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      });
+      if (!isAlreadyOpen) {
+        item.classList.add('is-open');
+        qBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Modal Dialog Open/Close
+  function openModal(isAuto) {
+    if (!dlg) return;
+    if (videoDialog && videoDialog.open) videoDialog.close();
+    sheet.classList.remove('is-submitted');
+    if (modalAlert) modalAlert.style.display = 'none';
+    try {
+      if (typeof dlg.showModal === 'function') {
+        if (!dlg.open) dlg.showModal();
+      } else {
+        dlg.setAttribute('open', '');
+      }
+    } catch (err) {
+      dlg.setAttribute('open', '');
+    }
+    document.body.classList.add('modal-open');
+    if (!isAuto) {
+      const nameInp = document.getElementById('f-name');
+      if (nameInp) setTimeout(() => nameInp.focus(), 150);
+    }
+  }
+
+  function closeModal() {
+    if (!dlg) return;
+    try {
+      if (typeof dlg.close === 'function' && dlg.open) dlg.close();
+      else dlg.removeAttribute('open');
+    } catch(err) {
+      dlg.removeAttribute('open');
+    }
+    document.body.classList.remove('modal-open');
+  }
+
+  // Universal Modal Triggers
+  const allTriggers = document.querySelectorAll('.open-modal-trigger');
+  allTriggers.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal(false);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (doneBtn) {
+    doneBtn.addEventListener('click', function() {
+      closeModal();
+      if (modalForm) modalForm.reset();
+    });
+  }
+
+  if (dlg) {
+    dlg.addEventListener('click', function(e) {
+      if (e.target === dlg) closeModal();
+    });
+    dlg.addEventListener('close', () => document.body.classList.remove('modal-open'));
+    dlg.addEventListener('cancel', () => document.body.classList.remove('modal-open'));
+  }
+
+  // Validation Rules
+  const rules = {
+    name: val => /^[A-Za-z\u0900-\u097F][A-Za-z\u0900-\u097F .'-]{1,59}$/.test(val.trim()),
+    phone: val => {
+      const clean = val.replace(/^(\+91|0)/, '').replace(/[\s-]/g, '');
+      return /^[6-9]\d{9}$/.test(clean);
+    },
+    email: val => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim()),
+    city: val => val.trim().length >= 2
+  };
+
+  function validateInput(input) {
+    const fn = rules[input.name];
+    if (!fn) return true;
+    const ok = fn(input.value);
+    const group = input.closest('.form-group');
+    if (group) {
+      group.classList.toggle('has-error', !ok);
+    }
+    input.setAttribute('aria-invalid', ok ? 'false' : 'true');
+    return ok;
+  }
+
+  function setupFormValidation(formElement) {
+    if (!formElement) return;
+    const inputs = formElement.querySelectorAll('.form-group input');
+    inputs.forEach(inp => {
+      inp.addEventListener('blur', () => { if (inp.value) validateInput(inp); });
+      inp.addEventListener('input', () => {
+        const group = inp.closest('.form-group');
+        if (group && group.classList.contains('has-error')) validateInput(inp);
+      });
+    });
+  }
+
+  setupFormValidation(modalForm);
+  setupFormValidation(inlineForm);
+
+  // Form Submitter Handler
+  async function handleFormSubmit(formEl, submitBtnEl, alertEl, isModal) {
+    if (!formEl) return;
+    if (alertEl) alertEl.style.display = 'none';
+
+    const inputs = formEl.querySelectorAll('.form-group input');
+    let allValid = true;
+    let firstInvalid = null;
+
+    inputs.forEach(inp => {
+      const isValid = validateInput(inp);
+      if (!isValid) {
+        allValid = false;
+        if (!firstInvalid) firstInvalid = inp;
+      }
+    });
+
+    if (!allValid) {
+      if (firstInvalid) firstInvalid.focus();
+      return;
+    }
+
+    const honeypot = formEl.querySelector('.hp-field');
+    if (honeypot && honeypot.value) {
+      window.location.href = 'thank-you.html';
+      return;
+    }
+
+    const cleanPhone = formEl.phone.value.trim().replace(/^(\+91|0)/, '').replace(/[\s-]/g, '');
+    const payload = {
+      name: formEl.name.value.trim(),
+      phone: cleanPhone,
+      email: formEl.email.value.trim().toLowerCase(),
+      city: formEl.city.value.trim(),
+      service: 'Meta Ads & Google Growth Audit (V2)',
+      submittedAt: new Date().toISOString()
+    };
+
+    submitBtnEl.disabled = true;
+    submitBtnEl.innerHTML = '<span>Securing Your Spot...</span>';
+
+    let saved = false;
+    try {
+      if (SHEET_WEBHOOK) {
+        await fetch(SHEET_WEBHOOK, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+        saved = true;
+      }
+    } catch (err) {
+      console.warn("Webhook transmission note:", err);
+      saved = true;
+    }
+
+    submitBtnEl.disabled = false;
+    submitBtnEl.innerHTML = '<span>Claim Free Growth Audit</span><span aria-hidden="true">➔</span>';
+
+    if (saved) {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+      if (isModal) {
+        sheet.classList.add('is-submitted');
+      } else {
+        window.location.href = 'thank-you.html';
+      }
+    } else {
+      if (alertEl) {
+        alertEl.textContent = "We couldn't submit your details. Please check your connection and try again.";
+        alertEl.style.display = 'block';
+      }
+    }
+  }
+
+  if (modalForm) {
+    modalForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      handleFormSubmit(modalForm, modalBtn, modalAlert, true);
+    });
+  }
+
+  if (inlineForm) {
+    inlineForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      handleFormSubmit(inlineForm, inlineBtn, inlineAlert, false);
+    });
+  }
+
+  // LIVE SOCIAL PROOF TOAST ROTATION
+  const toast = document.getElementById('socialProofToast');
+  const toastText = document.getElementById('toastText');
+  const toastTime = document.getElementById('toastTime');
+  const toastClose = document.getElementById('toastCloseBtn');
+  
+  const toastQueue = [
+    { text: "<strong>Rahul S. from Bengaluru</strong> claimed a Free Meta Ads Audit", time: "2 minutes ago • D2C Founder" },
+    { text: "<strong>Ananya M. from Mumbai</strong> booked a 1-on-1 Growth Session", time: "7 minutes ago • Fashion Brand" },
+    { text: "<strong>Vikram P. from Delhi</strong> launched 48h Meta Campaign Kickoff", time: "16 minutes ago • B2B SaaS" },
+    { text: "<strong>Siddharth G. from Pune</strong> unlocked 3.8x ROAS Scaling Plan", time: "28 minutes ago • Healthcare Clinic" }
+  ];
+  let toastIdx = 0;
+  let toastDismissed = false;
+
+  function showNextToast() {
+    if (!toast || toastDismissed) return;
+    const item = toastQueue[toastIdx];
+    toastText.innerHTML = item.text;
+    toastTime.textContent = item.time;
+    toast.classList.add('is-visible');
+
+    setTimeout(() => {
+      if (!toastDismissed && toast) toast.classList.remove('is-visible');
+    }, 5000);
+
+    toastIdx = (toastIdx + 1) % toastQueue.length;
+  }
+
+  if (toastClose) {
+    toastClose.addEventListener('click', e => {
+      e.stopPropagation();
+      toastDismissed = true;
+      if (toast) toast.classList.remove('is-visible');
+    });
+  }
+
+  setTimeout(() => {
+    showNextToast();
+    setInterval(showNextToast, 12000);
+  }, 4500);
+
+  // AUTO-POPUP ON FIRST VISIT (after 7 seconds if user hasn't clicked)
+  let autoPopupTriggered = false;
+  function triggerAutoPopup() {
+    if (autoPopupTriggered) return;
+    autoPopupTriggered = true;
+    setTimeout(() => {
+      if (dlg && !dlg.open && !videoDialog.open) {
+        openModal(true);
+      }
+    }, 7000);
+  }
+
+  if (document.readyState === 'complete') triggerAutoPopup();
+  else window.addEventListener('load', triggerAutoPopup);
+
+
+  // Video Player Offline / Local Fallback Helper (from reference architecture)
+  (function initHeroVideoPlayer() {
+    const container = document.getElementById('heroVideoContainer');
+    if (!container) return;
+    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+      container.innerHTML = `
+        <video controls autoplay muted loop playsinline poster="assets/onkar_kulkarni.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+          <source src="./assets/video.mp4" type="video/mp4">
+        </video>
+      `;
+    }
+  })();
+
+
+  // ==================== MOBILE HAMBURGER DRAWER LOGIC ====================
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileNavDrawer');
+  const drawerBackdrop = document.getElementById('drawerBackdrop');
+  const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+  const drawerLinks = document.querySelectorAll('.drawer-link, #drawerBrandLink');
+
+  function openDrawer() {
+    if (!drawer) return;
+    drawer.classList.add('is-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    if (hamburgerBtn) {
+      hamburgerBtn.classList.add('is-active');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    if (!drawer) return;
+    drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    if (hamburgerBtn) {
+      hamburgerBtn.classList.remove('is-active');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+    document.body.style.overflow = '';
+  }
+
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (drawer && drawer.classList.contains('is-open')) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+  }
+
+  if (drawerCloseBtn) {
+    drawerCloseBtn.addEventListener('click', closeDrawer);
+  }
+
+  if (drawerBackdrop) {
+    drawerBackdrop.addEventListener('click', closeDrawer);
+  }
+
+  drawerLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      closeDrawer();
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && drawer && drawer.classList.contains('is-open')) {
+      closeDrawer();
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>

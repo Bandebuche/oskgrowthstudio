@@ -28,12 +28,6 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1310370707788717');
 fbq('track', 'PageView');
 fbq('track', 'Lead');
-try {
-  var urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('qualified') === '1') {
-    fbq('trackCustom', 'QualifiedLead');
-  }
-} catch (e) {}
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1310370707788717&ev=Lead&noscript=1"
