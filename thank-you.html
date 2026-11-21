@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Thank You | OSK Growth Studio</title>
+<title>Your Strategy Audit Is Booked! | OSK Growth Studio</title>
 <meta name="description" content="Thank you for requesting your Growth Marketing Strategy & Audit from OSK Growth Studio. We will contact you within 24 hours.">
 <link rel="canonical" href="https://www.oskgrowthstudio.com/thank-you">
 
@@ -11,9 +11,14 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OSK Growth Studio">
 <meta property="og:url" content="https://www.oskgrowthstudio.com/thank-you">
-<meta property="og:title" content="Thank You | OSK Growth Studio">
+<meta property="og:title" content="Your Strategy Audit Is Booked! | OSK Growth Studio">
 <meta property="og:description" content="Thank you for requesting your Growth Marketing Strategy & Audit from OSK Growth Studio. We will contact you within 24 hours.">
 <meta property="og:image" content="https://dedicated-marketing-support.vercel.app/assets/ogs_logo.png">
+
+<!-- Favicons & App Icons -->
+<link rel="icon" type="image/x-icon" href="https://dedicated-marketing-support.vercel.app/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dedicated-marketing-support.vercel.app/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://dedicated-marketing-support.vercel.app/apple-touch-icon.png">
 
 <!-- Meta Pixel Code -->
 <script>
@@ -28,11 +33,13 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1310370707788717');
 fbq('track', 'PageView');
 fbq('track', 'Lead');
+fbq('track', 'CompleteRegistration');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1310370707788717&ev=Lead&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
 <script>
 if (window.history && window.history.replaceState && window.location.pathname.includes('.html')) {
   window.history.replaceState(null, '', window.location.pathname.replace(/\.html.*$/, ''));
@@ -44,22 +51,41 @@ if (window.history && window.history.replaceState && window.location.pathname.in
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+/* ====================================================
+   CSS VARIABLES & DESIGN SYSTEM (THANK YOU PAGE)
+   ==================================================== */
 :root {
-  --bg: #F8F7F3;
-  --bg-gradient: radial-gradient(circle at 50% 0%, #FFFFFF 0%, #F5F3EC 100%);
-  --ink: #0F1015;
-  --ink-secondary: #272832;
-  --muted: #565662;
+  --bg: #F9F8F5;
+  --bg-subtle: #F3F1EB;
+  --bg-gradient: radial-gradient(circle at 50% -20%, #FFFFFF 0%, #F6F4EC 65%, #F0EDE2 100%);
+  --ink: #0B0D13;
+  --ink-secondary: #272A34;
+  --muted: #5E6271;
+  --muted-light: #7E8292;
   --card: #FFFFFF;
-  --line: #E6E4DC;
-  --yellow: #FFD23F;
-  --yellow-hover: #F5C62C;
-  --green: #15803D;
-  --green-bg: #DCFCE7;
-  --green-border: #86EFAC;
-  --radius-card: 24px;
+  --line: #E7E4DA;
+  --line-light: #F0EEE7;
+  
+  --yellow: #FFC72C;
+  --yellow-hover: #EBB218;
+  --yellow-light: #FFF9D4;
+  
+  --meta-blue: #0064E0;
+  --green: #10B981;
+  --green-dark: #059669;
+  --green-badge: #D1FAE5;
+  --green-badge-text: #065F46;
+  --green-bg: #F0FDF4;
+  --green-border: #BBF7D0;
+  
+  --shadow-card: 0 16px 36px -10px rgba(11, 13, 19, 0.08), 0 4px 12px rgba(11, 13, 19, 0.03);
+  --shadow-glow-yellow: 0 12px 28px rgba(255, 199, 44, 0.38);
+  --shadow-glow-green: 0 12px 28px rgba(16, 185, 129, 0.3);
+  
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
   --radius-pill: 9999px;
-  --shadow-card: 0 16px 36px rgba(15, 16, 21, 0.07), 0 3px 8px rgba(15, 16, 21, 0.03);
 }
 
 *, *::before, *::after {
@@ -80,226 +106,531 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 16px;
+  padding: 24px 16px 40px;
   overflow-x: hidden;
 }
 
-/* Ambient background glow */
+/* Ambient glow */
 body::before {
   content: "";
   position: fixed;
-  top: -100px;
-  right: 0;
-  width: min(500px, 90vw);
-  height: min(500px, 90vh);
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(255, 210, 63, 0.08) 45%, transparent 70%);
+  top: -120px;
+  right: -50px;
+  width: min(540px, 90vw);
+  height: min(540px, 90vh);
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(255, 199, 44, 0.1) 45%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
-.header {
+/* Header */
+.ty-header {
   position: relative;
-  z-index: 1;
-  padding: 8px 0 20px;
-  text-align: center;
+  z-index: 2;
   width: 100%;
+  max-width: 820px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px 24px;
 }
 
-.logo-img {
-  height: 42px;
+.ty-logo-img {
+  height: 44px;
   width: auto;
-  max-width: 200px;
+  max-width: 180px;
   object-fit: contain;
 }
 
-.main-container {
-  position: relative;
-  z-index: 1;
-  max-width: 520px;
-  width: 100%;
-  margin: auto;
+.ty-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  transition: all 0.2s ease;
 }
 
-.thankyou-card {
+.ty-home-link:hover {
+  background: #FFFFFF;
+  border-color: var(--ink);
+  transform: translateX(-2px);
+}
+
+/* Main Container */
+.ty-main {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Primary Hero Confirmation Card */
+.ty-card {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: var(--radius-card);
+  border-radius: var(--radius-xl);
   box-shadow: var(--shadow-card);
-  padding: 42px 36px 36px;
+  padding: 44px 36px 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: hidden;
   animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.ty-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #10B981, #FFC72C, #0064E0);
 }
 
-.check-bubble {
-  width: 62px;
-  height: 62px;
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animated Checkmark */
+.ty-check-wrap {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 20px;
+}
+
+.ty-check-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  background: var(--green-bg);
-  border: 2px solid var(--green-border);
+  background: rgba(16, 185, 129, 0.25);
+  animation: pulseRing 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulseRing {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.ty-check-bubble {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 18px;
-  color: var(--green);
-  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.18);
-  animation: popScale 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  color: #FFFFFF;
+  box-shadow: var(--shadow-glow-green);
+  animation: popScale 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 @keyframes popScale {
-  0% { transform: scale(0.4); opacity: 0; }
+  0% { transform: scale(0.3); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
-.check-bubble svg {
-  width: 28px;
-  height: 28px;
+.ty-check-bubble svg {
+  width: 36px;
+  height: 36px;
+  stroke: #FFFFFF;
 }
 
-.kicker {
-  display: block;
-  width: 100%;
-  font-size: 0.78rem;
+/* Badge */
+.ty-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--green-badge);
+  border: 1px solid var(--green-border);
+  color: var(--green-badge-text);
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  color: var(--green);
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin: 0 auto 12px;
-  text-align: center;
+  margin-bottom: 16px;
 }
 
-.title {
-  display: block;
-  width: 100%;
-  font-size: clamp(1.4rem, 4.5vw, 1.95rem);
-  font-weight: 800;
-  line-height: 1.28;
+.ty-badge .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+}
+
+/* Titles */
+.ty-title {
+  font-size: clamp(1.6rem, 5vw, 2.3rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
   color: var(--ink);
-  margin: 0 auto 14px;
-  letter-spacing: -0.02em;
-  text-align: center;
+  line-height: 1.22;
+  margin-bottom: 14px;
 }
 
-.desc {
-  display: block;
-  font-size: clamp(0.92rem, 2.5vw, 1.02rem);
+.ty-subtitle {
+  font-size: clamp(0.98rem, 2.5vw, 1.1rem);
   color: var(--muted);
   line-height: 1.6;
-  max-width: 440px;
-  margin: 0 auto 28px;
+  max-width: 580px;
+  margin-bottom: 28px;
+}
+
+/* Fast-Track WhatsApp CTA Card inside Main */
+.ty-whatsapp-box {
+  width: 100%;
+  background: linear-gradient(135deg, #075E54 0%, #128C7E 100%);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  margin-bottom: 32px;
+  box-shadow: 0 14px 30px rgba(18, 140, 126, 0.28);
+}
+
+.ty-wa-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ty-wa-desc {
+  font-size: 0.92rem;
+  color: #E2F7F2;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.ty-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #25D366;
+  color: #074B40;
+  font-family: inherit;
+  font-size: 1.02rem;
+  font-weight: 800;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.ty-wa-btn:hover {
+  background: #2BF075;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* 3-Step Roadmap */
+.ty-roadmap-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
   text-align: center;
 }
 
-.back-btn {
+.ty-steps-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.ty-step-item {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.ty-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.ty-step-head {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.ty-step-text {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* Mentor / Founder Social Proof Bar */
+.ty-founder-bar {
+  width: 100%;
+  background: var(--bg-subtle);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ty-founder-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ty-founder-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--yellow);
+}
+
+.ty-founder-name {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.ty-founder-role {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.ty-founder-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+}
+
+.ty-stars {
+  color: #F59E0B;
+  letter-spacing: 2px;
+}
+
+/* Action Buttons */
+.ty-actions {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  max-width: 440px;
+  margin-top: 24px;
+}
+
+.ty-btn-primary {
+  flex: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 100%;
-  max-width: 320px;
   background: var(--yellow);
   color: var(--ink);
   font-family: inherit;
   font-size: 0.98rem;
   font-weight: 800;
-  padding: 15px 24px;
+  padding: 14px 24px;
   border-radius: var(--radius-pill);
   text-decoration: none;
-  box-shadow: 0 10px 24px rgba(255, 210, 63, 0.35);
-  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: var(--shadow-glow-yellow);
+  transition: all 0.2s ease;
   cursor: pointer;
   border: none;
 }
 
-.back-btn:hover {
+.ty-btn-primary:hover {
   background: var(--yellow-hover);
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(255, 210, 63, 0.45);
 }
 
-.back-btn:active {
-  transform: translateY(0);
-}
-
-.footer {
+/* Footer */
+.ty-footer {
   position: relative;
-  z-index: 1;
-  padding: 20px 0 10px;
+  z-index: 2;
   text-align: center;
   font-size: 0.82rem;
-  color: var(--muted);
-  width: 100%;
+  color: var(--muted-light);
+  padding: 24px 0 10px;
 }
 
-@media (max-width: 480px) {
-  body {
-    padding: 16px 14px;
+/* Responsive adjustments */
+@media (max-width: 680px) {
+  .ty-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
-  .thankyou-card {
-    padding: 32px 20px 28px;
-    border-radius: 20px;
+  .ty-card {
+    padding: 36px 20px 28px;
   }
-  .check-bubble {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 14px;
+  .ty-founder-bar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .check-bubble svg {
-    width: 24px;
-    height: 24px;
-  }
-  .desc {
-    margin-bottom: 24px;
-  }
-  .back-btn {
-    max-width: 100%;
-    padding: 14px 20px;
+  .ty-actions {
+    flex-direction: column;
   }
 }
 </style>
 </head>
 <body>
 
-<header class="header">
+<header class="ty-header">
   <a href="/" aria-label="Go to Homepage">
-    <img src="https://dedicated-marketing-support.vercel.app/assets/ogs_logo.png" alt="OSK Growth Studio Logo" class="logo-img" onerror="this.onerror=null;this.src='https://dedicated-marketing-support.vercel.app/assets/ogs_logo.png';">
+    <img src="https://dedicated-marketing-support.vercel.app/assets/ogs_logo.png" alt="OSK Growth Studio Logo" class="ty-logo-img">
+  </a>
+  <a href="/" class="ty-home-link">
+    <span>← Return Home</span>
   </a>
 </header>
 
-<main class="main-container">
-  <div class="thankyou-card">
-    <div class="check-bubble" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none">
-        <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+<main class="ty-main">
+  <div class="ty-card">
+    
+    <!-- Animated Success Checkmark -->
+    <div class="ty-check-wrap">
+      <div class="ty-check-pulse" aria-hidden="true"></div>
+      <div class="ty-check-bubble" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
     </div>
 
-    <span class="kicker">REQUEST RECEIVED · OSK GROWTH STUDIO</span>
-    <h1 class="title">Your Next Stage of Growth Starts Here.</h1>
-    <p class="desc">
-      Thank you for choosing OSK Growth Studio. We have safely received your details and our team is already reviewing your brand's growth opportunities.
+    <!-- Priority Badge -->
+    <div class="ty-badge">
+      <span class="dot"></span>
+      <span>APPLICATION CONFIRMED · PRIORITY ACCESS</span>
+    </div>
+
+    <!-- Title & Message -->
+    <h1 class="ty-title">Your Growth Strategy &amp; Audit Is Booked!</h1>
+    <p class="ty-subtitle">
+      Thank you for submitting your details. Founder <strong>Onkar Kulkarni</strong> and our senior performance marketing team have safely received your request and are currently preparing your account diagnostics.
     </p>
 
-    <a href="/" class="back-btn">
-      <span>← Return to Homepage</span>
-    </a>
+    <!-- Instant WhatsApp Fast-Track -->
+    <div class="ty-whatsapp-box">
+      <div class="ty-wa-title">
+        <span>⚡ Need Immediate Growth Support?</span>
+      </div>
+      <p class="ty-wa-desc">
+        Skip the email queue. Connect directly with Onkar Kulkarni on WhatsApp to share your ad account details or discuss your growth targets right now.
+      </p>
+      <a href="https://wa.me/919876543210?text=Hi%20Onkar,%20I%20just%20submitted%20my%20form%20for%20the%20Meta%20Ads%20Growth%20Audit%20on%20OGS.%20Let%27s%20connect!" target="_blank" rel="noopener noreferrer" class="ty-wa-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span>Chat on WhatsApp (Fastest Reply)</span>
+      </a>
+    </div>
+
+    <!-- 3-Step What Happens Next -->
+    <div style="width: 100%;">
+      <div class="ty-roadmap-title">What Happens Next:</div>
+      <div class="ty-steps-grid">
+        
+        <div class="ty-step-item">
+          <div class="ty-step-num">1</div>
+          <div class="ty-step-head">Account Deep Dive</div>
+          <p class="ty-step-text">Within 12 hours, we audit your pixel events, ROAS leaks, and Meta creative performance.</p>
+        </div>
+
+        <div class="ty-step-item">
+          <div class="ty-step-num">2</div>
+          <div class="ty-step-head">1-on-1 Growth Call</div>
+          <p class="ty-step-text">We reach out via WhatsApp/Phone with your custom ad creative and scaling blueprint.</p>
+        </div>
+
+        <div class="ty-step-item">
+          <div class="ty-step-num">3</div>
+          <div class="ty-step-head">48h Kickoff</div>
+          <p class="ty-step-text">Once approved, we deploy high-converting ad funnels built for immediate qualified inquiries.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Founder Trust Strip -->
+    <div class="ty-founder-bar">
+      <div class="ty-founder-info">
+        <img src="https://dedicated-marketing-support.vercel.app/assets/onkar_kulkarni.jpg" alt="Onkar Kulkarni" class="ty-founder-avatar">
+        <div>
+          <div class="ty-founder-name">Onkar Kulkarni</div>
+          <div class="ty-founder-role">Founder &amp; Lead Growth Partner · OSK Growth Studio</div>
+        </div>
+      </div>
+      <div class="ty-founder-rating">
+        <span class="ty-stars">★★★★★</span>
+        <span>4.9/5 Rating (150+ Brands Scaled)</span>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="ty-actions">
+      <a href="/" class="ty-btn-primary">
+        <span>← Return to OGS Website</span>
+      </a>
+    </div>
+
   </div>
 </main>
 
-<footer class="footer">
+<footer class="ty-footer">
   © 2026 OSK Growth Studio. All rights reserved.
 </footer>
 

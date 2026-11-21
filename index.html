@@ -2511,6 +2511,143 @@ body::after {
   margin: 0 auto 16px;
 }
 
+
+/* ====================================================
+   HIGH-CONVERTING DESIGN SYSTEM OVERRIDES FOR SU-FORM
+   ==================================================== */
+.su-form {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif !important;
+  --su-primary: #FFC72C !important;
+  --su-btn-bg: #FFC72C !important;
+  --su-btn-text: #0B0D13 !important;
+  --su-focus: #0064E0 !important;
+  --su-label: #0B0D13 !important;
+  --su-text: #0B0D13 !important;
+}
+
+.su-form .su-field {
+  margin-bottom: 16px !important;
+}
+
+.su-form .su-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  color: #0B0D13 !important;
+  margin-bottom: 6px !important;
+  letter-spacing: -0.01em !important;
+}
+
+.su-form .su-req {
+  color: #EF4444 !important;
+  font-weight: 800 !important;
+}
+
+.su-form .su-input,
+.su-form .su-textarea {
+  width: 100% !important;
+  padding: 13px 16px !important;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  color: #0B0D13 !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #E2E8F0 !important;
+  border-radius: 12px !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  outline: none !important;
+  box-shadow: 0 1px 2px rgba(11, 13, 19, 0.04) !important;
+}
+
+.su-form .su-input:hover,
+.su-form .su-textarea:hover {
+  border-color: #CBD5E1 !important;
+}
+
+.su-form .su-input:focus,
+.su-form .su-textarea:focus {
+  border-color: #0064E0 !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 0 0 4px rgba(0, 100, 224, 0.12), 0 2px 4px rgba(11, 13, 19, 0.05) !important;
+}
+
+.su-form .su-textarea {
+  min-height: 95px !important;
+  resize: vertical !important;
+  line-height: 1.5 !important;
+}
+
+/* International Tel Input styling */
+.su-form .iti {
+  width: 100% !important;
+}
+
+.su-form .iti__country-container {
+  border-radius: 12px 0 0 12px !important;
+}
+
+.su-form .iti__selected-country {
+  padding-left: 12px !important;
+  border-radius: 12px 0 0 12px !important;
+}
+
+.su-form .iti input.su-input {
+  padding-left: 52px !important;
+}
+
+/* Premium Submit Button */
+.su-form .su-btn {
+  width: 100% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: #FFC72C !important;
+  color: #0B0D13 !important;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  padding: 16px 24px !important;
+  border-radius: 9999px !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 12px 28px rgba(255, 199, 44, 0.38), 0 4px 10px rgba(11, 13, 19, 0.06) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  margin-top: 8px !important;
+  text-transform: none !important;
+  letter-spacing: -0.01em !important;
+}
+
+.su-form .su-btn:hover {
+  background: #EBB218 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 16px 32px rgba(255, 199, 44, 0.48), 0 6px 14px rgba(11, 13, 19, 0.08) !important;
+}
+
+.su-form .su-btn:active {
+  transform: translateY(0) !important;
+}
+
+.su-form .su-err {
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  color: #EF4444 !important;
+  margin-top: 4px !important;
+}
+
+.su-form .su-banner-err {
+  background: #FEF2F2 !important;
+  border: 1px solid #FECACA !important;
+  color: #991B1B !important;
+  border-radius: 10px !important;
+  font-size: 0.88rem !important;
+  padding: 12px 16px !important;
+  margin-bottom: 16px !important;
+  font-weight: 600 !important;
+}
+
 .success-title {
   font-size: 1.45rem;
   font-weight: 900;
@@ -3649,9 +3786,9 @@ body::after {
           <p class="form-header-sub">Takes under 60 seconds • 100% Free Strategy Session</p>
         </div>
 
-        <div class="su-form" data-su-form="true" data-su-form-id="aa98f445-c47a-4aba-9ca6-a1519d0515e4" data-su-sub-account="e5fb3992-9c87-4f02-9fcd-0a11eb83a966" data-su-instance="contact-form" style="--su-primary:hsl(220 70% 55%);--su-primary-weak:hsl(220 70% 55%)26;--su-card-bg:hsl(0 0% 100%);--su-card-bg-img:none;--su-card-radius:8px;--su-card-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--su-card-border:rgba(0,0,0,.08);--su-card-border-w:1px;--su-card-pad:32px 32px 32px 32px;--su-text:#1a1a2e;--su-heading:#1a1a2e;--su-desc:rgba(0,0,0,0.45);--su-label:#1a1a2e;--su-input-bg:transparent;--su-input-text:#1a1a2e;--su-input-border:#d1d5db;--su-input-radius:8px;--su-placeholder:rgba(0,0,0,0.35);--su-opt-bg:hsl(0 0% 100%);--su-opt-text:#1a1a2e;--su-btn-bg:hsl(220 70% 55%);--su-btn-bg-img:none;--su-btn-text:hsl(0 0% 100%);--su-btn-radius:8px;--su-req:#dc2626;--su-err:#ef4444;--su-focus:hsl(220 70% 55%);--su-divider:#e5e7eb;--su-field-gap:16px;font-family:system-ui, sans-serif;max-width:480px;margin:0 auto;">
+        <div class="su-form" data-su-form="true" data-su-form-id="aa98f445-c47a-4aba-9ca6-a1519d0515e4" data-su-sub-account="e5fb3992-9c87-4f02-9fcd-0a11eb83a966" data-su-instance="contact-form" style="--su-primary:#FFC72C;--su-primary-weak:rgba(255,199,44,0.2);--su-card-bg:#FFFFFF;--su-card-bg-img:none;--su-card-radius:16px;--su-card-shadow:0 10px 25px -4px rgba(11,13,19,0.06);--su-card-border:#E7E4DA;--su-card-border-w:1px;--su-card-pad:28px 24px;--su-text:#0B0D13;--su-heading:#0B0D13;--su-desc:#5E6271;--su-label:#0B0D13;--su-input-bg:#FFFFFF;--su-input-text:#0B0D13;--su-input-border:#E2E8F0;--su-input-radius:12px;--su-placeholder:#94A3B8;--su-opt-bg:#FFFFFF;--su-opt-text:#0B0D13;--su-btn-bg:#FFC72C;--su-btn-bg-img:none;--su-btn-text:#0B0D13;--su-btn-radius:9999px;--su-req:#EF4444;--su-err:#EF4444;--su-focus:#0064E0;--su-divider:#E7E4DA;--su-field-gap:16px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;max-width:480px;margin:0 auto;">
 <div class="su-form-mount"></div>
-<script type="application/json" class="su-form-config">{"formId":"aa98f445-c47a-4aba-9ca6-a1519d0515e4","subAccountId":"e5fb3992-9c87-4f02-9fcd-0a11eb83a966","apiUrl":"https://myappzbackend.com/functions/v1/form-api","pk":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIn0.CJ12IdcxndQO5Ptx2zFbJpE39RwK9bBAi8QkUKqbcIs","primary":"hsl(220 70% 55%)","successMsg":"Thank you for your submission!","redirectUrl":"","appendSubmissionId":false,"forwardUtm":false,"gdprConsent":false,"gdprConsentText":"","funnelId":"","pageId":"","schema":{"elements":[{"id":"tpl-el-1","type":"fullName","label":"Full Name","placeholder":"John Doe","queryKey":"full_name","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-2","type":"email","label":"Email Address","placeholder":"john@example.com","queryKey":"email","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-3","type":"phone","label":"Phone Number","placeholder":"+1 (555) 000-0000","queryKey":"phone","required":false,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-4","type":"multiLine","label":"Message","placeholder":"How can we help you?","queryKey":"message","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-5","type":"button","label":"Send Message","placeholder":"","queryKey":"submit","required":false,"hidden":false,"options":[],"content":"","maxRating":5}]}}</script>
+<script type="application/json" class="su-form-config">{"formId":"aa98f445-c47a-4aba-9ca6-a1519d0515e4","subAccountId":"e5fb3992-9c87-4f02-9fcd-0a11eb83a966","apiUrl":"https://myappzbackend.com/functions/v1/form-api","pk":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIn0.CJ12IdcxndQO5Ptx2zFbJpE39RwK9bBAi8QkUKqbcIs","primary":"hsl(220 70% 55%)","successMsg":"Thank you for your submission!","redirectUrl":"thank-you.html","forwardUtm":true,"appendSubmissionId":true,"appendSubmissionId":false,"forwardUtm":false,"gdprConsent":false,"gdprConsentText":"","funnelId":"","pageId":"","schema":{"elements":[{"id":"tpl-el-1","type":"fullName","label":"Full Name","placeholder":"John Doe","queryKey":"full_name","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-2","type":"email","label":"Email Address","placeholder":"john@example.com","queryKey":"email","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-3","type":"phone","label":"Phone Number","placeholder":"+1 (555) 000-0000","queryKey":"phone","required":false,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-4","type":"multiLine","label":"Message","placeholder":"How can we help you?","queryKey":"message","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-5","type":"button","label":"Send Message","placeholder":"","queryKey":"submit","required":false,"hidden":false,"options":[],"content":"","maxRating":5}]}}</script>
 </div>
       </div>
 
@@ -4181,9 +4318,9 @@ body::after {
       </div>
     </div>
 
-    <div class="su-form" data-su-form="true" data-su-form-id="aa98f445-c47a-4aba-9ca6-a1519d0515e4" data-su-sub-account="e5fb3992-9c87-4f02-9fcd-0a11eb83a966" data-su-instance="modal-contact-form" style="--su-primary:hsl(220 70% 55%);--su-primary-weak:hsl(220 70% 55%)26;--su-card-bg:transparent;--su-card-bg-img:none;--su-card-radius:8px;--su-card-shadow:none;--su-card-border:transparent;--su-card-border-w:0;--su-card-pad:16px 0 0 0;--su-text:#1a1a2e;--su-heading:#1a1a2e;--su-desc:rgba(0,0,0,0.45);--su-label:#1a1a2e;--su-input-bg:transparent;--su-input-text:#1a1a2e;--su-input-border:#d1d5db;--su-input-radius:8px;--su-placeholder:rgba(0,0,0,0.35);--su-opt-bg:hsl(0 0% 100%);--su-opt-text:#1a1a2e;--su-btn-bg:hsl(220 70% 55%);--su-btn-bg-img:none;--su-btn-text:hsl(0 0% 100%);--su-btn-radius:8px;--su-req:#dc2626;--su-err:#ef4444;--su-focus:hsl(220 70% 55%);--su-divider:#e5e7eb;--su-field-gap:16px;font-family:system-ui, sans-serif;max-width:100%;margin:0 auto;">
+    <div class="su-form" data-su-form="true" data-su-form-id="aa98f445-c47a-4aba-9ca6-a1519d0515e4" data-su-sub-account="e5fb3992-9c87-4f02-9fcd-0a11eb83a966" data-su-instance="modal-contact-form" style="--su-primary:#FFC72C;--su-primary-weak:rgba(255,199,44,0.2);--su-card-bg:transparent;--su-card-bg-img:none;--su-card-radius:12px;--su-card-shadow:none;--su-card-border:transparent;--su-card-border-w:0;--su-card-pad:12px 0 0 0;--su-text:#0B0D13;--su-heading:#0B0D13;--su-desc:#5E6271;--su-label:#0B0D13;--su-input-bg:#FFFFFF;--su-input-text:#0B0D13;--su-input-border:#E2E8F0;--su-input-radius:12px;--su-placeholder:#94A3B8;--su-opt-bg:#FFFFFF;--su-opt-text:#0B0D13;--su-btn-bg:#FFC72C;--su-btn-bg-img:none;--su-btn-text:#0B0D13;--su-btn-radius:9999px;--su-req:#EF4444;--su-err:#EF4444;--su-focus:#0064E0;--su-divider:#E7E4DA;--su-field-gap:16px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;max-width:100%;margin:0 auto;">
 <div class="su-form-mount"></div>
-<script type="application/json" class="su-form-config">{"formId":"aa98f445-c47a-4aba-9ca6-a1519d0515e4","subAccountId":"e5fb3992-9c87-4f02-9fcd-0a11eb83a966","apiUrl":"https://myappzbackend.com/functions/v1/form-api","pk":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIn0.CJ12IdcxndQO5Ptx2zFbJpE39RwK9bBAi8QkUKqbcIs","primary":"hsl(220 70% 55%)","successMsg":"Thank you for your submission!","redirectUrl":"","appendSubmissionId":false,"forwardUtm":false,"gdprConsent":false,"gdprConsentText":"","funnelId":"","pageId":"","schema":{"elements":[{"id":"tpl-el-1","type":"fullName","label":"Full Name","placeholder":"John Doe","queryKey":"full_name","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-2","type":"email","label":"Email Address","placeholder":"john@example.com","queryKey":"email","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-3","type":"phone","label":"Phone Number","placeholder":"+1 (555) 000-0000","queryKey":"phone","required":false,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-4","type":"multiLine","label":"Message","placeholder":"How can we help you?","queryKey":"message","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-5","type":"button","label":"Send Message","placeholder":"","queryKey":"submit","required":false,"hidden":false,"options":[],"content":"","maxRating":5}]}}</script>
+<script type="application/json" class="su-form-config">{"formId":"aa98f445-c47a-4aba-9ca6-a1519d0515e4","subAccountId":"e5fb3992-9c87-4f02-9fcd-0a11eb83a966","apiUrl":"https://myappzbackend.com/functions/v1/form-api","pk":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIn0.CJ12IdcxndQO5Ptx2zFbJpE39RwK9bBAi8QkUKqbcIs","primary":"hsl(220 70% 55%)","successMsg":"Thank you for your submission!","redirectUrl":"thank-you.html","forwardUtm":true,"appendSubmissionId":true,"appendSubmissionId":false,"forwardUtm":false,"gdprConsent":false,"gdprConsentText":"","funnelId":"","pageId":"","schema":{"elements":[{"id":"tpl-el-1","type":"fullName","label":"Full Name","placeholder":"John Doe","queryKey":"full_name","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-2","type":"email","label":"Email Address","placeholder":"john@example.com","queryKey":"email","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-3","type":"phone","label":"Phone Number","placeholder":"+1 (555) 000-0000","queryKey":"phone","required":false,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-4","type":"multiLine","label":"Message","placeholder":"How can we help you?","queryKey":"message","required":true,"hidden":false,"options":[],"content":"","maxRating":5},{"id":"tpl-el-5","type":"button","label":"Send Message","placeholder":"","queryKey":"submit","required":false,"hidden":false,"options":[],"content":"","maxRating":5}]}}</script>
 </div>
 
     <!-- Success View -->
@@ -4706,6 +4843,56 @@ body::after {
       } catch (err) {}
     }
   }, true);
+
+  
+  // ==================== AUTOMATIC THANK-YOU REDIRECT & ATTRIBUTION ====================
+  (function initThankYouRedirect() {
+    let redirected = false;
+    function redirectToThankYou() {
+      if (redirected) return;
+      redirected = true;
+      const search = window.location.search || '';
+      window.location.href = 'thank-you.html' + search;
+    }
+
+    // 1. Intercept fetch responses to form-api or workflow-webhook
+    if (typeof window.fetch === 'function') {
+      const originalFetch = window.fetch;
+      window.fetch = async function(...args) {
+        const response = await originalFetch.apply(this, args);
+        try {
+          const urlStr = typeof args[0] === 'string' ? args[0] : (args[0] && args[0].url ? args[0].url : '');
+          if (urlStr.includes('form-api') || urlStr.includes('workflow-webhook')) {
+            const clone = response.clone();
+            clone.json().then(data => {
+              if (data && (data.success || data.status === 'accepted' || data.id)) {
+                if (typeof fbq === 'function') fbq('track', 'Lead');
+                setTimeout(redirectToThankYou, 400);
+              }
+            }).catch(() => {});
+          }
+        } catch (e) {}
+        return response;
+      };
+    }
+
+    // 2. Observe DOM mutations for .su-success appearance
+    const observer = new MutationObserver(function(mutations) {
+      for (let i = 0; i < mutations.length; i++) {
+        const m = mutations[i];
+        if (m.target && m.target.querySelector && m.target.querySelector('.su-success')) {
+          if (typeof fbq === 'function') fbq('track', 'Lead');
+          setTimeout(redirectToThankYou, 300);
+          break;
+        }
+      }
+    });
+
+    document.querySelectorAll('.su-form, .su-form-mount').forEach(el => {
+      observer.observe(el, { childList: true, subtree: true });
+    });
+  })();
+
 
   // LIVE SOCIAL PROOF TOAST ROTATION
   const toast = document.getElementById('socialProofToast');
