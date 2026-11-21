@@ -4347,7 +4347,61 @@ body::after {
 <!-- ==================== SCRIPTS ==================== -->
 <script>
 (function() {
+  // Webhook Endpoints
+  const AWEBER_WEBHOOK = "https://myappzbackend.com/functions/v1/workflow-webhook/uu1spcwxbaw98l9s";
   const SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbwhZZVfysb_JRwknYLRgUrMkTWHka8fxe39cOFCEJfmplITH8GwoPmZIdmxEsL2W7eQ/exec";
+
+  // ==================== UTM TRACKING & ATTRIBUTION ====================
+  function captureAndGetUtms() {
+    const params = new URLSearchParams(window.location.search);
+    const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'wbraid', 'gbraid'];
+    const utms = {};
+
+    keys.forEach(k => {
+      let val = params.get(k);
+      if (val) {
+        val = val.trim();
+        utms[k] = val;
+        try {
+          sessionStorage.setItem('ogs_' + k, val);
+          localStorage.setItem('ogs_' + k, val);
+        } catch (e) {}
+      } else {
+        try {
+          val = sessionStorage.getItem('ogs_' + k) || localStorage.getItem('ogs_' + k) || '';
+          utms[k] = val;
+        } catch (e) {
+          utms[k] = '';
+        }
+      }
+    });
+
+    if (!utms.utm_source) {
+      const ref = (document.referrer || '').toLowerCase();
+      if (ref.includes('facebook.com') || ref.includes('fb.com') || ref.includes('instagram.com')) {
+        utms.utm_source = 'meta';
+        utms.utm_medium = 'paid_social';
+      } else if (ref.includes('google.')) {
+        utms.utm_source = 'google';
+        utms.utm_medium = 'organic';
+      } else if (ref.includes('linkedin.com')) {
+        utms.utm_source = 'linkedin';
+        utms.utm_medium = 'social';
+      } else if (ref.includes('youtube.com')) {
+        utms.utm_source = 'youtube';
+        utms.utm_medium = 'video';
+      } else if (ref) {
+        utms.utm_source = 'referral';
+        utms.utm_medium = 'referral';
+        utms.utm_term = document.referrer;
+      } else {
+        utms.utm_source = 'direct';
+        utms.utm_medium = 'none';
+      }
+    }
+
+    return utms;
+  }
 
   // Elements
   const dlg = document.getElementById('leadDialog');
@@ -4563,33 +4617,132 @@ body::after {
       return;
     }
 
+    const utms = captureAndGetUtms();
+    const fullName = formEl.name.value.trim();
+    const nameParts = fullName.split(/\s+/);
+    const firstName = nameParts[0] || fullName;
+    const lastName = nameParts.slice(1).join(' ') || '';
     const cleanPhone = formEl.phone.value.trim().replace(/^(\+91|0)/, '').replace(/[\s-]/g, '');
+    const cleanEmail = formEl.email.value.trim().toLowerCase();
+    const city = formEl.city.value.trim();
+    const formType = isModal ? "Modal Pop-up Form" : "Inline Audit Form";
+    const formId = isModal ? "leadForm" : "inlineLeadForm";
+
     const payload = {
-      name: formEl.name.value.trim(),
+      // Primary Contact Info
+      name: fullName,
+      first_name: firstName,
+      last_name: lastName,
+      email: cleanEmail,
       phone: cleanPhone,
-      email: formEl.email.value.trim().toLowerCase(),
-      city: formEl.city.value.trim(),
-      service: 'Meta Ads & Google Growth Audit (V2)',
-      submittedAt: new Date().toISOString()
+      phone_with_code: '+91' + cleanPhone,
+      city: city,
+
+      // Alternative Case Variations for CRM compatibility
+      FullName: fullName,
+      FirstName: firstName,
+      LastName: lastName,
+      Email: cleanEmail,
+      Phone: cleanPhone,
+      Mobile: cleanPhone,
+      City: city,
+
+      // Service & Deal Details
+      service: "Meta Ads & Google Growth Audit (V2)",
+      service_requested: "Growth Marketing Strategy & Audit",
+      total: 15000,
+      value: 15000,
+      amount: 0,
+      currency: "INR",
+      lead_title: "Growth Marketing Strategy & Audit Lead",
+
+      // Form Source & Context
+      form_type: formType,
+      form_id: formId,
+      form_name: isModal ? "Main Modal Popup Lead Form" : "On-Page Inline Audit Form",
+
+      // UTM & Campaign Tracking (lowercase & TitleCase)
+      utm_source: utms.utm_source || "direct",
+      utm_medium: utms.utm_medium || "none",
+      utm_campaign: utms.utm_campaign || "",
+      utm_term: utms.utm_term || "",
+      utm_content: utms.utm_content || "",
+
+      UTM_Source: utms.utm_source || "direct",
+      UTM_Medium: utms.utm_medium || "none",
+      UTM_Campaign: utms.utm_campaign || "",
+      UTM_Term: utms.utm_term || "",
+      UTM_Content: utms.utm_content || "",
+
+      // Ad Click IDs
+      gclid: utms.gclid || "",
+      fbclid: utms.fbclid || "",
+      wbraid: utms.wbraid || "",
+      gbraid: utms.gbraid || "",
+
+      // Page & Session Context
+      page_url: window.location.href,
+      page_path: window.location.pathname,
+      page_title: document.title,
+      referrer: document.referrer || "direct",
+      submittedAt: new Date().toISOString(),
+      submitted_date_ist: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+
+      // CRM Tags
+      tags: [
+        "OGS Lead",
+        isModal ? "Pop-up Form" : "Inline Audit Form",
+        utms.utm_source ? "utm:" + utms.utm_source : "direct"
+      ]
     };
 
     submitBtnEl.disabled = true;
     submitBtnEl.innerHTML = '<span>Securing Your Spot...</span>';
 
     let saved = false;
+
+    // 1. Dispatch to AWeber / CRM Webhook (Direct JSON)
     try {
-      if (SHEET_WEBHOOK) {
-        await fetch(SHEET_WEBHOOK, {
+      if (AWEBER_WEBHOOK) {
+        const aweberRes = await fetch(AWEBER_WEBHOOK, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+        if (aweberRes.ok) {
+          saved = true;
+        }
+      }
+    } catch (err) {
+      console.warn("AWeber Webhook transmission note:", err);
+      try {
+        await fetch(AWEBER_WEBHOOK, {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify(payload)
         });
         saved = true;
+      } catch (fallbackErr) {
+        console.warn("AWeber fallback transmission note:", fallbackErr);
       }
-    } catch (err) {
-      console.warn("Webhook transmission note:", err);
-      saved = true;
+    }
+
+    // 2. Dispatch to Google Sheets backup Webhook
+    try {
+      if (SHEET_WEBHOOK) {
+        fetch(SHEET_WEBHOOK, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        }).catch(sheetErr => console.warn("Sheet Webhook note:", sheetErr));
+        saved = true;
+      }
+    } catch (sheetErr) {
+      console.warn("Sheet Webhook dispatch note:", sheetErr);
     }
 
     submitBtnEl.disabled = false;
@@ -4602,7 +4755,8 @@ body::after {
       if (isModal) {
         sheet.classList.add('is-submitted');
       } else {
-        window.location.href = 'thank-you.html';
+        const query = window.location.search ? window.location.search : '';
+        window.location.href = 'thank-you.html' + query;
       }
     } else {
       if (alertEl) {
